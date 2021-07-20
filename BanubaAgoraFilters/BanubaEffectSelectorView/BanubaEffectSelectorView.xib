@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BanubaEffectSelectorView" customModule="BanubaAgoraFilters" customModuleProvider="target">
+            <connections>
+                <outlet property="carousel" destination="T9G-DU-Soh" id="zGT-lV-gig"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="749" height="159"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selector" translatesAutoresizingMaskIntoConstraints="NO" id="O48-7m-DXJ">
+                    <rect key="frame" x="315" y="44" width="119" height="119"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="O48-7m-DXJ" secondAttribute="height" multiplier="1:1" id="NZs-T4-khJ"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9G-DU-Soh" customClass="iCarousel">
+                    <rect key="frame" x="0.0" y="48" width="749" height="111"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="y7i-c2-vJv"/>
+                        <outlet property="delegate" destination="-1" id="ngb-3i-yPv"/>
+                    </connections>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="T9G-DU-Soh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="GMA-Qe-962"/>
+                <constraint firstItem="O48-7m-DXJ" firstAttribute="bottom" secondItem="T9G-DU-Soh" secondAttribute="bottom" constant="4" id="IR5-B8-2lh"/>
+                <constraint firstAttribute="bottom" secondItem="T9G-DU-Soh" secondAttribute="bottom" id="MJ8-hR-LzY"/>
+                <constraint firstItem="O48-7m-DXJ" firstAttribute="top" secondItem="T9G-DU-Soh" secondAttribute="top" constant="-4" id="Zlz-eY-BTc"/>
+                <constraint firstItem="O48-7m-DXJ" firstAttribute="centerX" secondItem="T9G-DU-Soh" secondAttribute="centerX" id="iWm-fE-ddg"/>
+                <constraint firstItem="O48-7m-DXJ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="j6F-H3-ICF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="T9G-DU-Soh" secondAttribute="trailing" id="mNn-5f-V4e"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="71.739130434782609" y="306.36160714285711"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="selector" width="64" height="64"/>
+    </resources>
+</document>

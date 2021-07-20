@@ -2,35 +2,37 @@
 //  AppDelegate.swift
 //  BanubaAgoraFilters
 //
-//  Created by Andrei Sak on 20.07.21.
+//  Created by Banuba on 20.07.21.
 //
 
 import UIKit
+import BanubaEffectPlayer
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+  
+  var window: UIWindow?
+  
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    
+    setupEffectPlayer()
+    
+    let viewController = ViewController(nibName: "ViewController", bundle: nil)
+    self.window = UIWindow(frame: UIScreen.main.bounds)
+    self.window?.rootViewController = viewController
+    self.window?.makeKeyAndVisible()
+    
     return true
   }
-
-  // MARK: UISceneSession Lifecycle
-
-  func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-    // Called when a new scene session is being created.
-    // Use this method to select a configuration to create the new scene with.
-    return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+  
+  private func setupEffectPlayer() {
+    let effectsPath = Bundle.main.bundleURL.appendingPathComponent("effects/", isDirectory: true).path
+    let bundleRoot = Bundle.init(for: BNBEffectPlayer.self).bundlePath
+    let dirs = [bundleRoot + "/bnb-resources", bundleRoot + "/bnb-res-ios"] + [effectsPath]
+    BNBUtilityManager.initialize(
+        dirs,
+        clientToken: banubaClientToken.trimmingCharacters(in: .whitespacesAndNewlines)
+    )
   }
-
-  func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-    // Called when the user discards a scene session.
-    // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-    // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-  }
-
-
 }
 
