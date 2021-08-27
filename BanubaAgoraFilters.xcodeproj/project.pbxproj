@@ -99,13 +99,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0AC2C1FF4A58EB523F2E64DD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		6337EB4426D79C55007AC2E2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,7 +123,6 @@
 				637C19B626A6EEAB000C647F /* BanubaAgoraFilters */,
 				637C19B526A6EEAB000C647F /* Products */,
 				637C19CB26A6EF5C000C647F /* Frameworks */,
-				0AC2C1FF4A58EB523F2E64DD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
