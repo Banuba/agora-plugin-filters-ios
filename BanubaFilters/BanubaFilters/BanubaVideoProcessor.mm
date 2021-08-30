@@ -73,7 +73,7 @@ namespace agora::extension {
 
         m_image_format.width = width;
         m_image_format.height = height;
-        m_image_format.orientation = bnb::camera_orientation::deg_180;
+        m_image_format.orientation = bnb::camera_orientation::deg_0;
     }
 
     void BanubaVideoProcessor::send_event(const char *key, const char *data) {

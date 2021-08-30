@@ -9,7 +9,7 @@ import UIKit
 import AgoraRtcKit
 
 private struct Defaults {
-  static let renderSize = AgoraVideoDimension1280x720
+  static let renderSize = AgoraVideoDimension640x480
 }
 
 class ViewController: UIViewController {
@@ -73,6 +73,7 @@ class ViewController: UIViewController {
     videoCanvas.uid = 0
     videoCanvas.view = localVideo
     videoCanvas.renderMode = .hidden
+    videoCanvas.mirrorMode = .disabled
     agoraKit?.setupLocalVideo(videoCanvas)
   }
   

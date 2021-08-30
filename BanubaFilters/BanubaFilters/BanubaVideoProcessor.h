@@ -42,6 +42,6 @@ namespace agora::extension {
 
         rtc::VideoFrameData m_captured_frame;
         bnb::image_format m_image_format;
-        bnb::interfaces::orient_format m_target_orient{bnb::camera_orientation::deg_0, false};
+        bnb::interfaces::orient_format m_target_orient{bnb::camera_orientation::deg_0, true};
     };
 }
