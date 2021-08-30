@@ -434,7 +434,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C6B2297G29;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 8W9QCBMQCU;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -446,7 +448,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.banuba.BanubaAgoraFilters;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banuba.BanubaAgoraFilters.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BanubaAgoraFilters/BanubaAgoraFilters-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -462,7 +464,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C6B2297G29;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 8W9QCBMQCU;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -474,7 +478,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.banuba.BanubaAgoraFilters;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banuba.BanubaAgoraFilters.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BanubaAgoraFilters/BanubaAgoraFilters-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
