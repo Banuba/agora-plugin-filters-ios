@@ -30,6 +30,7 @@
 		63EAAC8926D8CB6E00A83AD4 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAC8426D8CB6E00A83AD4 /* iCarousel.m */; };
 		63EAAC8A26D8CB6E00A83AD4 /* iCarousel.h in Headers */ = {isa = PBXBuildFile; fileRef = 63EAAC8526D8CB6E00A83AD4 /* iCarousel.h */; };
 		63EAAE3026D8ED4000A83AD4 /* EffectsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAE2F26D8ED4000A83AD4 /* EffectsService.swift */; };
+		63EAAE7D26DE5B3500A83AD4 /* BanubaEffectsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAE7C26DE5B3500A83AD4 /* BanubaEffectsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		63EAAC8426D8CB6E00A83AD4 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		63EAAC8526D8CB6E00A83AD4 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		63EAAE2F26D8ED4000A83AD4 /* EffectsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectsService.swift; sourceTree = "<group>"; };
+		63EAAE7C26DE5B3500A83AD4 /* BanubaEffectsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanubaEffectsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				637C19E226A6F0CD000C647F /* Token.swift */,
 				637C19BB26A6EEAB000C647F /* ViewController.swift */,
 				63EAAE2F26D8ED4000A83AD4 /* EffectsService.swift */,
+				63EAAE7C26DE5B3500A83AD4 /* BanubaEffectsManager.swift */,
 				63EAAC6C26D8C6FC00A83AD4 /* ViewController.xib */,
 				637C19C026A6EEAE000C647F /* Assets.xcassets */,
 				637C19C226A6EEAE000C647F /* LaunchScreen.storyboard */,
@@ -291,6 +294,7 @@
 				637C19E326A6F0CD000C647F /* Token.swift in Sources */,
 				637C19BC26A6EEAB000C647F /* ViewController.swift in Sources */,
 				63EAAC8926D8CB6E00A83AD4 /* iCarousel.m in Sources */,
+				63EAAE7D26DE5B3500A83AD4 /* BanubaEffectsManager.swift in Sources */,
 				637C19B826A6EEAB000C647F /* AppDelegate.swift in Sources */,
 				63EAAE3026D8ED4000A83AD4 /* EffectsService.swift in Sources */,
 				6337EB4E26D8BF84007AC2E2 /* BanubaEffectSelectorView.swift in Sources */,

@@ -9,17 +9,19 @@ import Foundation
 
 class EffectsService {
   
-  static let shared = EffectsService()
+  let manager = FileManager.default
+  let effectsPath: String
   
-  let fm = FileManager.default
-  let path = Bundle.main.bundlePath + "/effects"
+  init(effectsPath: String) {
+    self.effectsPath = effectsPath
+  }
   
-  func loadEffects(path: String) -> [String] {
+  func getEffectNames() -> [String] {
     do {
-      return try fm.contentsOfDirectory(atPath: path)
+      return try manager.contentsOfDirectory(atPath: effectsPath)
         .filter { content in
           var isDir: ObjCBool = false
-          return fm.fileExists(atPath: path + "/" + content, isDirectory: &isDir)
+          return manager.fileExists(atPath: effectsPath + "/" + content, isDirectory: &isDir)
         }
     } catch {
       print("\(error)")
@@ -28,7 +30,7 @@ class EffectsService {
   }
   
   func getEffectPreview(_ effectName: String) -> UIImage? {
-    let previewPath = path + "/" + effectName + "/preview.png"
+    let previewPath = effectsPath + "/" + effectName + "/preview.png"
     return UIImage(contentsOfFile: previewPath)
   }
 }

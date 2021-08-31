@@ -7,6 +7,8 @@
 
 import UIKit
 import AgoraRtcKit
+import BanubaEffectPlayer
+import BanubaFiltersAgoraExtension
 
 private struct Defaults {
   static let renderSize = AgoraVideoDimension640x480
@@ -33,6 +35,7 @@ class ViewController: UIViewController {
     super.viewDidAppear(animated)
     
     joinChannel()
+    setupBanubaPlugin()
   }
   
   private func setupEngine() {
@@ -45,8 +48,8 @@ class ViewController: UIViewController {
     )
     
     agoraKit?.enableExtension(
-      withVendor: "Banuba",
-      extension: "BanubaFilter",
+      withVendor: BanubaPluginKeys.vendorName,
+      extension: BanubaPluginKeys.extensionName,
       enabled: true
     )
   }
@@ -78,9 +81,14 @@ class ViewController: UIViewController {
   }
   
   private func joinChannel() {
-    agoraKit?.joinChannel(byToken: agoraClientToken, channelId: agoraChannelId, info: nil, uid: 0, joinSuccess: { channel, uid, elapsed in
-      print("Did join channel")
-    })
+    agoraKit?.joinChannel(
+      byToken: agoraClientToken,
+      channelId: agoraChannelId,
+      info: nil,
+      uid: 0,
+      joinSuccess: { channel, uid, elapsed in
+        print("Did join channel")
+      })
     agoraKit?.startPreview()
     agoraKit?.setEnableSpeakerphone(true)
   }
@@ -109,14 +117,18 @@ extension ViewController {
       effectName: nil
     )
     var effectViewModels = [resetEffectViewModel]
-    EffectsService.shared.loadEffects(path: EffectsService.shared.path)
+    let effectsPath = BanubaEffectsManager.effectsURL.path
+    let effectsService = EffectsService(effectsPath: effectsPath)
+    
+    effectsService
+      .getEffectNames()
       .sorted()
       .forEach { effectName in
-      guard let effectPreviewImage = EffectsService.shared.getEffectPreview(effectName) else {
-        return
+        guard let effectPreviewImage = effectsService.getEffectPreview(effectName) else {
+          return
+        }
+        effectViewModels.append(EffectViewModel(image: effectPreviewImage, effectName: effectName))
       }
-      effectViewModels.append(EffectViewModel(image: effectPreviewImage, effectName: effectName))
-    }
     effectSelectorView.effectViewModels = effectViewModels
     effectSelectorView.didSelectEffectViewModel = { [weak self] effectModel in
       if let effectName = effectModel.effectName {
@@ -127,21 +139,41 @@ extension ViewController {
     }
     effectSelectorView.selectedEffectViewModel = effectViewModels.first
   }
+}
+
+// MARK: - BanubaFilterPlugin interactions
+extension ViewController {
+  private func setupBanubaPlugin() {
+    agoraKit?.setExtensionPropertyWithVendor(
+      BanubaPluginKeys.vendorName,
+      extension: BanubaPluginKeys.extensionName,
+      key: BanubaPluginKeys.setEffectsPath,
+      value: BanubaEffectsManager.effectsURL.path
+    )
+    
+    let clientToken = banubaClientToken.trimmingCharacters(in: .whitespacesAndNewlines)
+    agoraKit?.setExtensionPropertyWithVendor(
+      BanubaPluginKeys.vendorName,
+      extension: BanubaPluginKeys.extensionName,
+      key: BanubaPluginKeys.setToken,
+      value: clientToken
+    )
+  }
   
   private func loadEffect(_ effectName: String) {
     agoraKit?.setExtensionPropertyWithVendor(
-      "Banuba",
-      extension: "BanubaFilter",
-      key: "load_effect",
+      BanubaPluginKeys.vendorName,
+      extension: BanubaPluginKeys.extensionName,
+      key: BanubaPluginKeys.loadEffect,
       value: effectName
     )
   }
   
   private func unloadEffect() {
     agoraKit?.setExtensionPropertyWithVendor(
-      "Banuba",
-      extension: "BanubaFilter",
-      key: "unload_effect",
+      BanubaPluginKeys.vendorName,
+      extension: BanubaPluginKeys.extensionName,
+      key: BanubaPluginKeys.unloadEffect,
       value: " "
     )
   }

@@ -5,20 +5,23 @@
 #include <libyuv.h>
 #include "utility.hpp"
 
+#include <BanubaEffectPlayer/BNBUtilityManager.h>
+
 namespace agora::extension {
 
     BanubaVideoProcessor::BanubaVideoProcessor() = default;
 
     void BanubaVideoProcessor::process_frame(const agora_refptr<rtc::IVideoFrame> &in) {
+        if (!m_is_initialized) {
+            m_control->deliverVideoFrame(in);
+            return;
+        }
         in->getVideoFrameData(m_captured_frame);
         if (!m_oep ||
             m_image_format.width != m_captured_frame.width ||
             m_image_format.height != m_captured_frame.height) {
             create_ep(m_captured_frame.width, m_captured_frame.height);
         }
-#ifdef DEBUG
-        std::chrono::steady_clock::time_point time_begin = std::chrono::steady_clock::now();
-#endif
         auto pixels = m_captured_frame.pixels.data;
         int32_t y_size = m_captured_frame.width * m_captured_frame.height;
         auto yuv_image = bnb::full_image_t(
@@ -30,7 +33,7 @@ namespace agora::extension {
         );
         auto image_ptr = std::make_shared<bnb::full_image_t>(std::move(yuv_image));
         auto pb = m_oep->process_image(image_ptr, m_target_orient);
-        auto convert_callback = [this, pixels, pb, in, time_begin](std::optional<bnb::full_image_t> image) {
+        auto convert_callback = [this, pixels, pb, in](std::optional<bnb::full_image_t> image) {
           if (image.has_value()) {
             auto &rgba_image = image->get_data<bnb::bpc8_image_t>();
             int32_t y_size = m_captured_frame.width * m_captured_frame.height;
@@ -39,13 +42,6 @@ namespace agora::extension {
                                pixels + y_size, m_captured_frame.width,
                                m_captured_frame.width, m_captured_frame.height);
             m_control->deliverVideoFrame(in);
-            #ifdef DEBUG
-            std::chrono::steady_clock::time_point time_end = std::chrono::steady_clock::now();
-            auto time_result = std::chrono::duration_cast<std::chrono::milliseconds>(
-                                                                                     time_end - time_begin).count();
-            send_event("processFrame",
-                       std::string("Processing time ms: ").append(std::to_string(time_result)).c_str());
-            #endif
         }
         pb->unlock();
       };
@@ -64,6 +60,33 @@ namespace agora::extension {
             m_oep->unload_effect();
             return;
         }
+        if (key == "set_effects_path") {
+            m_path_to_effects = parameter;
+            initialize();
+            return;
+        }
+        if (key == "set_token") {
+            m_client_token = parameter;
+            initialize();
+            return;
+        }
+    }
+
+    void BanubaVideoProcessor::initialize() {
+        if (m_client_token.empty() || m_path_to_effects.empty())
+            return;
+      
+        NSString *effectPlayerBundlePath = [[NSBundle bundleForClass:[BNBUtilityManager self]] bundlePath];
+        NSString *pathToEffects = @(m_path_to_effects.c_str());
+        NSArray *paths = @[
+          [effectPlayerBundlePath stringByAppendingString:@"/bnb-resources"],
+          [effectPlayerBundlePath stringByAppendingString:@"/bnb-res-ios"],
+          pathToEffects
+        ];
+        NSString *clientToken = @(m_client_token.c_str());
+        [BNBUtilityManager initialize:paths clientToken:clientToken];
+      
+        m_is_initialized = true;
     }
 
     void BanubaVideoProcessor::create_ep(int32_t width, int32_t height) {

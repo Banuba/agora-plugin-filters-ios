@@ -35,7 +35,12 @@ namespace agora::extension {
     private:
         void send_event(const char *key, const char *data);
 
+        void initialize();
         void create_ep(int32_t width, int32_t height);
+      
+        std::string m_path_to_effects;
+        std::string m_client_token;
+        bool m_is_initialized = false;
 
         agora::agora_refptr<rtc::IExtensionVideoFilter::Control> m_control;
         ioep_sptr m_oep;
