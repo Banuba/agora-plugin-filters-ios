@@ -7,7 +7,6 @@
 
 import UIKit
 import AgoraRtcKit
-import BanubaEffectPlayer
 import BanubaFiltersAgoraExtension
 
 private struct Defaults {

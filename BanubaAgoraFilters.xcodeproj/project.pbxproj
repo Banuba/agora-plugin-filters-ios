@@ -7,53 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6337EB4226D79985007AC2E2 /* BanubaFiltersAgoraExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6337EB4126D79985007AC2E2 /* BanubaFiltersAgoraExtension.framework */; };
-		6337EB4326D79985007AC2E2 /* BanubaFiltersAgoraExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6337EB4126D79985007AC2E2 /* BanubaFiltersAgoraExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6337EB4E26D8BF84007AC2E2 /* BanubaEffectSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6337EB4B26D8BF84007AC2E2 /* BanubaEffectSelectorView.swift */; };
-		6337EB4F26D8BF84007AC2E2 /* BanubaEffectSelectorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6337EB4C26D8BF84007AC2E2 /* BanubaEffectSelectorView.xib */; };
-		6374828B26D62B6600505F33 /* Agoraffmpeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6374828926D62B6600505F33 /* Agoraffmpeg.framework */; };
-		6374828C26D62B6600505F33 /* Agoraffmpeg.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6374828926D62B6600505F33 /* Agoraffmpeg.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		637C19B826A6EEAB000C647F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637C19B726A6EEAB000C647F /* AppDelegate.swift */; };
-		637C19BC26A6EEAB000C647F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637C19BB26A6EEAB000C647F /* ViewController.swift */; };
-		637C19C126A6EEAE000C647F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 637C19C026A6EEAE000C647F /* Assets.xcassets */; };
-		637C19C426A6EEAE000C647F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637C19C226A6EEAE000C647F /* LaunchScreen.storyboard */; };
-		637C19CE26A6EF5C000C647F /* AgoraRtcKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637C19CC26A6EF5C000C647F /* AgoraRtcKit.framework */; };
-		637C19CF26A6EF5C000C647F /* AgoraRtcKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 637C19CC26A6EF5C000C647F /* AgoraRtcKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		637C19E326A6F0CD000C647F /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637C19E226A6F0CD000C647F /* Token.swift */; };
-		637C19EC26A6FC2C000C647F /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 637C19EB26A6FC2C000C647F /* effects */; };
-		637C1A1626A83307000C647F /* BanubaAgoraFilters-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 637C1A1126A8306E000C647F /* BanubaAgoraFilters-Bridging-Header.h */; };
-		63CE256426D38E8C002A587C /* BanubaEffectPlayer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637C19CD26A6EF5C000C647F /* BanubaEffectPlayer.xcframework */; };
-		63CE256526D38E8C002A587C /* BanubaEffectPlayer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 637C19CD26A6EF5C000C647F /* BanubaEffectPlayer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		63EAAC6D26D8C6FC00A83AD4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63EAAC6C26D8C6FC00A83AD4 /* ViewController.xib */; };
-		63EAAC8726D8CB6E00A83AD4 /* LICENCE.md in Resources */ = {isa = PBXBuildFile; fileRef = 63EAAC8126D8CB6E00A83AD4 /* LICENCE.md */; };
-		63EAAC8826D8CB6E00A83AD4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 63EAAC8226D8CB6E00A83AD4 /* README.md */; };
-		63EAAC8926D8CB6E00A83AD4 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAC8426D8CB6E00A83AD4 /* iCarousel.m */; };
-		63EAAC8A26D8CB6E00A83AD4 /* iCarousel.h in Headers */ = {isa = PBXBuildFile; fileRef = 63EAAC8526D8CB6E00A83AD4 /* iCarousel.h */; };
-		63EAAE3026D8ED4000A83AD4 /* EffectsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAE2F26D8ED4000A83AD4 /* EffectsService.swift */; };
-		63EAAE7D26DE5B3500A83AD4 /* BanubaEffectsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAE7C26DE5B3500A83AD4 /* BanubaEffectsManager.swift */; };
+		63EAAE9B26DE824D00A83AD4 /* BanubaEffectPlayer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAAE9726DE824D00A83AD4 /* BanubaEffectPlayer.xcframework */; };
+		63EAAE9C26DE824D00A83AD4 /* BanubaEffectPlayer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAAE9726DE824D00A83AD4 /* BanubaEffectPlayer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63EAAE9D26DE824D00A83AD4 /* Agoraffmpeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAAE9826DE824D00A83AD4 /* Agoraffmpeg.framework */; };
+		63EAAE9E26DE824D00A83AD4 /* Agoraffmpeg.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAAE9826DE824D00A83AD4 /* Agoraffmpeg.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63EAAE9F26DE824D00A83AD4 /* AgoraRtcKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAAE9926DE824D00A83AD4 /* AgoraRtcKit.framework */; };
+		63EAAEA026DE824D00A83AD4 /* AgoraRtcKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAAE9926DE824D00A83AD4 /* AgoraRtcKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63EAAEA126DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAAE9A26DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework */; };
+		63EAAEA226DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAAE9A26DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63EAB02D26DE830A00A83AD4 /* BanubaEffectSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAEA626DE830A00A83AD4 /* BanubaEffectSelectorView.swift */; };
+		63EAB02E26DE830A00A83AD4 /* LICENCE.md in Resources */ = {isa = PBXBuildFile; fileRef = 63EAAEA826DE830A00A83AD4 /* LICENCE.md */; };
+		63EAB02F26DE830A00A83AD4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 63EAAEA926DE830A00A83AD4 /* README.md */; };
+		63EAB03026DE830A00A83AD4 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAEAB26DE830A00A83AD4 /* iCarousel.m */; };
+		63EAB03126DE830A00A83AD4 /* iCarousel.h in Headers */ = {isa = PBXBuildFile; fileRef = 63EAAEAC26DE830A00A83AD4 /* iCarousel.h */; };
+		63EAB03226DE830A00A83AD4 /* BanubaEffectSelectorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63EAAEAD26DE830A00A83AD4 /* BanubaEffectSelectorView.xib */; };
+		63EAB03326DE830A00A83AD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAEAE26DE830A00A83AD4 /* ViewController.swift */; };
+		63EAB03426DE830A00A83AD4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63EAAEAF26DE830A00A83AD4 /* ViewController.xib */; };
+		63EAB03526DE830A00A83AD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63EAAEB026DE830A00A83AD4 /* Assets.xcassets */; };
+		63EAB03626DE830A00A83AD4 /* EffectsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAEB126DE830A00A83AD4 /* EffectsService.swift */; };
+		63EAB03726DE830A00A83AD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EAAEB226DE830A00A83AD4 /* LaunchScreen.storyboard */; };
+		63EAB03826DE830A00A83AD4 /* BanubaEffectsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAEB426DE830A00A83AD4 /* BanubaEffectsManager.swift */; };
+		63EAB03926DE830A00A83AD4 /* BanubaAgoraFilters-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 63EAAEB526DE830A00A83AD4 /* BanubaAgoraFilters-Bridging-Header.h */; };
+		63EAB03A26DE830A00A83AD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAEB626DE830A00A83AD4 /* AppDelegate.swift */; };
+		63EAB1A326DE830B00A83AD4 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAB02B26DE830A00A83AD4 /* Token.swift */; };
+		63EAB1A626DE833100A83AD4 /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 63EAB1A526DE833100A83AD4 /* effects */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		6337EB4726D79C55007AC2E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 63CE254926D38BEE002A587C /* BanubaFiltersAgoraExtension.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 63CE252F26D38B8A002A587C;
-			remoteInfo = BanubaFiltersAgoraExtension;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		637C19D226A6EF5C000C647F /* Embed Frameworks */ = {
+		63EAAEA326DE824D00A83AD4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6374828C26D62B6600505F33 /* Agoraffmpeg.framework in Embed Frameworks */,
-				63CE256526D38E8C002A587C /* BanubaEffectPlayer.xcframework in Embed Frameworks */,
-				6337EB4326D79985007AC2E2 /* BanubaFiltersAgoraExtension.framework in Embed Frameworks */,
-				637C19CF26A6EF5C000C647F /* AgoraRtcKit.framework in Embed Frameworks */,
+				63EAAEA026DE824D00A83AD4 /* AgoraRtcKit.framework in Embed Frameworks */,
+				63EAAE9E26DE824D00A83AD4 /* Agoraffmpeg.framework in Embed Frameworks */,
+				63EAAEA226DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework in Embed Frameworks */,
+				63EAAE9C26DE824D00A83AD4 /* BanubaEffectPlayer.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,29 +51,28 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6337EB4126D79985007AC2E2 /* BanubaFiltersAgoraExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BanubaFiltersAgoraExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6337EB4B26D8BF84007AC2E2 /* BanubaEffectSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BanubaEffectSelectorView.swift; sourceTree = "<group>"; };
-		6337EB4C26D8BF84007AC2E2 /* BanubaEffectSelectorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BanubaEffectSelectorView.xib; sourceTree = "<group>"; };
-		6374828926D62B6600505F33 /* Agoraffmpeg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Agoraffmpeg.framework; path = Frameworks/Agoraffmpeg.framework; sourceTree = "<group>"; };
 		637C19B426A6EEAB000C647F /* BanubaAgoraFilters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BanubaAgoraFilters.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		637C19B726A6EEAB000C647F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		637C19BB26A6EEAB000C647F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		637C19C026A6EEAE000C647F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		637C19C326A6EEAE000C647F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		637C19C526A6EEAE000C647F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		637C19CC26A6EF5C000C647F /* AgoraRtcKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AgoraRtcKit.framework; path = Frameworks/AgoraRtcKit.framework; sourceTree = "<group>"; };
-		637C19CD26A6EF5C000C647F /* BanubaEffectPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BanubaEffectPlayer.xcframework; path = Frameworks/BanubaEffectPlayer.xcframework; sourceTree = "<group>"; };
-		637C19E226A6F0CD000C647F /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		637C19EB26A6FC2C000C647F /* effects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = effects; sourceTree = "<group>"; };
-		637C1A1126A8306E000C647F /* BanubaAgoraFilters-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BanubaAgoraFilters-Bridging-Header.h"; sourceTree = "<group>"; };
-		63CE254926D38BEE002A587C /* BanubaFiltersAgoraExtension.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BanubaFiltersAgoraExtension.xcodeproj; path = BanubaFilters/BanubaFiltersAgoraExtension.xcodeproj; sourceTree = "<group>"; };
-		63EAAC6C26D8C6FC00A83AD4 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		63EAAC8126D8CB6E00A83AD4 /* LICENCE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENCE.md; sourceTree = "<group>"; };
-		63EAAC8226D8CB6E00A83AD4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		63EAAC8426D8CB6E00A83AD4 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
-		63EAAC8526D8CB6E00A83AD4 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
-		63EAAE2F26D8ED4000A83AD4 /* EffectsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectsService.swift; sourceTree = "<group>"; };
-		63EAAE7C26DE5B3500A83AD4 /* BanubaEffectsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanubaEffectsManager.swift; sourceTree = "<group>"; };
+		63EAAE9726DE824D00A83AD4 /* BanubaEffectPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BanubaEffectPlayer.xcframework; path = Frameworks/BanubaEffectPlayer.xcframework; sourceTree = "<group>"; };
+		63EAAE9826DE824D00A83AD4 /* Agoraffmpeg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Agoraffmpeg.framework; path = Frameworks/Agoraffmpeg.framework; sourceTree = "<group>"; };
+		63EAAE9926DE824D00A83AD4 /* AgoraRtcKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AgoraRtcKit.framework; path = Frameworks/AgoraRtcKit.framework; sourceTree = "<group>"; };
+		63EAAE9A26DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BanubaFiltersAgoraExtension.framework; path = Frameworks/BanubaFiltersAgoraExtension.framework; sourceTree = "<group>"; };
+		63EAAEA626DE830A00A83AD4 /* BanubaEffectSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BanubaEffectSelectorView.swift; sourceTree = "<group>"; };
+		63EAAEA826DE830A00A83AD4 /* LICENCE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENCE.md; sourceTree = "<group>"; };
+		63EAAEA926DE830A00A83AD4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		63EAAEAB26DE830A00A83AD4 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		63EAAEAC26DE830A00A83AD4 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		63EAAEAD26DE830A00A83AD4 /* BanubaEffectSelectorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BanubaEffectSelectorView.xib; sourceTree = "<group>"; };
+		63EAAEAE26DE830A00A83AD4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		63EAAEAF26DE830A00A83AD4 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		63EAAEB026DE830A00A83AD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63EAAEB126DE830A00A83AD4 /* EffectsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectsService.swift; sourceTree = "<group>"; };
+		63EAAEB326DE830A00A83AD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		63EAAEB426DE830A00A83AD4 /* BanubaEffectsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BanubaEffectsManager.swift; sourceTree = "<group>"; };
+		63EAAEB526DE830A00A83AD4 /* BanubaAgoraFilters-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BanubaAgoraFilters-Bridging-Header.h"; sourceTree = "<group>"; };
+		63EAAEB626DE830A00A83AD4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		63EAB02B26DE830A00A83AD4 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		63EAB02C26DE830A00A83AD4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63EAB1A526DE833100A83AD4 /* effects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = effects; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,38 +80,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6374828B26D62B6600505F33 /* Agoraffmpeg.framework in Frameworks */,
-				63CE256426D38E8C002A587C /* BanubaEffectPlayer.xcframework in Frameworks */,
-				6337EB4226D79985007AC2E2 /* BanubaFiltersAgoraExtension.framework in Frameworks */,
-				637C19CE26A6EF5C000C647F /* AgoraRtcKit.framework in Frameworks */,
+				63EAAE9F26DE824D00A83AD4 /* AgoraRtcKit.framework in Frameworks */,
+				63EAAE9D26DE824D00A83AD4 /* Agoraffmpeg.framework in Frameworks */,
+				63EAAEA126DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework in Frameworks */,
+				63EAAE9B26DE824D00A83AD4 /* BanubaEffectPlayer.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6337EB4426D79C55007AC2E2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6337EB4826D79C55007AC2E2 /* BanubaFiltersAgoraExtension.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6337EB4A26D8BF84007AC2E2 /* BanubaEffectSelectorView */ = {
-			isa = PBXGroup;
-			children = (
-				63EAAC8026D8CB6E00A83AD4 /* iCarousel */,
-				6337EB4B26D8BF84007AC2E2 /* BanubaEffectSelectorView.swift */,
-				6337EB4C26D8BF84007AC2E2 /* BanubaEffectSelectorView.xib */,
-			);
-			path = BanubaEffectSelectorView;
-			sourceTree = "<group>";
-		};
 		637C19AB26A6EEAB000C647F = {
 			isa = PBXGroup;
 			children = (
-				637C19B626A6EEAB000C647F /* BanubaAgoraFilters */,
+				63EAAEA426DE830A00A83AD4 /* BanubaAgoraFilters */,
 				637C19B526A6EEAB000C647F /* Products */,
 				637C19CB26A6EF5C000C647F /* Frameworks */,
 			);
@@ -136,52 +107,61 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		637C19B626A6EEAB000C647F /* BanubaAgoraFilters */ = {
-			isa = PBXGroup;
-			children = (
-				637C19B726A6EEAB000C647F /* AppDelegate.swift */,
-				6337EB4A26D8BF84007AC2E2 /* BanubaEffectSelectorView */,
-				637C19EB26A6FC2C000C647F /* effects */,
-				637C19E226A6F0CD000C647F /* Token.swift */,
-				637C19BB26A6EEAB000C647F /* ViewController.swift */,
-				63EAAE2F26D8ED4000A83AD4 /* EffectsService.swift */,
-				63EAAE7C26DE5B3500A83AD4 /* BanubaEffectsManager.swift */,
-				63EAAC6C26D8C6FC00A83AD4 /* ViewController.xib */,
-				637C19C026A6EEAE000C647F /* Assets.xcassets */,
-				637C19C226A6EEAE000C647F /* LaunchScreen.storyboard */,
-				637C19C526A6EEAE000C647F /* Info.plist */,
-				637C1A1126A8306E000C647F /* BanubaAgoraFilters-Bridging-Header.h */,
-			);
-			path = BanubaAgoraFilters;
-			sourceTree = "<group>";
-		};
 		637C19CB26A6EF5C000C647F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6337EB4126D79985007AC2E2 /* BanubaFiltersAgoraExtension.framework */,
-				6374828926D62B6600505F33 /* Agoraffmpeg.framework */,
-				63CE254926D38BEE002A587C /* BanubaFiltersAgoraExtension.xcodeproj */,
-				637C19CC26A6EF5C000C647F /* AgoraRtcKit.framework */,
-				637C19CD26A6EF5C000C647F /* BanubaEffectPlayer.xcframework */,
+				63EAAE9826DE824D00A83AD4 /* Agoraffmpeg.framework */,
+				63EAAE9926DE824D00A83AD4 /* AgoraRtcKit.framework */,
+				63EAAE9726DE824D00A83AD4 /* BanubaEffectPlayer.xcframework */,
+				63EAAE9A26DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		63EAAC8026D8CB6E00A83AD4 /* iCarousel */ = {
+		63EAAEA426DE830A00A83AD4 /* BanubaAgoraFilters */ = {
 			isa = PBXGroup;
 			children = (
-				63EAAC8126D8CB6E00A83AD4 /* LICENCE.md */,
-				63EAAC8226D8CB6E00A83AD4 /* README.md */,
-				63EAAC8326D8CB6E00A83AD4 /* iCarousel */,
+				63EAAEA526DE830A00A83AD4 /* BanubaEffectSelectorView */,
+				63EAAEAE26DE830A00A83AD4 /* ViewController.swift */,
+				63EAAEAF26DE830A00A83AD4 /* ViewController.xib */,
+				63EAAEB026DE830A00A83AD4 /* Assets.xcassets */,
+				63EAB1A526DE833100A83AD4 /* effects */,
+				63EAAEB126DE830A00A83AD4 /* EffectsService.swift */,
+				63EAAEB226DE830A00A83AD4 /* LaunchScreen.storyboard */,
+				63EAAEB426DE830A00A83AD4 /* BanubaEffectsManager.swift */,
+				63EAAEB526DE830A00A83AD4 /* BanubaAgoraFilters-Bridging-Header.h */,
+				63EAAEB626DE830A00A83AD4 /* AppDelegate.swift */,
+				63EAB02B26DE830A00A83AD4 /* Token.swift */,
+				63EAB02C26DE830A00A83AD4 /* Info.plist */,
+			);
+			path = BanubaAgoraFilters;
+			sourceTree = "<group>";
+		};
+		63EAAEA526DE830A00A83AD4 /* BanubaEffectSelectorView */ = {
+			isa = PBXGroup;
+			children = (
+				63EAAEA626DE830A00A83AD4 /* BanubaEffectSelectorView.swift */,
+				63EAAEA726DE830A00A83AD4 /* iCarousel */,
+				63EAAEAD26DE830A00A83AD4 /* BanubaEffectSelectorView.xib */,
+			);
+			path = BanubaEffectSelectorView;
+			sourceTree = "<group>";
+		};
+		63EAAEA726DE830A00A83AD4 /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				63EAAEA826DE830A00A83AD4 /* LICENCE.md */,
+				63EAAEA926DE830A00A83AD4 /* README.md */,
+				63EAAEAA26DE830A00A83AD4 /* iCarousel */,
 			);
 			path = iCarousel;
 			sourceTree = "<group>";
 		};
-		63EAAC8326D8CB6E00A83AD4 /* iCarousel */ = {
+		63EAAEAA26DE830A00A83AD4 /* iCarousel */ = {
 			isa = PBXGroup;
 			children = (
-				63EAAC8426D8CB6E00A83AD4 /* iCarousel.m */,
-				63EAAC8526D8CB6E00A83AD4 /* iCarousel.h */,
+				63EAAEAB26DE830A00A83AD4 /* iCarousel.m */,
+				63EAAEAC26DE830A00A83AD4 /* iCarousel.h */,
 			);
 			path = iCarousel;
 			sourceTree = "<group>";
@@ -193,8 +173,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63EAAC8A26D8CB6E00A83AD4 /* iCarousel.h in Headers */,
-				637C1A1626A83307000C647F /* BanubaAgoraFilters-Bridging-Header.h in Headers */,
+				63EAB03126DE830A00A83AD4 /* iCarousel.h in Headers */,
+				63EAB03926DE830A00A83AD4 /* BanubaAgoraFilters-Bridging-Header.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +189,7 @@
 				637C19B026A6EEAB000C647F /* Sources */,
 				637C19B126A6EEAB000C647F /* Frameworks */,
 				637C19B226A6EEAB000C647F /* Resources */,
-				637C19D226A6EF5C000C647F /* Embed Frameworks */,
+				63EAAEA326DE824D00A83AD4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,12 +226,6 @@
 			mainGroup = 637C19AB26A6EEAB000C647F;
 			productRefGroup = 637C19B526A6EEAB000C647F /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 6337EB4426D79C55007AC2E2 /* Products */;
-					ProjectRef = 63CE254926D38BEE002A587C /* BanubaFiltersAgoraExtension.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				637C19B326A6EEAB000C647F /* BanubaAgoraFilters */,
@@ -259,28 +233,18 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		6337EB4826D79C55007AC2E2 /* BanubaFiltersAgoraExtension.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = BanubaFiltersAgoraExtension.framework;
-			remoteRef = 6337EB4726D79C55007AC2E2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		637C19B226A6EEAB000C647F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				637C19C426A6EEAE000C647F /* LaunchScreen.storyboard in Resources */,
-				637C19C126A6EEAE000C647F /* Assets.xcassets in Resources */,
-				63EAAC8726D8CB6E00A83AD4 /* LICENCE.md in Resources */,
-				63EAAC8826D8CB6E00A83AD4 /* README.md in Resources */,
-				637C19EC26A6FC2C000C647F /* effects in Resources */,
-				63EAAC6D26D8C6FC00A83AD4 /* ViewController.xib in Resources */,
-				6337EB4F26D8BF84007AC2E2 /* BanubaEffectSelectorView.xib in Resources */,
+				63EAB03226DE830A00A83AD4 /* BanubaEffectSelectorView.xib in Resources */,
+				63EAB02F26DE830A00A83AD4 /* README.md in Resources */,
+				63EAB03426DE830A00A83AD4 /* ViewController.xib in Resources */,
+				63EAB03726DE830A00A83AD4 /* LaunchScreen.storyboard in Resources */,
+				63EAB02E26DE830A00A83AD4 /* LICENCE.md in Resources */,
+				63EAB03526DE830A00A83AD4 /* Assets.xcassets in Resources */,
+				63EAB1A626DE833100A83AD4 /* effects in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,23 +255,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				637C19E326A6F0CD000C647F /* Token.swift in Sources */,
-				637C19BC26A6EEAB000C647F /* ViewController.swift in Sources */,
-				63EAAC8926D8CB6E00A83AD4 /* iCarousel.m in Sources */,
-				63EAAE7D26DE5B3500A83AD4 /* BanubaEffectsManager.swift in Sources */,
-				637C19B826A6EEAB000C647F /* AppDelegate.swift in Sources */,
-				63EAAE3026D8ED4000A83AD4 /* EffectsService.swift in Sources */,
-				6337EB4E26D8BF84007AC2E2 /* BanubaEffectSelectorView.swift in Sources */,
+				63EAB03A26DE830A00A83AD4 /* AppDelegate.swift in Sources */,
+				63EAB1A326DE830B00A83AD4 /* Token.swift in Sources */,
+				63EAB03626DE830A00A83AD4 /* EffectsService.swift in Sources */,
+				63EAB03326DE830A00A83AD4 /* ViewController.swift in Sources */,
+				63EAB02D26DE830A00A83AD4 /* BanubaEffectSelectorView.swift in Sources */,
+				63EAB03026DE830A00A83AD4 /* iCarousel.m in Sources */,
+				63EAB03826DE830A00A83AD4 /* BanubaEffectsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		637C19C226A6EEAE000C647F /* LaunchScreen.storyboard */ = {
+		63EAAEB226DE830A00A83AD4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				637C19C326A6EEAE000C647F /* Base */,
+				63EAAEB326DE830A00A83AD4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -438,7 +402,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8W9QCBMQCU;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -468,7 +432,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8W9QCBMQCU;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (

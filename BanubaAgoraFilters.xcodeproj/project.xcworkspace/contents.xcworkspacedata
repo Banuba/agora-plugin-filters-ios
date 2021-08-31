@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/andrei.sak/Developer/BanubaAgoraFilters/BanubaAgoraFilters/BanubaAgoraFilters.xcodeproj">
    </FileRef>
 </Workspace>
