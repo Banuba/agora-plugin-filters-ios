@@ -71,7 +71,7 @@ agoraKit?.setExtensionPropertyWithVendor(
     BanubaPluginKeys.vendorName,
     extension: BanubaPluginKeys.extensionName,
     key: BanubaPluginKeys.loadEffect,
-    value: effectName
+    value: "put_effect_name_here"
 )
   
 agoraKit?.setExtensionPropertyWithVendor(
