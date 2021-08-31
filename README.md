@@ -81,3 +81,49 @@ agoraKit?.setExtensionPropertyWithVendor(
     value: " "
 )
 ```
+
+
+# Effects managing
+
+To retrieve effects list use the following code:
+
+```swift
+let effectsPath = BanubaEffectsManager.effectsURL.path
+let effectsService = EffectsService(effectsPath: effectsPath)
+let effectViewModels = effectsService
+    .getEffectNames()
+    .sorted()
+    .compactMap { effectName in
+        guard let effectPreviewImage = effectsService.getEffectPreview(effectName) else {
+          return nil
+        }
+
+        let effectViewModel = EffectViewModel(image: effectPreviewImage, effectName: effectName)
+        return effectViewModel
+      }
+```
+
+`EffectViewModel` has the next properties:
+```swift
+class EffectViewModel {
+    let image: UIImage
+    let effectName: String?
+    var cancelEffectModel: Bool {
+        return effectName == nil
+    }
+}
+```
+
+To modify effects, add or remove effect folder in `BanubaAgoraFilters/effects` directory.
+By default sample contains the following effects:
+1. ElvisUnleashed
+2. EnglandEightPieceCap
+3. FashionHistory1940_male
+4. MorphingHatBow
+5. MorphTeenegers
+6. Nerd
+7. Popeye
+8. SnapBubblesGlasses
+9. Space
+10. StarGlow_low
+11. TitanicJack
