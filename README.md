@@ -13,7 +13,7 @@ To receive full commercial licence from Banuba - please fill in our form on [for
 let banubaClientToken = “place_your_banuba_token_here”
 ```
 4. Visit agora.io to sign up and get token, app and channel ID.
-5. Put received `Agoraffmpeg.framework` and `AgoraRtcKit.framework` to “Frameworks, Libraries, and Embedded Content” section in your project.
+5. Put received `Agoraffmpeg.framework` and `AgoraRtcKit.framework` to “Frameworks, Libraries, and Embedded Content” section in your project (supported version is 3.6.201).
 
 <img src="screenshots/screenshot_1.png" alt="Screenshot" width="100%" height="auto">&nbsp;
 
