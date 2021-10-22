@@ -9,7 +9,7 @@ Examples for [Banuba SDK on iOS] and [Agora.io](https://www.agora.io/en/) SDK in
 To receive full commercial licence from Banuba - please fill in our form on [form on banuba.com](https://www.banuba.com/face-filters-sdk) website, or contact us via [info@banuba.com](mailto:info@banuba.com).
 2. Open BanubaAgoraFilters.xcodeproj file in Xcode and delete all existing staff from «General->Frameworks, Libraries, and Embedded Content» and from Frameworks folder in the BanubaAgoraFilters project structure (the left part of Xcode window).
 
-<img src="screenshots/screenshot_1.png" alt="Screenshot" width="100%" height="auto">&nbsp;
+<img src="screenshots/screenshot_1.png" alt="Screenshot1" width="100%" height="auto">&nbsp;
 
 3. Put received `BanubaEffectPlayer.xcframework` adn `BanubaFiltersAgoraExtension.framework` to “Frameworks, Libraries, and Embedded Content” section in your project.
 4. Copy and Paste your Banuba client token into appropriate section of `/BanubaAgoraFilters/Token.swift` with “ ” symbols. For example: 
@@ -19,7 +19,7 @@ let banubaClientToken = “place_your_banuba_token_here”
 5. Visit agora.io to sign up and get token, app and channel ID.
 6. Download Agora Video SDK from Agora site (supported version is 3.6.201 or higher). Put received `Agoraffmpeg.framework` and `AgoraRtcKit.framework` to “Frameworks, Libraries, and Embedded Content” section in your project.
 
-<img src="screenshots/screenshot_2.png" alt="Screenshot" width="100%" height="auto">&nbsp;
+<img src="screenshots/screenshot_2.png" alt="Screenshot2" width="100%" height="auto">&nbsp;
 
 7. Copy and Paste your agora token, app and chanel ID into appropriate section of `/BanubaAgoraFilters/Token.swift` with “ ” symbols. For example: 
 ``` swift
