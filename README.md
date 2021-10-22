@@ -7,23 +7,27 @@ Examples for [Banuba SDK on iOS] and [Agora.io](https://www.agora.io/en/) SDK in
 (b)[BanubaFiltersAgoraExtension for iOS](https://f.hubspotusercontent10.net/hubfs/4992313/Agora_Banuba_Extension/AgoraBanubaExtension(iOS).zip),
 (c) [Banuba trial client token](https://docs.agora.io/en/extension_customer/Banuba_downloads).
 To receive full commercial licence from Banuba - please fill in our form on [form on banuba.com](https://www.banuba.com/face-filters-sdk) website, or contact us via [info@banuba.com](mailto:info@banuba.com).
-2. Put received `BanubaEffectPlayer.xcframework` adn `BanubaFiltersAgoraExtension.framework` to “Frameworks, Libraries, and Embedded Content” section in your project.
-3. Copy and Paste your Banuba client token into appropriate section of `/BanubaAgoraFilters/Token.swift` with “ ” symbols. For example: 
-``` swift
-let banubaClientToken = “place_your_banuba_token_here”
-```
-4. Visit agora.io to sign up and get token, app and channel ID.
-5. Put received `Agoraffmpeg.framework` and `AgoraRtcKit.framework` to “Frameworks, Libraries, and Embedded Content” section in your project (supported version is 3.6.201).
+2. Open BanubaAgoraFilters.xcodeproj file in Xcode and delete all existing staff from «General->Frameworks, Libraries, and Embedded Content» and from Frameworks folder in the BanubaAgoraFilters project structure (the left part of Xcode window).
 
 <img src="screenshots/screenshot_1.png" alt="Screenshot" width="100%" height="auto">&nbsp;
 
-6. Copy and Paste your agora token, app and chanel ID into appropriate section of `/BanubaAgoraFilters/Token.swift` with “ ” symbols. For example: 
+3. Put received `BanubaEffectPlayer.xcframework` adn `BanubaFiltersAgoraExtension.framework` to “Frameworks, Libraries, and Embedded Content” section in your project.
+4. Copy and Paste your Banuba client token into appropriate section of `/BanubaAgoraFilters/Token.swift` with “ ” symbols. For example: 
+``` swift
+let banubaClientToken = “place_your_banuba_token_here”
+```
+5. Visit agora.io to sign up and get token, app and channel ID.
+6. Download Agora Video SDK from Agora site (supported version is 3.6.201 or higher). Put received `Agoraffmpeg.framework` and `AgoraRtcKit.framework` to “Frameworks, Libraries, and Embedded Content” section in your project.
+
+<img src="screenshots/screenshot_2.png" alt="Screenshot" width="100%" height="auto">&nbsp;
+
+7. Copy and Paste your agora token, app and chanel ID into appropriate section of `/BanubaAgoraFilters/Token.swift` with “ ” symbols. For example: 
 ``` swift
 internal let agoraAppID = "place_your_agora_app_id_here"
 internal let agoraClientToken = "place_your_agora_client_token_here"
 internal let agoraChannelId = "place_your_agora_channel_id_here"
 ```
-7. Open the BanubaAgoraFilters.xcodporj project in Xcode and run the `BanubaAgoraFilters` target.
+8. Open the BanubaAgoraFilters.xcodporj project in Xcode and run the `BanubaAgoraFilters` target.
 
 
 # How to use `BanubaFiltersAgoraExtension`
