@@ -8,9 +8,9 @@
 import Foundation
 
 // MARK: - Agora Tokens
-internal let agoraAppID = "place_your_agora_app_id_here"
-internal let agoraClientToken = "place_your_agora_client_token_here"
-internal let agoraChannelId = "place_your_agora_channel_id_here"
+internal let agoraAppID: String = <#Agora App ID#>
+internal let agoraClientToken: String? = <#Agora Token#>
+internal let agoraChannelId: String = <#Agora Channel ID#>
 
 // MARK: - BanubaToken
-internal let banubaClientToken = "place_your_banuba_token_here"
+internal let banubaClientToken = <#Banuba Token#>
