@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AgoraRtcKit",
+        "repositoryURL": "https://github.com/agorabuilder/AgoraRtcEngine_iOS_Preview.git",
+        "state": {
+          "branch": null,
+          "revision": "40bc7895687fae1beddde528796a3024d072fa8e",
+          "version": "4.0.0-preview.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

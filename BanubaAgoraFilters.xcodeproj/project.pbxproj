@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		63EAAE9B26DE824D00A83AD4 /* BanubaEffectPlayer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAAE9726DE824D00A83AD4 /* BanubaEffectPlayer.xcframework */; };
 		63EAAE9C26DE824D00A83AD4 /* BanubaEffectPlayer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAAE9726DE824D00A83AD4 /* BanubaEffectPlayer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		63EAAE9D26DE824D00A83AD4 /* Agoraffmpeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAAE9826DE824D00A83AD4 /* Agoraffmpeg.framework */; };
-		63EAAE9E26DE824D00A83AD4 /* Agoraffmpeg.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAAE9826DE824D00A83AD4 /* Agoraffmpeg.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		63EAAE9F26DE824D00A83AD4 /* AgoraRtcKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAAE9926DE824D00A83AD4 /* AgoraRtcKit.framework */; };
-		63EAAEA026DE824D00A83AD4 /* AgoraRtcKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAAE9926DE824D00A83AD4 /* AgoraRtcKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63EAAEA126DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAAE9A26DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework */; };
 		63EAAEA226DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAAE9A26DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63EAB02D26DE830A00A83AD4 /* BanubaEffectSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAEA626DE830A00A83AD4 /* BanubaEffectSelectorView.swift */; };
@@ -31,6 +27,7 @@
 		63EAB03A26DE830A00A83AD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAEB626DE830A00A83AD4 /* AppDelegate.swift */; };
 		63EAB1A326DE830B00A83AD4 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAB02B26DE830A00A83AD4 /* Token.swift */; };
 		63EAB1A626DE833100A83AD4 /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 63EAB1A526DE833100A83AD4 /* effects */; };
+		F355FC1B2733E6EB0056A8D9 /* AgoraRtcKit in Frameworks */ = {isa = PBXBuildFile; productRef = F355FC1A2733E6EB0056A8D9 /* AgoraRtcKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,8 +37,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				63EAAEA026DE824D00A83AD4 /* AgoraRtcKit.framework in Embed Frameworks */,
-				63EAAE9E26DE824D00A83AD4 /* Agoraffmpeg.framework in Embed Frameworks */,
 				63EAAEA226DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework in Embed Frameworks */,
 				63EAAE9C26DE824D00A83AD4 /* BanubaEffectPlayer.xcframework in Embed Frameworks */,
 			);
@@ -53,8 +48,6 @@
 /* Begin PBXFileReference section */
 		637C19B426A6EEAB000C647F /* BanubaAgoraFilters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BanubaAgoraFilters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EAAE9726DE824D00A83AD4 /* BanubaEffectPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BanubaEffectPlayer.xcframework; path = Frameworks/BanubaEffectPlayer.xcframework; sourceTree = "<group>"; };
-		63EAAE9826DE824D00A83AD4 /* Agoraffmpeg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Agoraffmpeg.framework; path = Frameworks/Agoraffmpeg.framework; sourceTree = "<group>"; };
-		63EAAE9926DE824D00A83AD4 /* AgoraRtcKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AgoraRtcKit.framework; path = Frameworks/AgoraRtcKit.framework; sourceTree = "<group>"; };
 		63EAAE9A26DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BanubaFiltersAgoraExtension.framework; path = Frameworks/BanubaFiltersAgoraExtension.framework; sourceTree = "<group>"; };
 		63EAAEA626DE830A00A83AD4 /* BanubaEffectSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BanubaEffectSelectorView.swift; sourceTree = "<group>"; };
 		63EAAEA826DE830A00A83AD4 /* LICENCE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENCE.md; sourceTree = "<group>"; };
@@ -80,8 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63EAAE9F26DE824D00A83AD4 /* AgoraRtcKit.framework in Frameworks */,
-				63EAAE9D26DE824D00A83AD4 /* Agoraffmpeg.framework in Frameworks */,
+				F355FC1B2733E6EB0056A8D9 /* AgoraRtcKit in Frameworks */,
 				63EAAEA126DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework in Frameworks */,
 				63EAAE9B26DE824D00A83AD4 /* BanubaEffectPlayer.xcframework in Frameworks */,
 			);
@@ -110,8 +102,6 @@
 		637C19CB26A6EF5C000C647F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				63EAAE9826DE824D00A83AD4 /* Agoraffmpeg.framework */,
-				63EAAE9926DE824D00A83AD4 /* AgoraRtcKit.framework */,
 				63EAAE9726DE824D00A83AD4 /* BanubaEffectPlayer.xcframework */,
 				63EAAE9A26DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework */,
 			);
@@ -196,6 +186,9 @@
 			dependencies = (
 			);
 			name = BanubaAgoraFilters;
+			packageProductDependencies = (
+				F355FC1A2733E6EB0056A8D9 /* AgoraRtcKit */,
+			);
 			productName = BanubaAgoraFilters;
 			productReference = 637C19B426A6EEAB000C647F /* BanubaAgoraFilters.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +217,9 @@
 				Base,
 			);
 			mainGroup = 637C19AB26A6EEAB000C647F;
+			packageReferences = (
+				F355FC192733E6EB0056A8D9 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS_Preview" */,
+			);
 			productRefGroup = 637C19B526A6EEAB000C647F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -476,6 +472,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F355FC192733E6EB0056A8D9 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS_Preview" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/agorabuilder/AgoraRtcEngine_iOS_Preview.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = "4.0.0-preview";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F355FC1A2733E6EB0056A8D9 /* AgoraRtcKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F355FC192733E6EB0056A8D9 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS_Preview" */;
+			productName = AgoraRtcKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 637C19AC26A6EEAB000C647F /* Project object */;
 }
