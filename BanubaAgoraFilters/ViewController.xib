@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,7 +27,7 @@
                     <color key="backgroundColor" systemColor="systemGrayColor"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dtu-Sq-DIM" customClass="BanubaEffectSelectorView" customModule="BanubaAgoraFilters" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="798" width="414" height="64"/>
+                    <rect key="frame" x="0.0" y="778" width="414" height="64"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="64" id="GPq-dg-6Zy"/>
@@ -45,7 +45,7 @@
             <viewLayoutGuide key="safeArea" id="XHD-Bx-CyI"/>
             <color key="backgroundColor" systemColor="systemGrayColor"/>
             <constraints>
-                <constraint firstItem="XHD-Bx-CyI" firstAttribute="bottom" secondItem="Dtu-Sq-DIM" secondAttribute="bottom" id="7nt-S9-5b8"/>
+                <constraint firstItem="XHD-Bx-CyI" firstAttribute="bottom" secondItem="Dtu-Sq-DIM" secondAttribute="bottom" constant="20" id="7nt-S9-5b8"/>
                 <constraint firstItem="Dtu-Sq-DIM" firstAttribute="leading" secondItem="XHD-Bx-CyI" secondAttribute="leading" id="BYX-jt-rVh"/>
                 <constraint firstItem="XHD-Bx-CyI" firstAttribute="trailing" secondItem="Rt8-ua-ihj" secondAttribute="trailing" constant="20" id="S28-nc-dPe"/>
                 <constraint firstItem="XHD-Bx-CyI" firstAttribute="trailing" secondItem="t0H-eh-V0p" secondAttribute="trailing" id="WSJ-2Z-Yg9"/>

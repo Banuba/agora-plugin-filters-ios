@@ -18,20 +18,21 @@ To receive a full commercial licence from Banuba - please fill in our form on [f
   <img src="screenshots/screenshot_2.png" alt="Screenshot2" width="100%" height="auto">
 </p>
 
-3. Copy and Paste your Banuba client token into the appropriate section of `/BanubaAgoraFilters/Token.swift` with “ ” symbols. For example: 
+4. Copy and Paste your Banuba client token into the appropriate section of `/BanubaAgoraFilters/Token.swift` with “ ” symbols. For example: 
 ``` swift
-let banubaClientToken = “place_your_banuba_token_here”
+let banubaClientToken = "Banuba Token"
 ```
 5. Visit agora.io to sign up and get the token, app and channel ID.
 
-7. Copy and Paste your agora token, app and chanel ID into appropriate section of `/BanubaAgoraFilters/Token.swift` with “ ” symbols. For example: 
+6. Copy and Paste your agora token, app and chanel ID into appropriate section of `/BanubaAgoraFilters/Token.swift` with “ ” symbols. For example: 
 ``` swift
-internal let agoraAppID = "place_your_agora_app_id_here"
-internal let agoraClientToken = "place_your_agora_client_token_here"
-internal let agoraChannelId = "place_your_agora_channel_id_here"
+internal let agoraAppID = "Agora App ID"
+internal let agoraClientToken = "Agora Token"
+internal let agoraChannelId = "Agora Channel ID"
 ```
-8. Open the BanubaAgoraFilters.xcodporj project in Xcode and run the `BanubaAgoraFilters` target.
+7. Open the BanubaAgoraFilters.xcodporj project in Xcode and run the `BanubaAgoraFilters` target.
 
+:exclamation: If you have any problems with installing Agora frameworks with Swift Package Manager refer to this [page](https://github.com/agorabuilder/AgoraRtcEngine_iOS_Preview)
 
 # How to use `BanubaFiltersAgoraExtension`
 
