@@ -27,7 +27,8 @@
                                                                options:kNilOptions
                                                                  error:&jsonError];
     
-    if (jsonError != nil) {
+    if (jsonObject) {
+      NSLog(@"json object %@", jsonObject);
       // JSON string should have next structure
       NSString *methodName = [jsonObject objectForKey:@"methodName"];
       NSString *methodParams = [jsonObject objectForKey:@"methodParams"];
@@ -35,7 +36,7 @@
                                                                         methodParams:methodParams];
       return wrapper;
     } else {
-      NSLog(@"%@", jsonError);
+      NSLog(@"json error %@", jsonError);
       return nil;
     }
 }
