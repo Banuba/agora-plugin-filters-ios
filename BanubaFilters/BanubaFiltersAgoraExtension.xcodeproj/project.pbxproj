@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		632EE64B2747965E004F9B8F /* AgoraRtcKit in Frameworks */ = {isa = PBXBuildFile; productRef = 632EE64A2747965E004F9B8F /* AgoraRtcKit */; };
+		632EE650274796F5004F9B8F /* CallJSMethodWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 632EE64E274796F5004F9B8F /* CallJSMethodWrapper.h */; };
+		632EE651274796F5004F9B8F /* CallJSMethodWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 632EE64F274796F5004F9B8F /* CallJSMethodWrapper.mm */; };
 		637480DC26D38F7600505F33 /* AgoraRtcKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63CE256026D38DE7002A587C /* AgoraRtcKit.framework */; platformFilter = ios; };
 		637480E126D394F700505F33 /* BanubaVideoProcessor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 637480DF26D394F700505F33 /* BanubaVideoProcessor.mm */; };
 		637480E226D394F700505F33 /* BanubaVideoProcessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 637480E026D394F700505F33 /* BanubaVideoProcessor.h */; };
@@ -42,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		632EE64E274796F5004F9B8F /* CallJSMethodWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallJSMethodWrapper.h; sourceTree = "<group>"; };
+		632EE64F274796F5004F9B8F /* CallJSMethodWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CallJSMethodWrapper.mm; sourceTree = "<group>"; };
 		637480DF26D394F700505F33 /* BanubaVideoProcessor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BanubaVideoProcessor.mm; sourceTree = "<group>"; };
 		637480E026D394F700505F33 /* BanubaVideoProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BanubaVideoProcessor.h; sourceTree = "<group>"; };
 		637480E326D397B200505F33 /* BanubaEffectPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BanubaEffectPlayer.xcframework; path = ../Frameworks/BanubaEffectPlayer.xcframework; sourceTree = "<group>"; };
@@ -98,6 +103,7 @@
 				6374827D26D620BF00505F33 /* Foundation.framework in Frameworks */,
 				637480DC26D38F7600505F33 /* AgoraRtcKit.framework in Frameworks */,
 				6374828326D6217300505F33 /* OpenGLES.framework in Frameworks */,
+				632EE64B2747965E004F9B8F /* AgoraRtcKit in Frameworks */,
 				6374828726D627A900505F33 /* libyuv.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +309,8 @@
 				63CE255B26D38D66002A587C /* BanubaExtensionProvider.mm */,
 				637480E026D394F700505F33 /* BanubaVideoProcessor.h */,
 				637480DF26D394F700505F33 /* BanubaVideoProcessor.mm */,
+				632EE64E274796F5004F9B8F /* CallJSMethodWrapper.h */,
+				632EE64F274796F5004F9B8F /* CallJSMethodWrapper.mm */,
 				63EAAE8526DE5F6000A83AD4 /* BanubaPluginKeys.swift */,
 				6374828626D627A900505F33 /* libyuv.a */,
 			);
@@ -334,6 +342,7 @@
 				63CE255E26D38D66002A587C /* BanubaExtensionProvider.h in Headers */,
 				637481FD26D3DDE900505F33 /* pixel_buffer.hpp in Headers */,
 				637480E226D394F700505F33 /* BanubaVideoProcessor.h in Headers */,
+				632EE650274796F5004F9B8F /* CallJSMethodWrapper.h in Headers */,
 				6374820126D3DDE900505F33 /* offscreen_effect_player_interface.hpp in Headers */,
 				6374820326D3DDE900505F33 /* formats.hpp in Headers */,
 				637481F526D3DDE900505F33 /* thread_pool.h in Headers */,
@@ -363,6 +372,9 @@
 			dependencies = (
 			);
 			name = BanubaFiltersAgoraExtension;
+			packageProductDependencies = (
+				632EE64A2747965E004F9B8F /* AgoraRtcKit */,
+			);
 			productName = BanubaFilters;
 			productReference = 63CE252F26D38B8A002A587C /* BanubaFiltersAgoraExtension.framework */;
 			productType = "com.apple.product-type.framework";
@@ -390,6 +402,9 @@
 				Base,
 			);
 			mainGroup = 63CE252526D38B8A002A587C;
+			packageReferences = (
+				632EE6492747965E004F9B8F /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS_Preview" */,
+			);
 			productRefGroup = 63CE253026D38B8A002A587C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -421,6 +436,7 @@
 				637480E126D394F700505F33 /* BanubaVideoProcessor.mm in Sources */,
 				637481FF26D3DDE900505F33 /* offscreen_effect_player.mm in Sources */,
 				63EAAE8626DE5F6000A83AD4 /* BanubaPluginKeys.swift in Sources */,
+				632EE651274796F5004F9B8F /* CallJSMethodWrapper.mm in Sources */,
 				63CE255D26D38D66002A587C /* BanubaExtensionProvider.mm in Sources */,
 				637481F926D3DDE900505F33 /* program.cpp in Sources */,
 				637481FA26D3DDE900505F33 /* opengl.cpp in Sources */,
@@ -666,6 +682,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		632EE6492747965E004F9B8F /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS_Preview" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/agorabuilder/AgoraRtcEngine_iOS_Preview";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = "4.0.0-preview.1";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		632EE64A2747965E004F9B8F /* AgoraRtcKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 632EE6492747965E004F9B8F /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS_Preview" */;
+			productName = AgoraRtcKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 63CE252626D38B8A002A587C /* Project object */;
 }
