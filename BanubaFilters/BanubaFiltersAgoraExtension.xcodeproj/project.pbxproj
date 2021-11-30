@@ -602,6 +602,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = "-lc++";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banuba.BanubaFilters;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -650,6 +651,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = "-lc++";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banuba.BanubaFilters;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
