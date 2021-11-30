@@ -94,6 +94,17 @@ agoraKit?.setExtensionPropertyWithVendor(
 )
 ```
 
+If the mask has parameters and you want to change them, you can do it the next way:
+
+```swift
+agoraKit?.setExtensionPropertyWithVendor(
+    BanubaPluginKeys.vendorName,
+    extension: BanubaPluginKeys.extensionName,
+    key: BanubaPluginKeys.callJSMethod,
+    value: jsonString
+)      
+```
+`callJsMethod` must be a JSON string with two fields: `method` and `params`. The`method` field stands for method’s name and `params` for method’s parameters. You can find an example in our [sample](https://github.com/Banuba/agora-plugin-filters-ios/blob/main/BanubaAgoraFilters/ViewController.swift#L181).
 
 # Effects managing
 
