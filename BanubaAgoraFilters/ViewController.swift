@@ -178,11 +178,11 @@ extension ViewController {
   }
   
   /// To control BanubaEffectPlayer via json methods refer to this method
-  private func sendJSONToBanubaPlugin() {
+  private func sendJSONToBanubaPlugin(method: String, params: String) {
     /// Build object with method name and method params
     let jsMethod = BanubaJSMethod(
-      methodName: "test",
-      methodParams: "test params"
+      methodName: method,
+      methodParams: params
     )
     do {
       let jsonData = try JSONEncoder().encode(jsMethod)
