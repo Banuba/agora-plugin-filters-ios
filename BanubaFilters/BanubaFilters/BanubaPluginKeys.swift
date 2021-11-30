@@ -14,4 +14,5 @@ public struct BanubaPluginKeys {
   public static let unloadEffect = "unload_effect"
   public static let setEffectsPath = "set_effects_path"
   public static let setToken = "set_token"
+  public static let callJSMethod = "call_js_method"
 }

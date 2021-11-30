@@ -6,6 +6,7 @@
 #include "utility.hpp"
 
 #include <BanubaEffectPlayer/BNBUtilityManager.h>
+#include "CallJSMethodWrapper.h"
 
 namespace agora::extension {
 
@@ -52,6 +53,7 @@ namespace agora::extension {
             const std::string &key,
             const std::string &parameter
     ) {
+      NSLog(@"set_parameter");
         if (m_oep && key == "load_effect") {
             m_oep->load_effect(parameter);
             return;
@@ -68,6 +70,18 @@ namespace agora::extension {
         if (key == "set_token") {
             m_client_token = parameter;
             initialize();
+            return;
+        }
+        if (key == "call_js_method") {
+            NSString *string = @(parameter.c_str());
+            CallJSMethodWrapper *jsMethodWrapper = [CallJSMethodWrapper makeWrapperFromJSONString: string];
+            if (jsMethodWrapper != nil) {
+                NSLog(@"call js method with method name: %@ | params: %@", jsMethodWrapper.methodName, jsMethodWrapper.methodParams);
+                m_oep->call_js_method(
+                                      [jsMethodWrapper.methodName UTF8String],
+                                      [jsMethodWrapper.methodParams UTF8String]
+                                      );
+            }
             return;
         }
     }
