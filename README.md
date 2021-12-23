@@ -106,6 +106,20 @@ agoraKit?.setExtensionPropertyWithVendor(
 ```
 `callJsMethod` must be a JSON string with two fields: `method` and `params`. The`method` field stands for method’s name and `params` for method’s parameters. You can find an example in our [sample](https://github.com/Banuba/agora-plugin-filters-ios/blob/main/BanubaAgoraFilters/ViewController.swift#L181).
 
+# How to build `BanubaFiltersAgoraExtension`
+
+To build the BanubaFiltersAgoraExtension manually, please follow the steps bellow:
+
+1. Launch project `/BanubaFilters/BanubaFiltersAgoraExtension.xcodeproj`.
+
+2. Choose "File->Packages->Reset Package Cashes" from Xcode menu.
+
+3. Build `BanubaFiltersAgoraExtension`. It will be built with your Swift version. After this you should open the section `Products` in the `Project Navigator` (the left part of the Xcode screen). Click on the `BanubaFiltersAgoraExtension` with the right click of the mouse and choose «Show in Finder». Copy the `BanubaFiltersAgoraExtension.framework` from the folder.
+
+4. Then put the framework to the `/Frameworks` folder of the BanubaAgoraFilters.xcodeproj (or of your project). Then you can build BanubaAgoraFilters or your project.
+
+The reconnection of the `BanubaFiltersAgoraExtension.framework` to the example project may be required. To do it, you should remove the `BanubaFiltersAgoraExtension.framework` from the Project Settings: "General-> Frameworks, Libraries and Embedded Content". Then you should drag&drop the `BanubaFiltersAgoraExtension.framework` to this section. You should choose «Embed&Sign» for this framework.
+
 # Effects managing
 
 To retrieve effects list use the following code:
