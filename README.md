@@ -5,8 +5,8 @@ Examples for [Banuba SDK on iOS] and [Agora.io](https://www.agora.io/en/) SDK in
 1. Get
 (a)the latest Banuba SDK archive,
 (b)[Banuba Extension files for iOS](https://www.banuba.com/faq/how-to-integrate-banuba-sdk-with-agora-sdk),
-(c) [Banuba trial client token](https://docs.agora.io/en/extension_customer/Banuba_downloads).
-To receive a full commercial licence from Banuba - please fill in our form on [form on banuba.com](https://www.banuba.com/face-filters-sdk) website, or contact us via [info@banuba.com](mailto:info@banuba.com).
+(c) Banuba trial client token.
+To receive a trial token or a full commercial licence from Banuba - please fill in our form on [form on banuba.com](https://www.banuba.com/face-filters-sdk) website, or contact us via [info@banuba.com](mailto:info@banuba.com).
 2. Open the BanubaAgoraFilters.xcodeproj file in Xcode and delete the Banuba items from «General->Frameworks, Libraries, and Embedded Content» (do not delete AgoraRtcKit framework), and from the Frameworks folder in the BanubaAgoraFilters project structure (the left part of Xcode window).
 
 <p align="center">
