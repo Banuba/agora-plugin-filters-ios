@@ -1,11 +1,11 @@
-Examples for [Banuba SDK on iOS] and [Agora.io](https://www.agora.io/en/) SDK integration via Agora Plugin Filters to enhance video calls with real-time face filters and virtual backgrounds.
+Examples for Banuba SDK on iOS and [Agora.io](https://www.agora.io/en/) SDK integration via Agora Plugin Filters to enhance video calls with real-time face filters and virtual backgrounds.
 
 # Getting Started
 
-1. Get
-(a)the latest Banuba SDK archive,
-(b)[Banuba Extension files for iOS](https://www.banuba.com/faq/how-to-integrate-banuba-sdk-with-agora-sdk),
-(c) Banuba trial client token.
+1. Get the following:  
+(a) the latest Banuba SDK archive,  
+(b) [Banuba Extension files for iOS](https://www.banuba.com/faq/how-to-integrate-banuba-sdk-with-agora-sdk),  
+(c) Banuba trial client token.  
 To receive a trial token or a full commercial licence from Banuba - please fill in our form on [form on banuba.com](https://www.banuba.com/face-filters-sdk) website, or contact us via [info@banuba.com](mailto:info@banuba.com).
 2. Open the BanubaAgoraFilters.xcodeproj file in Xcode and delete the Banuba items from «General->Frameworks, Libraries, and Embedded Content» (do not delete AgoraRtcKit framework), and from the Frameworks folder in the BanubaAgoraFilters project structure (the left part of Xcode window).
 
@@ -33,6 +33,13 @@ internal let agoraChannelId = "Agora Channel ID"
 7. Open the BanubaAgoraFilters.xcodporj project in Xcode and run the `BanubaAgoraFilters` target.
 
 :exclamation: If you have any problems with installing Agora frameworks with Swift Package Manager refer to this [page](https://github.com/agorabuilder/AgoraRtcEngine_iOS_Preview)
+
+# Connecting Banuba SDK and AgoraRtcKit to your own project
+
+Connecting Banuba SDK to your project is similar to the steps in the `Getting Started` section. As for AgoraRtcKit, we advise to use Swift Package Manager. You should use the following settings:  
+URL: `https://github.com/agorabuilder/AgoraRtcEngine_iOS_Preview.git`  
+Version Rule: `Exact`  
+Version: `4.0.0-preview.3`
 
 # How to use `BanubaFiltersAgoraExtension`
 
