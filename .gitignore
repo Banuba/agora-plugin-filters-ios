@@ -1,4 +1,5 @@
 Frameworks/*
+.DS_Store
 
 # Xcode
 build/
