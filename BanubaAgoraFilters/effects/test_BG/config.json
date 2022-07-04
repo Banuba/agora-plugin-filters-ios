@@ -1,0 +1,153 @@
+{
+    "assets": {
+        "attachments": {
+            "camera_color": {
+                "type": "color"
+            },
+            "bg_mask": {
+                "type": "color"
+            }
+        },
+        "images": {
+            "bg_nn": {
+                "type": "segmentation_mask",
+                "active": true,
+                "recognizer_feature_name": "background"
+            },
+            "camera: tex_y": {
+                "type" : "camera",
+                "format": "y"
+            },
+            "camera: tex_uv": {
+                "type" : "camera",
+                "format": "uv"
+            },
+            "camera: tex_rgb": {
+                "type" : "camera",
+                "format": "rgba"
+            }
+        },
+        "materials": {
+            "bg": {
+                "samplers": [
+                    {
+                        "name": "s_bg",
+                        "image": "camera_color"
+                    },
+                    {
+                        "name": "s_segmentation_mask",
+                        "image": "bg_nn"
+                    }
+                ],
+                "state": {
+                    "blend": "off",
+                    "backfaces": false,
+                    "colorwrite": true,
+                    "ztest": false,
+                    "zwrite": false
+                }
+            },
+            "$builtin$materials/camera": {
+                "samplers": [
+                    {
+                        "name": "tex_y",
+                        "image": "camera: tex_y"
+                    },
+                    {
+                        "name": "tex_uv",
+                        "image": "camera: tex_uv"
+                    },
+                    {
+                        "name": "tex_rgb",
+                        "image": "camera: tex_rgb"
+                    }
+                ],
+                "state": {
+                    "backfaces": true,
+                    "blend": "off",
+                    "colorwrite": true,
+                    "ztest": false,
+                    "zwrite": false
+                },
+                "parameters": {
+                    "bnb_camera_orientation": {
+                        "type": "vec4",
+                        "value": [1, 0, 0, 1]
+                    },
+
+                    "bnb_camera_scale": {
+                        "type": "vec4",
+                        "value": [1, 0, 0, 1]
+                    },
+
+                    "bnb_view_width_fraction": {
+                        "type": "vec4",
+                        "value": [1, 0, 0, 0]
+                    }
+                }
+            }
+        },
+        "meshes": {
+            "plane_surface": "$builtin$meshes/fs_tri",
+            "quad_surface": "quad.bsm2"
+        }
+    },
+    "components": {
+        "camera_tri": {
+            "materials": ["$builtin$materials/camera"],
+            "mesh": "plane_surface",
+            "type": "mesh_instance"
+        },
+        "bg_surface": {
+            "materials": ["bg"],
+            "mesh": "quad_surface",
+            "type": "mesh_instance"
+        }
+    },
+    "entities": {
+        "camera": {
+            "components": [
+                "camera_tri"
+            ],
+            "layer": "composer_pre"
+        },
+        "bg_surface": {
+            "components": [
+                "bg_surface"
+            ],
+            "layer": "bg"
+        }
+    },
+    "hierarchy": {
+        "root": [
+            "camera",
+            "bg_surface"
+        ]
+    },
+    "layers": {
+        "bg": {},
+        "composer_pre": {}
+    },
+    "render_list": {
+        "default": [
+            {
+                "layer": "composer_pre",
+                "render_target": "ComposerRT"
+            },
+            {
+                "layer": "bg",
+                "render_target": "bgRT"
+            }
+        ]
+    },
+    "render_targets": {
+        "ComposerRT": [
+            "camera_color"
+        ],
+        "bgRT": [
+            "bg_mask"
+        ]
+    },
+
+    "scene": "bg_nn"
+}

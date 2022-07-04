@@ -1,0 +1,453 @@
+{
+    "action_units": [
+        "BrowDownRight",
+        "BrowDownLeft",
+        "BrowInnerUp",
+        "BrowOuterUpRight",
+        "BrowOuterUpLeft",
+        "CheekPuff",
+        "CheekSquintRight",
+        "CheekSquintLeft",
+        "JawForward",
+        "JawRight",
+        "JawLeft",
+        "JawOpen",
+        "MouthClose",
+        "MouthFunnel",
+        "MouthPucker",
+        "MouthRight",
+        "MouthLeft",
+        "MouthSmileRight",
+        "MouthSmileLeft",
+        "MouthRollUpper",
+        "MouthRollLower",
+        "MouthShrugUpper",
+        "MouthShrugLower",
+        "MouthFrownRight",
+        "MouthFrownLeft",
+        "MouthUpperUpRight",
+        "MouthUpperUpLeft",
+        "MouthLowerDownRight",
+        "MouthLowerDownLeft",
+        "NoseSneerRight",
+        "NoseSneerLeft",
+        "MouthPressRight",
+        "MouthPressLeft",
+        "MouthStretchRight",
+        "MouthStretchLeft",
+        "EyeBlinkRight",
+        "EyeBlinkLeft",
+        "EyeWideRight",
+        "EyeWideLeft",
+        "EyeSquintRight",
+        "EyeSquintLeft"
+    ],
+    "assets": {
+        "attachments": {
+            "ComposerRT_color": {
+                "type": "color"
+            },
+            "EffectRT0_color": {
+                "type": "color"
+            },
+            "EffectRT0_depth": {
+                "clear": [
+                    1.0
+                ],
+                "type": "depth"
+            }
+        },
+        "faces": {
+            "face0": {
+                "index": 0,
+                "mesh": "!glfx_FACE"
+            }
+        },
+        "images": {
+            "BGGrout.png": {
+                "file_name": "images/BGGrout.png",
+                "type": "texture"
+            },
+            "blinn2_Metallic.png": {
+                "file_name": "images/blinn2_Metallic.png",
+                "type": "texture"
+            },
+            "blinn2_Normal.png": {
+                "file_name": "images/blinn2_Normal.png",
+                "type": "texture"
+            },
+            "blinn2_Roughness.png": {
+                "file_name": "images/blinn2_Roughness.png",
+                "type": "texture"
+            },
+            "bs_groot_nomip_point.ktx": {
+                "file_name": "images/bs_groot_nomip_point.ktx",
+                "type": "texture"
+            },
+            "camera": {
+                "type": "procedural_texture",
+                "algorithm": "camera_composer"
+            },
+            "eye.png": {
+                "file_name": "images/eye.png",
+                "type": "texture"
+            },
+            "hair": {
+                "active": false,
+                "recognizer_feature_name": "hair",
+                "type": "segmentation_mask"
+            },
+            "image.png": {
+                "file_name": "images/image.png",
+                "type": "texture"
+            },
+            "left_eye": {
+                "active": false,
+                "recognizer_feature_name": "left_eye",
+                "type": "segmentation_mask"
+            },
+            "lips": {
+                "active": false,
+                "recognizer_feature_name": "lips",
+                "type": "segmentation_mask"
+            },
+            "null_image.png": {
+                "file_name": "images/null_image.png",
+                "type": "texture"
+            },
+            "null_lut.png": {
+                "file_name": "images/null_lut.png",
+                "type": "texture"
+            },
+            "preview.png": {
+                "file_name": "images/preview.png",
+                "type": "texture"
+            },
+            "right_eye": {
+                "active": false,
+                "recognizer_feature_name": "right_eye",
+                "type": "segmentation_mask"
+            },
+            "skin": {
+                "active": false,
+                "recognizer_feature_name": "skin",
+                "type": "segmentation_mask"
+            }
+        },
+        "materials": {
+            "$builtin$materials/copy_pixels.0": {
+                "parameters": {},
+                "samplers": [
+                    {
+                        "image": "camera",
+                        "name": "tex_src"
+                    }
+                ],
+                "state": {
+                    "backfaces": true,
+                    "blend": "off",
+                    "colorwrite": true,
+                    "ztest": false,
+                    "zwrite": false
+                }
+            },
+            "shaders/QuadMat": {
+                "built_in_samplers": [],
+                "samplers": [
+                    {
+                        "image": "BGGrout.png",
+                        "name": "meshTexture"
+                    }
+                ],
+                "state": {
+                    "backfaces": true,
+                    "blend": "alpha",
+                    "colorwrite": true,
+                    "ztest": true,
+                    "zwrite": false
+                }
+            },
+            "shaders/eye": {
+                "built_in_samplers": [
+                    "bnb_BONES"
+                ],
+                "samplers": [
+                    {
+                        "image": "eye.png",
+                        "name": "tex_diffuse"
+                    },
+                    {
+                        "image": "blinn2_Normal.png",
+                        "name": "tex_normal"
+                    },
+                    {
+                        "image": "blinn2_Metallic.png",
+                        "name": "tex_metallic"
+                    },
+                    {
+                        "image": "blinn2_Roughness.png",
+                        "name": "tex_roughness"
+                    },
+                    {
+                        "image": "bs_groot_nomip_point.ktx",
+                        "name": "tex_blend_shapes"
+                    },
+                    {
+                        "name": "bnb_BONES"
+                    }
+                ],
+                "state": {
+                    "backfaces": false,
+                    "blend": "off",
+                    "colorwrite": true,
+                    "ztest": true,
+                    "zwrite": true
+                }
+            },
+            "shaders/groot": {
+                "built_in_samplers": [
+                    "bnb_BONES"
+                ],
+                "samplers": [
+                    {
+                        "image": "image.png",
+                        "name": "tex_diffuse"
+                    },
+                    {
+                        "image": "blinn2_Normal.png",
+                        "name": "tex_normal"
+                    },
+                    {
+                        "image": "blinn2_Metallic.png",
+                        "name": "tex_metallic"
+                    },
+                    {
+                        "image": "blinn2_Roughness.png",
+                        "name": "tex_roughness"
+                    },
+                    {
+                        "image": "bs_groot_nomip_point.ktx",
+                        "name": "tex_blend_shapes"
+                    },
+                    {
+                        "name": "bnb_BONES"
+                    }
+                ],
+                "state": {
+                    "backfaces": false,
+                    "blend": "off",
+                    "colorwrite": true,
+                    "ztest": true,
+                    "zwrite": true
+                }
+            },
+            "shaders/leaf": {
+                "built_in_samplers": [
+                    "bnb_BONES"
+                ],
+                "samplers": [
+                    {
+                        "image": "image.png",
+                        "name": "tex_diffuse"
+                    },
+                    {
+                        "image": "blinn2_Normal.png",
+                        "name": "tex_normal"
+                    },
+                    {
+                        "image": "blinn2_Metallic.png",
+                        "name": "tex_metallic"
+                    },
+                    {
+                        "image": "blinn2_Roughness.png",
+                        "name": "tex_roughness"
+                    },
+                    {
+                        "image": "bs_groot_nomip_point.ktx",
+                        "name": "tex_blend_shapes"
+                    },
+                    {
+                        "name": "bnb_BONES"
+                    }
+                ],
+                "state": {
+                    "backfaces": false,
+                    "blend": "off",
+                    "colorwrite": true,
+                    "ztest": true,
+                    "zwrite": true
+                }
+            },
+            "shaders/teeth": {
+                "built_in_samplers": [
+                    "bnb_BONES"
+                ],
+                "samplers": [
+                    {
+                        "image": "image.png",
+                        "name": "tex_diffuse"
+                    },
+                    {
+                        "image": "blinn2_Normal.png",
+                        "name": "tex_normal"
+                    },
+                    {
+                        "image": "blinn2_Metallic.png",
+                        "name": "tex_metallic"
+                    },
+                    {
+                        "image": "blinn2_Roughness.png",
+                        "name": "tex_roughness"
+                    },
+                    {
+                        "image": "bs_groot_nomip_point.ktx",
+                        "name": "tex_blend_shapes"
+                    },
+                    {
+                        "name": "bnb_BONES"
+                    }
+                ],
+                "state": {
+                    "backfaces": false,
+                    "blend": "off",
+                    "colorwrite": true,
+                    "ztest": true,
+                    "zwrite": true
+                }
+            }
+        },
+        "media": {},
+        "meshes": {
+            "!glfx_FACE": "$builtin$meshes/face.stream:0",
+            "camera_surface": "$builtin$meshes/fs_tri",
+            "groot.bsm2": "meshes/groot.bsm2",
+            "quad.bsm2": "meshes/quad.bsm2"
+        },
+        "morphs": {}
+    },
+    "components": {
+        "ComposerRT_copy": {
+            "materials": [
+                "$builtin$materials/copy_pixels.0"
+            ],
+            "mesh": "camera_surface",
+            "type": "mesh_instance"
+        },
+        "face_tracker:0": {
+            "face": "face0",
+            "type": "face_tracker"
+        }
+    },
+    "entities": {
+        "ComposerRT_copy_append_to_root__": {
+            "components": [
+                "ComposerRT_copy"
+            ],
+            "layer": "ComposerRT_copy"
+        },
+        "face_tracker0": {
+            "components": [
+                "face_tracker:0"
+            ]
+        },
+        "spawn_entity0": {
+            "add_to_legacy_entities_list": true,
+            "layers": [
+                "eye",
+                "groot",
+                "teeth",
+                "leaf"
+            ]
+        },
+        "spawn_entity1": {
+            "add_to_legacy_entities_list": true,
+            "layers": [
+                "QuadMat"
+            ]
+        }
+    },
+    "global_params": [
+        "glfx_VIEW_Q"
+    ],
+    "hierarchy": {
+        "face_tracker0": [
+            "spawn_entity0"
+        ],
+        "root": [
+            "face_tracker0",
+            "spawn_entity1",
+            "ComposerRT_copy_append_to_root__"
+        ]
+    },
+    "layers": {
+        "ComposerRT_copy": {},
+        "QuadMat": {},
+        "composer_pre": {},
+        "eye": {},
+        "groot": {},
+        "internal_face_morph__": {},
+        "leaf": {},
+        "teeth": {}
+    },
+    "render_list": {
+        "default": [
+            {
+                "layer": "ComposerRT_copy",
+                "render_target": "EffectRT0"
+            },
+            {
+                "layer": "QuadMat",
+                "render_target": "EffectRT0",
+                "sub_geometries": [
+                    "QuadMat"
+                ]
+            },
+            {
+                "layer": "eye",
+                "render_target": "EffectRT0",
+                "sub_geometries": [
+                    "eye"
+                ]
+            },
+            {
+                "layer": "internal_face_morph__",
+                "render_target": "EffectRT0"
+            },
+            {
+                "layer": "groot",
+                "render_target": "EffectRT0",
+                "sub_geometries": [
+                    "groot"
+                ]
+            },
+            {
+                "layer": "teeth",
+                "render_target": "EffectRT0",
+                "sub_geometries": [
+                    "teeth"
+                ]
+            },
+            {
+                "layer": "leaf",
+                "render_target": "EffectRT0",
+                "sub_geometries": [
+                    "leaf"
+                ]
+            }
+        ]
+    },
+    "render_targets": {
+        "ComposerRT": [
+            "ComposerRT_color"
+        ],
+        "EffectRT0": [
+            "EffectRT0_color",
+            "EffectRT0_depth"
+        ]
+    },
+    "scene": "ActionunitsGrout",
+    "script": {
+        "entry_point": "config.js",
+        "type": "legacy"
+    }
+}
