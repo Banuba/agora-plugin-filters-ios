@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		632EE65327479F59004F9B8F /* BanubaJSMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632EE65227479F59004F9B8F /* BanubaJSMethod.swift */; };
-		63EAAE9B26DE824D00A83AD4 /* BanubaEffectPlayer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAAE9726DE824D00A83AD4 /* BanubaEffectPlayer.xcframework */; };
-		63EAAE9C26DE824D00A83AD4 /* BanubaEffectPlayer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAAE9726DE824D00A83AD4 /* BanubaEffectPlayer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		63EAAEA126DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAAE9A26DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework */; };
-		63EAAEA226DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAAE9A26DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63EAB02D26DE830A00A83AD4 /* BanubaEffectSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAEA626DE830A00A83AD4 /* BanubaEffectSelectorView.swift */; };
 		63EAB02E26DE830A00A83AD4 /* LICENCE.md in Resources */ = {isa = PBXBuildFile; fileRef = 63EAAEA826DE830A00A83AD4 /* LICENCE.md */; };
 		63EAB02F26DE830A00A83AD4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 63EAAEA926DE830A00A83AD4 /* README.md */; };
@@ -28,18 +24,29 @@
 		63EAB03A26DE830A00A83AD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAEB626DE830A00A83AD4 /* AppDelegate.swift */; };
 		63EAB1A326DE830B00A83AD4 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAB02B26DE830A00A83AD4 /* Token.swift */; };
 		63EAB1A626DE833100A83AD4 /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 63EAB1A526DE833100A83AD4 /* effects */; };
+		8E6E85ED287460C500041909 /* BanubaFiltersAgoraExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6E85EC287460BE00041909 /* BanubaFiltersAgoraExtension.framework */; platformFilter = ios; };
+		8E6E85EE287460C500041909 /* BanubaFiltersAgoraExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6E85EC287460BE00041909 /* BanubaFiltersAgoraExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F355FC1B2733E6EB0056A8D9 /* AgoraRtcKit in Frameworks */ = {isa = PBXBuildFile; productRef = F355FC1A2733E6EB0056A8D9 /* AgoraRtcKit */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8E6E85EB287460BE00041909 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E6E85E7287460BE00041909 /* BanubaFiltersAgoraExtension.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 63CE252F26D38B8A002A587C;
+			remoteInfo = BanubaFiltersAgoraExtension;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		63EAAEA326DE824D00A83AD4 /* Embed Frameworks */ = {
+		8E6E85EF287460C500041909 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				63EAAEA226DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework in Embed Frameworks */,
-				63EAAE9C26DE824D00A83AD4 /* BanubaEffectPlayer.xcframework in Embed Frameworks */,
+				8E6E85EE287460C500041909 /* BanubaFiltersAgoraExtension.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,6 +75,7 @@
 		63EAB02B26DE830A00A83AD4 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		63EAB02C26DE830A00A83AD4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63EAB1A526DE833100A83AD4 /* effects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = effects; sourceTree = "<group>"; };
+		8E6E85E7287460BE00041909 /* BanubaFiltersAgoraExtension.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BanubaFiltersAgoraExtension.xcodeproj; path = BanubaFilters/BanubaFiltersAgoraExtension.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6E85ED287460C500041909 /* BanubaFiltersAgoraExtension.framework in Frameworks */,
 				F355FC1B2733E6EB0056A8D9 /* AgoraRtcKit in Frameworks */,
-				63EAAEA126DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework in Frameworks */,
-				63EAAE9B26DE824D00A83AD4 /* BanubaEffectPlayer.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +94,7 @@
 		637C19AB26A6EEAB000C647F = {
 			isa = PBXGroup;
 			children = (
+				8E6E85E7287460BE00041909 /* BanubaFiltersAgoraExtension.xcodeproj */,
 				63EAAEA426DE830A00A83AD4 /* BanubaAgoraFilters */,
 				637C19B526A6EEAB000C647F /* Products */,
 				637C19CB26A6EF5C000C647F /* Frameworks */,
@@ -159,6 +167,14 @@
 			path = iCarousel;
 			sourceTree = "<group>";
 		};
+		8E6E85E8287460BE00041909 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E6E85EC287460BE00041909 /* BanubaFiltersAgoraExtension.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -182,7 +198,7 @@
 				637C19B026A6EEAB000C647F /* Sources */,
 				637C19B126A6EEAB000C647F /* Frameworks */,
 				637C19B226A6EEAB000C647F /* Resources */,
-				63EAAEA326DE824D00A83AD4 /* Embed Frameworks */,
+				8E6E85EF287460C500041909 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -225,12 +241,28 @@
 			);
 			productRefGroup = 637C19B526A6EEAB000C647F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8E6E85E8287460BE00041909 /* Products */;
+					ProjectRef = 8E6E85E7287460BE00041909 /* BanubaFiltersAgoraExtension.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				637C19B326A6EEAB000C647F /* BanubaAgoraFilters */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8E6E85EC287460BE00041909 /* BanubaFiltersAgoraExtension.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BanubaFiltersAgoraExtension.framework;
+			remoteRef = 8E6E85EB287460BE00041909 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		637C19B226A6EEAB000C647F /* Resources */ = {
