@@ -12,14 +12,14 @@
 #include "BanubaExtensionProvider.h"
 #include "BanubaVideoFilter.h"
 
-REGISTER_AGORA_EXTENSION_PROVIDER(Banuba, agora::extension::BanubaExtensionProvider)
+REGISTER_AGORA_EXTENSION_PROVIDER(Banuba, agora::extension::BanubaExtensionProvider, agora::rtc::IExtensionVideoFilter)
 
 namespace agora::extension {
 
     BanubaExtensionProvider::BanubaExtensionProvider() {
         m_video_processor = new agora::RefCountedObject<BanubaVideoProcessor>();
     }
-
+    
     BanubaExtensionProvider::~BanubaExtensionProvider() {
         m_video_processor.reset();
     }
