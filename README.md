@@ -4,19 +4,12 @@ Examples for Banuba SDK on iOS and [Agora.io](https://www.agora.io/en/) SDK inte
 
 1. Get the following:  
 (a) the latest Banuba SDK archive,  
-(b) [Banuba Extension files for iOS](https://www.banuba.com/faq/how-to-integrate-banuba-sdk-with-agora-sdk),  
-(c) Banuba trial client token.  
+(b) Banuba trial client token.
 To receive a trial token or a full commercial licence from Banuba - please fill in our form on [form on banuba.com](https://www.banuba.com/face-filters-sdk) website, or contact us via [info@banuba.com](mailto:info@banuba.com).
-2. Open the BanubaAgoraFilters.xcodeproj file in Xcode and delete the Banuba items from «General->Frameworks, Libraries, and Embedded Content» (do not delete AgoraRtcKit framework), and from the Frameworks folder in the BanubaAgoraFilters project structure (the left part of Xcode window).
 
-<p align="center">
-  <img src="screenshots/screenshot_1.png" alt="Screenshot1" width="100%" height="auto">
-</p>
+2. Copy the reseived `BanubaEffectPlayer.xcframework` from `BanubaEffectPlayer -> bin` to `agora-plugin-filters-ios -> BanubaFilters -> Frameworks`.
 
-3. Put the received `BanubaEffectPlayer.xcframework` and `BanubaFiltersAgoraExtension.framework` to the “Frameworks, Libraries, and Embedded Content” section in your project.
-<p align="center">
-  <img src="screenshots/screenshot_2.png" alt="Screenshot2" width="100%" height="auto">
-</p>
+3. Open the BanubaAgoraFilters.xcworkspace file in Xcode.
 
 4. Copy and Paste your Banuba client token into the appropriate section of `/BanubaAgoraFilters/Token.swift` with “ ” symbols. For example: 
 ``` swift
