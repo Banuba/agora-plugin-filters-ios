@@ -8,7 +8,6 @@
 #include "CallJSMethodWrapper.h"
 
 #import <Accelerate/Accelerate.h>
-#import <CoreMotion/CoreMotion.h>
 
 namespace agora::extension {
 
@@ -28,22 +27,20 @@ namespace agora::extension {
             create_ep(captured_frame.width, captured_frame.height);
         }
 
-        CVPixelBufferRef source_buffer = get_NV12_buffer_from_captured_frame(captured_frame);
-
-        //We have to copy the input data because of the workflow of the BanubaSDK
-        CVPixelBufferRef pixel_buffer = copy_pixel_buffer_NV12(source_buffer);
-
-        auto format =  EpImageFormat();
-        format.imageSize = CGSizeMake(m_width, m_height);
-        format.orientation = EPOrientationAngles0;
-        format.resultedImageOrientation = EPOrientationAngles0;
-        format.isMirrored = true;
-        format.needAlphaInOutput = false;
-        format.overrideOutputToBGRA = false;
-        format.outputTexture = false;
-
         @autoreleasepool {
             if (m_effect_is_loaded) {
+                //We have to copy the input data because of the workflow of the BanubaSDK
+                CVPixelBufferRef pixel_buffer = copy_to_NV12_buffer_from_captured_frame(captured_frame);
+
+                auto format =  EpImageFormat();
+                format.imageSize = CGSizeMake(m_width, m_height);
+                format.orientation = EPOrientationAngles0;
+                format.resultedImageOrientation = EPOrientationAngles0;
+                format.isMirrored = true;
+                format.needAlphaInOutput = false;
+                format.overrideOutputToBGRA = false;
+                format.outputTexture = false;
+
                 auto callback = [this, input_frame, pixel_buffer](CVPixelBufferRef buffer, NSNumber* timeStamp){
                     CVPixelBufferRelease(pixel_buffer);
                     if (buffer) {
@@ -141,28 +138,15 @@ namespace agora::extension {
         }
     }
 
-    CVPixelBufferRef BanubaVideoProcessor::get_NV12_buffer_from_captured_frame(rtc::VideoFrameData &captured_frame){
+    CVPixelBufferRef BanubaVideoProcessor::copy_to_NV12_buffer_from_captured_frame(rtc::VideoFrameData &captured_frame) {
         auto pixels = captured_frame.pixels.data;
-        void* adresses[2] = {pixels, pixels + captured_frame.width * captured_frame.height};
-        size_t widths[2] = {static_cast<size_t>(captured_frame.width),  static_cast<size_t>(captured_frame.width)};
-        size_t heights[2] = {static_cast<size_t>(captured_frame.height), static_cast<size_t>(captured_frame.height)};
-        size_t bytesPerRow[2] = {static_cast<size_t>(captured_frame.width), static_cast<size_t>(captured_frame.width)};
+        uint8_t* src_y_adress = static_cast<uint8_t*>(pixels);
+        int src_y_width = captured_frame.width;
+        int src_y_height = captured_frame.height;
+        int src_y_bytes_per_row = captured_frame.width;
 
-        CVPixelBufferRef buffer = NULL;
-        CVPixelBufferCreateWithPlanarBytes(kCFAllocatorDefault, captured_frame.width, captured_frame.height, kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange, NULL, NULL, 2, adresses, widths, heights, bytesPerRow, NULL, NULL, NULL, &buffer);
-
-        return buffer;
-    }
-
-    CVPixelBufferRef BanubaVideoProcessor::copy_pixel_buffer_NV12(CVPixelBufferRef source_buffer){
-        CVPixelBufferLockBaseAddress(source_buffer, 1);
-        uint8_t* src_y_adress = static_cast<uint8_t*>(CVPixelBufferGetBaseAddressOfPlane(source_buffer, 0));
-        int src_y_width = static_cast<int>(CVPixelBufferGetWidthOfPlane(source_buffer, 0));
-        int src_y_height = static_cast<int>(CVPixelBufferGetHeightOfPlane(source_buffer, 0));
-        int src_y_bytes_per_row = static_cast<int>(CVPixelBufferGetBytesPerRowOfPlane(source_buffer, 0));
-
-        uint8_t* src_uv_adress = static_cast<uint8_t*>(CVPixelBufferGetBaseAddressOfPlane(source_buffer, 1));
-        auto src_uv_bytes_per_row = static_cast<int>(CVPixelBufferGetBytesPerRowOfPlane(source_buffer, 1));
+        uint8_t* src_uv_adress = static_cast<uint8_t*>(pixels + captured_frame.width * captured_frame.height);
+        auto src_uv_bytes_per_row = captured_frame.width;
 
         CVPixelBufferRef destination_buffer = NULL;
         NSDictionary* pixel_attributes = @{(id) kCVPixelBufferIOSurfacePropertiesKey: @{}};
@@ -185,7 +169,6 @@ namespace agora::extension {
         libyuv::NV12Copy(src_y_adress, src_y_bytes_per_row, src_uv_adress, src_uv_bytes_per_row,
                          dst_y_adress, dst_y_bytes_per_row, dest_uv_adress, dest_uv_bytes_per_row, src_y_width, src_y_height);
         CVPixelBufferUnlockBaseAddress(destination_buffer, 0);
-        CVPixelBufferUnlockBaseAddress(source_buffer, 1);
 
         return destination_buffer;
     }
