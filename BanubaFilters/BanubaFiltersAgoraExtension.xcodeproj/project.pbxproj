@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		632EE64B2747965E004F9B8F /* AgoraRtcKit in Frameworks */ = {isa = PBXBuildFile; productRef = 632EE64A2747965E004F9B8F /* AgoraRtcKit */; };
-		632EE650274796F5004F9B8F /* CallJSMethodWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 632EE64E274796F5004F9B8F /* CallJSMethodWrapper.h */; };
-		632EE651274796F5004F9B8F /* CallJSMethodWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 632EE64F274796F5004F9B8F /* CallJSMethodWrapper.mm */; };
 		637480DC26D38F7600505F33 /* AgoraRtcKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63CE256026D38DE7002A587C /* AgoraRtcKit.framework */; platformFilter = ios; };
 		637480E126D394F700505F33 /* BanubaVideoProcessor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 637480DF26D394F700505F33 /* BanubaVideoProcessor.mm */; };
 		637480E226D394F700505F33 /* BanubaVideoProcessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 637480E026D394F700505F33 /* BanubaVideoProcessor.h */; };
@@ -40,8 +38,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		632EE64E274796F5004F9B8F /* CallJSMethodWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallJSMethodWrapper.h; sourceTree = "<group>"; };
-		632EE64F274796F5004F9B8F /* CallJSMethodWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CallJSMethodWrapper.mm; sourceTree = "<group>"; };
 		637480DF26D394F700505F33 /* BanubaVideoProcessor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BanubaVideoProcessor.mm; sourceTree = "<group>"; };
 		637480E026D394F700505F33 /* BanubaVideoProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BanubaVideoProcessor.h; sourceTree = "<group>"; };
 		637480E326D397B200505F33 /* BanubaEffectPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BanubaEffectPlayer.xcframework; path = ../Frameworks/BanubaEffectPlayer.xcframework; sourceTree = "<group>"; };
@@ -107,8 +103,6 @@
 				63CE255B26D38D66002A587C /* BanubaExtensionProvider.mm */,
 				637480E026D394F700505F33 /* BanubaVideoProcessor.h */,
 				637480DF26D394F700505F33 /* BanubaVideoProcessor.mm */,
-				632EE64E274796F5004F9B8F /* CallJSMethodWrapper.h */,
-				632EE64F274796F5004F9B8F /* CallJSMethodWrapper.mm */,
 				63EAAE8526DE5F6000A83AD4 /* BanubaPluginKeys.swift */,
 				6374828626D627A900505F33 /* libyuv.a */,
 			);
@@ -140,7 +134,6 @@
 				63CE253426D38B8A002A587C /* BanubaFilters.h in Headers */,
 				63CE255E26D38D66002A587C /* BanubaExtensionProvider.h in Headers */,
 				637480E226D394F700505F33 /* BanubaVideoProcessor.h in Headers */,
-				632EE650274796F5004F9B8F /* CallJSMethodWrapper.h in Headers */,
 				63CE255A26D38D03002A587C /* BanubaVideoFilter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,7 +216,6 @@
 				63CE255926D38D03002A587C /* BanubaVideoFilter.mm in Sources */,
 				637480E126D394F700505F33 /* BanubaVideoProcessor.mm in Sources */,
 				63EAAE8626DE5F6000A83AD4 /* BanubaPluginKeys.swift in Sources */,
-				632EE651274796F5004F9B8F /* CallJSMethodWrapper.mm in Sources */,
 				63CE255D26D38D66002A587C /* BanubaExtensionProvider.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

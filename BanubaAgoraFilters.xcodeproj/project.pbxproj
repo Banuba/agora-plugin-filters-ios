@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		632EE65327479F59004F9B8F /* BanubaJSMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632EE65227479F59004F9B8F /* BanubaJSMethod.swift */; };
 		63EAB02D26DE830A00A83AD4 /* BanubaEffectSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAEA626DE830A00A83AD4 /* BanubaEffectSelectorView.swift */; };
 		63EAB02E26DE830A00A83AD4 /* LICENCE.md in Resources */ = {isa = PBXBuildFile; fileRef = 63EAAEA826DE830A00A83AD4 /* LICENCE.md */; };
 		63EAB02F26DE830A00A83AD4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 63EAAEA926DE830A00A83AD4 /* README.md */; };
@@ -54,7 +53,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		632EE65227479F59004F9B8F /* BanubaJSMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanubaJSMethod.swift; sourceTree = "<group>"; };
 		637C19B426A6EEAB000C647F /* BanubaAgoraFilters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BanubaAgoraFilters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EAAE9726DE824D00A83AD4 /* BanubaEffectPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BanubaEffectPlayer.xcframework; path = Frameworks/BanubaEffectPlayer.xcframework; sourceTree = "<group>"; };
 		63EAAE9A26DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BanubaFiltersAgoraExtension.framework; path = Frameworks/BanubaFiltersAgoraExtension.framework; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 				63EAAEB126DE830A00A83AD4 /* EffectsService.swift */,
 				63EAAEB226DE830A00A83AD4 /* LaunchScreen.storyboard */,
 				63EAAEB426DE830A00A83AD4 /* BanubaEffectsManager.swift */,
-				632EE65227479F59004F9B8F /* BanubaJSMethod.swift */,
 				63EAAEB526DE830A00A83AD4 /* BanubaAgoraFilters-Bridging-Header.h */,
 				63EAAEB626DE830A00A83AD4 /* AppDelegate.swift */,
 				63EAB02B26DE830A00A83AD4 /* Token.swift */,
@@ -291,7 +288,6 @@
 				63EAB03626DE830A00A83AD4 /* EffectsService.swift in Sources */,
 				63EAB03326DE830A00A83AD4 /* ViewController.swift in Sources */,
 				63EAB02D26DE830A00A83AD4 /* BanubaEffectSelectorView.swift in Sources */,
-				632EE65327479F59004F9B8F /* BanubaJSMethod.swift in Sources */,
 				63EAB03026DE830A00A83AD4 /* iCarousel.m in Sources */,
 				63EAB03826DE830A00A83AD4 /* BanubaEffectsManager.swift in Sources */,
 			);

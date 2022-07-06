@@ -1,5 +1,4 @@
 #include "BanubaVideoProcessor.h"
-#include "CallJSMethodWrapper.h"
 #include <libyuv.h>
 
 #include <BanubaEffectPlayer/BNBUtilityManager.h>
@@ -58,9 +57,8 @@ namespace agora::extension {
             const std::string &parameter
     ) {
         NSString *param = @(parameter.c_str());
-        NSLog(@"set_parameter");
         if (m_oep && key == "load_effect") {
-            [m_oep loadEffect: param];
+            [m_oep loadEffect:param];
             m_effect_is_loaded = true;
             return;
         }
@@ -80,11 +78,7 @@ namespace agora::extension {
             return;
         }
         if (key == "call_js_method") {
-            CallJSMethodWrapper *jsMethodWrapper = [CallJSMethodWrapper makeWrapperFromJSONString: param];
-            if (jsMethodWrapper != nil) {
-                NSLog(@"call js method with method name: %@ | params: %@", jsMethodWrapper.methodName, jsMethodWrapper.methodParams);
-                [m_oep callJsMethod:jsMethodWrapper.methodName withParam:jsMethodWrapper.methodParams];
-            }
+            [m_oep evalJs:param resultCallback:nil];
             return;
         }
     }

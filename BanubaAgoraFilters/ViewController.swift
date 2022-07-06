@@ -178,27 +178,12 @@ extension ViewController {
   }
   
   /// To control BanubaEffectPlayer via json methods refer to this method
-  private func sendJSONToBanubaPlugin(method: String, params: String) {
-    /// Build object with method name and method params
-    let jsMethod = BanubaJSMethod(
-      methodName: method,
-      methodParams: params
-    )
-    do {
-      let jsonData = try JSONEncoder().encode(jsMethod)
-      
-      guard let jsonString = String(data: jsonData, encoding: .utf8) else {
-        fatalError("can't transform object data to json string")
-      }
-      
+  private func sendJSONToBanubaPlugin(string: String) {
       agoraKit?.setExtensionPropertyWithVendor(
         BanubaPluginKeys.vendorName,
         extension: BanubaPluginKeys.extensionName,
         key: BanubaPluginKeys.callJSMethod,
-        value: jsonString
+        value: string
       )
-    } catch {
-      print(error)
-    }
   }
 }
