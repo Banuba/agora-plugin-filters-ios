@@ -13,10 +13,6 @@
 		637480DC26D38F7600505F33 /* AgoraRtcKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63CE256026D38DE7002A587C /* AgoraRtcKit.framework */; platformFilter = ios; };
 		637480E126D394F700505F33 /* BanubaVideoProcessor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 637480DF26D394F700505F33 /* BanubaVideoProcessor.mm */; };
 		637480E226D394F700505F33 /* BanubaVideoProcessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 637480E026D394F700505F33 /* BanubaVideoProcessor.h */; };
-		6374827D26D620BF00505F33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6374827C26D620BF00505F33 /* Foundation.framework */; platformFilter = ios; };
-		6374827F26D6214C00505F33 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6374827E26D6214C00505F33 /* CoreMedia.framework */; platformFilter = ios; };
-		6374828126D6216000505F33 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6374828026D6216000505F33 /* Accelerate.framework */; platformFilter = ios; };
-		6374828326D6217300505F33 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6374828226D6217300505F33 /* OpenGLES.framework */; platformFilter = ios; };
 		6374828726D627A900505F33 /* libyuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6374828626D627A900505F33 /* libyuv.a */; platformFilter = ios; };
 		63CE253426D38B8A002A587C /* BanubaFilters.h in Headers */ = {isa = PBXBuildFile; fileRef = 63CE253226D38B8A002A587C /* BanubaFilters.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63CE255926D38D03002A587C /* BanubaVideoFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63CE255726D38D03002A587C /* BanubaVideoFilter.mm */; };
@@ -73,12 +69,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E66E313287486C4000BC4E8 /* BanubaEffectPlayer.xcframework in Frameworks */,
-				6374827F26D6214C00505F33 /* CoreMedia.framework in Frameworks */,
-				6374828126D6216000505F33 /* Accelerate.framework in Frameworks */,
-				6374827D26D620BF00505F33 /* Foundation.framework in Frameworks */,
 				637480DC26D38F7600505F33 /* AgoraRtcKit.framework in Frameworks */,
 				8E6E85E62874605500041909 /* CoreVideo.framework in Frameworks */,
-				6374828326D6217300505F33 /* OpenGLES.framework in Frameworks */,
 				632EE64B2747965E004F9B8F /* AgoraRtcKit in Frameworks */,
 				6374828726D627A900505F33 /* libyuv.a in Frameworks */,
 			);

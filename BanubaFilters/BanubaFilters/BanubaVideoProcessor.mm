@@ -1,13 +1,9 @@
 #include "BanubaVideoProcessor.h"
-#include <chrono>
-#include <optional>
-#include <utility>
+#include "CallJSMethodWrapper.h"
 #include <libyuv.h>
 
 #include <BanubaEffectPlayer/BNBUtilityManager.h>
-#include "CallJSMethodWrapper.h"
 
-#import <Accelerate/Accelerate.h>
 
 namespace agora::extension {
 
