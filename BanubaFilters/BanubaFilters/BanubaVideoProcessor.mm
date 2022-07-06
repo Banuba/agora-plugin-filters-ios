@@ -30,7 +30,7 @@ namespace agora::extension {
         @autoreleasepool {
             if (m_effect_is_loaded) {
                 //We have to copy the input data because of the workflow of the BanubaSDK
-                CVPixelBufferRef pixel_buffer = copy_to_NV12_buffer_from_captured_frame(captured_frame);
+                CVPixelBufferRef source_buffer = copy_to_NV12_buffer_from_captured_frame(captured_frame);
 
                 auto format =  EpImageFormat();
                 format.imageSize = CGSizeMake(m_width, m_height);
@@ -41,32 +41,16 @@ namespace agora::extension {
                 format.overrideOutputToBGRA = false;
                 format.outputTexture = false;
 
-                auto callback = [this, input_frame, pixel_buffer](CVPixelBufferRef buffer, NSNumber* timeStamp){
-                    CVPixelBufferRelease(pixel_buffer);
-                    if (buffer) {
-                        rtc::VideoFrameData captured_frame;
-                        input_frame->getVideoFrameData(captured_frame);
-                        auto pixels = captured_frame.pixels.data;
-
-                        CVPixelBufferLockBaseAddress(buffer, 0);
-                        uint8_t* y_adress = static_cast<uint8_t*>(CVPixelBufferGetBaseAddressOfPlane(buffer, 0));
-                        auto y_width = static_cast<int>(CVPixelBufferGetWidthOfPlane(buffer, 0));
-                        auto y_height = static_cast<int>(CVPixelBufferGetHeightOfPlane(buffer, 0));
-                        auto y_bytes_per_row = static_cast<int>(CVPixelBufferGetBytesPerRowOfPlane(buffer, 0));
-
-                        uint8_t* uv_adress = static_cast<uint8_t*>(CVPixelBufferGetBaseAddressOfPlane(buffer, 1));
-                        auto uv_bytes_per_row = static_cast<int>(CVPixelBufferGetBytesPerRowOfPlane(buffer, 1));
-
-                        libyuv::NV12Copy(y_adress, y_bytes_per_row, uv_adress, uv_bytes_per_row,
-                                         static_cast<uint8_t*>(pixels), m_width, static_cast<uint8_t*>(pixels + m_width * m_height), m_width, y_width, y_height);
-                        CVPixelBufferUnlockBaseAddress(buffer, 0);
-
+                auto callback = [this, input_frame, source_buffer](CVPixelBufferRef processed_buffer, NSNumber* timeStamp){
+                    CVPixelBufferRelease(source_buffer);
+                    if (processed_buffer) {
+                        copy_to_Agora_frame_from_processed_buffer(input_frame, processed_buffer);
                         m_control->deliverVideoFrame(input_frame);
                     }
                 };
 
                 NSNumber *timestamp = [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]];
-                [m_oep processImage:pixel_buffer withFormat:&format frameTimestamp:timestamp completion:callback];
+                [m_oep processImage:source_buffer withFormat:&format frameTimestamp:timestamp completion:callback];
             } else {
                 m_control->deliverVideoFrame(input_frame);
             }
@@ -171,5 +155,24 @@ namespace agora::extension {
         CVPixelBufferUnlockBaseAddress(destination_buffer, 0);
 
         return destination_buffer;
+    }
+
+    void BanubaVideoProcessor::copy_to_Agora_frame_from_processed_buffer(const agora_refptr<rtc::IVideoFrame> &input_frame, const CVPixelBufferRef buffer) {
+        rtc::VideoFrameData captured_frame;
+        input_frame->getVideoFrameData(captured_frame);
+        auto pixels = captured_frame.pixels.data;
+
+        CVPixelBufferLockBaseAddress(buffer, 1);
+        uint8_t* y_adress = static_cast<uint8_t*>(CVPixelBufferGetBaseAddressOfPlane(buffer, 0));
+        auto y_width = static_cast<int>(CVPixelBufferGetWidthOfPlane(buffer, 0));
+        auto y_height = static_cast<int>(CVPixelBufferGetHeightOfPlane(buffer, 0));
+        auto y_bytes_per_row = static_cast<int>(CVPixelBufferGetBytesPerRowOfPlane(buffer, 0));
+
+        uint8_t* uv_adress = static_cast<uint8_t*>(CVPixelBufferGetBaseAddressOfPlane(buffer, 1));
+        auto uv_bytes_per_row = static_cast<int>(CVPixelBufferGetBytesPerRowOfPlane(buffer, 1));
+
+        libyuv::NV12Copy(y_adress, y_bytes_per_row, uv_adress, uv_bytes_per_row,
+                         static_cast<uint8_t*>(pixels), m_width, static_cast<uint8_t*>(pixels + m_width * m_height), m_width, y_width, y_height);
+        CVPixelBufferUnlockBaseAddress(buffer, 1);
     }
 }

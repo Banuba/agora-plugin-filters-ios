@@ -34,6 +34,7 @@ namespace agora::extension {
         void create_ep(int32_t width, int32_t height);
 
         CVPixelBufferRef copy_to_NV12_buffer_from_captured_frame(rtc::VideoFrameData &captured_frame);
+        void copy_to_Agora_frame_from_processed_buffer(const agora_refptr<rtc::IVideoFrame> &input_frame, const CVPixelBufferRef buffer);
 
         std::string m_path_to_effects;
         std::string m_client_token;
