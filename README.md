@@ -3,6 +3,8 @@ Examples for Banuba SDK on iOS and [Agora.io](https://www.agora.io/en/) SDK inte
 > **Important**
 >
 > [master](../../tree/master) branch is always compatible with latest SDK version. Please use [v0.x](../../tree/v0.x) branch for SDK version 0.x (e.g. v0.38).
+>
+> The sample has been tested with `4.0.0-preview.6` version of the AgoraRtcKit.
 
 # Getting Started
 
@@ -39,7 +41,7 @@ internal let agoraChannelId = "Agora Channel ID"
 Connecting Banuba SDK to your project is similar to the steps in the `Getting Started` section. As for AgoraRtcKit, we advise to use Swift Package Manager. You should use the following settings:  
 URL: `https://github.com/agorabuilder/AgoraRtcEngine_iOS_Preview.git`  
 Version Rule: `Exact`  
-Version: `4.0.0-preview.3`
+Version: `4.0.0-preview.6`
 
 # How to use `BanubaFiltersAgoraExtension`
 
@@ -108,10 +110,10 @@ agoraKit?.setExtensionPropertyWithVendor(
     BanubaPluginKeys.vendorName,
     extension: BanubaPluginKeys.extensionName,
     key: BanubaPluginKeys.callJSMethod,
-    value: jsonString
+    value: string
 )      
 ```
-`callJsMethod` must be a JSON string with two fields: `method` and `params`. The`method` field stands for method’s name and `params` for method’s parameters. You can find an example in our [sample](https://github.com/Banuba/agora-plugin-filters-ios/blob/main/BanubaAgoraFilters/ViewController.swift#L181).
+`string` must be a string with  method’s name and  parameters. You can find an example in our [documentation](https://docs.banuba.com/face-ar-sdk-v1/effect_api/face_beauty).
 
 # How to build `BanubaFiltersAgoraExtension`
 
@@ -157,17 +159,3 @@ class EffectViewModel {
     }
 }
 ```
-
-To modify effects, add or remove effect folder in `BanubaAgoraFilters/effects` directory.
-By default sample contains the following effects:
-1. ElvisUnleashed
-2. EnglandEightPieceCap
-3. FashionHistory1940_male
-4. MorphingHatBow
-5. MorphTeenegers
-6. Nerd
-7. Popeye
-8. SnapBubblesGlasses
-9. Space
-10. StarGlow_low
-11. TitanicJack
