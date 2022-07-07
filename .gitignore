@@ -1,4 +1,6 @@
 Frameworks/*
+Pods/*
+Podfile.lock
 .DS_Store
 
 # Xcode

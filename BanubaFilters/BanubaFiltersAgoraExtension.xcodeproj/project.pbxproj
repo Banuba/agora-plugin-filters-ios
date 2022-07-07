@@ -17,25 +17,9 @@
 		63CE255D26D38D66002A587C /* BanubaExtensionProvider.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63CE255B26D38D66002A587C /* BanubaExtensionProvider.mm */; };
 		63CE255E26D38D66002A587C /* BanubaExtensionProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 63CE255C26D38D66002A587C /* BanubaExtensionProvider.h */; };
 		63EAAE8626DE5F6000A83AD4 /* BanubaPluginKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAE8526DE5F6000A83AD4 /* BanubaPluginKeys.swift */; };
-		8E66E313287486C4000BC4E8 /* BanubaEffectPlayer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E66E312287486C4000BC4E8 /* BanubaEffectPlayer.xcframework */; };
-		8E66E314287486C4000BC4E8 /* BanubaEffectPlayer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8E66E312287486C4000BC4E8 /* BanubaEffectPlayer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8E6E85E62874605500041909 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6E85E52874605500041909 /* CoreVideo.framework */; };
 		8ED00E262876C19700D8A3B2 /* AgoraRtcKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8ED00E252876C19700D8A3B2 /* AgoraRtcKit */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		8E66E315287486C4000BC4E8 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				8E66E314287486C4000BC4E8 /* BanubaEffectPlayer.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		637480DF26D394F700505F33 /* BanubaVideoProcessor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BanubaVideoProcessor.mm; sourceTree = "<group>"; };
@@ -65,7 +49,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ED00E262876C19700D8A3B2 /* AgoraRtcKit in Frameworks */,
-				8E66E313287486C4000BC4E8 /* BanubaEffectPlayer.xcframework in Frameworks */,
 				637480DC26D38F7600505F33 /* AgoraRtcKit.framework in Frameworks */,
 				8E6E85E62874605500041909 /* CoreVideo.framework in Frameworks */,
 				6374828726D627A900505F33 /* libyuv.a in Frameworks */,
@@ -149,7 +132,6 @@
 				63CE252B26D38B8A002A587C /* Sources */,
 				63CE252C26D38B8A002A587C /* Frameworks */,
 				63CE252D26D38B8A002A587C /* Resources */,
-				8E66E315287486C4000BC4E8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -379,7 +361,10 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				OTHER_LDFLAGS = "-lc++";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.banuba.BanubaFilters;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -428,7 +413,10 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				OTHER_LDFLAGS = "-lc++";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.banuba.BanubaFilters;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

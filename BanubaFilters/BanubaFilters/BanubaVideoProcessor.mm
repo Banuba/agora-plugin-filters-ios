@@ -88,8 +88,8 @@ namespace agora::extension
     {
         if (m_client_token.empty() || m_path_to_effects.empty())
             return;
-      
-        NSString* effectPlayerBundlePath = [[NSBundle bundleForClass:[BNBUtilityManager self]] bundlePath];
+
+        NSString* effectPlayerBundlePath = [[NSBundle mainBundle] bundlePath];
         NSString* pathToEffects = @(m_path_to_effects.c_str());
         NSArray* paths = @[
             [effectPlayerBundlePath stringByAppendingString:@"/bnb-resources"],
