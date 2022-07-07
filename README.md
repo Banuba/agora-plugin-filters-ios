@@ -8,12 +8,10 @@ Examples for Banuba SDK on iOS and [Agora.io](https://www.agora.io/en/) SDK inte
 
 # Getting Started
 
-1. Get the following:  
-(a) the latest Banuba SDK archive,  
-(b) Banuba trial client token.
+1. Get the following Banuba trial client token.
 To receive a trial token or a full commercial licence from Banuba - please fill in our form on [form on banuba.com](https://www.banuba.com/face-filters-sdk) website, or contact us via [info@banuba.com](mailto:info@banuba.com).
 
-2. Copy the reseived `BanubaEffectPlayer.xcframework` from `BanubaEffectPlayer -> bin` to `agora-plugin-filters-ios -> BanubaFilters -> Frameworks`.
+2. Execute 'pod install' to get the Banuba SDK.
 
 3. Open the BanubaAgoraFilters.xcworkspace file in Xcode.
 
@@ -119,13 +117,15 @@ agoraKit?.setExtensionPropertyWithVendor(
 
 To build the BanubaFiltersAgoraExtension manually, please follow the steps bellow:
 
-1. Launch project `/BanubaFilters/BanubaFiltersAgoraExtension.xcodeproj`.
+1. Execute 'pod install' to get the Banuba SDK.
 
-2. Choose "File->Packages->Reset Package Cashes" from Xcode menu.
+2. Open the BanubaAgoraFilters.xcworkspace file in Xcode.
 
-3. Build `BanubaFiltersAgoraExtension`. It will be built with your Swift version. After this you should open the section `Products` in the `Project Navigator` (the left part of the Xcode screen). Click on the `BanubaFiltersAgoraExtension` with the right click of the mouse and choose «Show in Finder». Copy the `BanubaFiltersAgoraExtension.framework` from the folder.
+3. Choose "File->Packages->Reset Package Cashes" from Xcode menu.
 
-4. Then put the framework to the `/Frameworks` folder of the BanubaAgoraFilters.xcodeproj (or of your project). Then you can build BanubaAgoraFilters or your project.
+4. Build the target `BanubaFiltersAgoraExtension`. It will be built with your Swift version. After this you should open the section `Products` in the `Project Navigator` (the left part of the Xcode screen). Click on the `BanubaFiltersAgoraExtension` with the right click of the mouse and choose «Show in Finder». Copy the `BanubaFiltersAgoraExtension.framework` from the folder.
+
+5. Then put the framework to the `/Frameworks` folder of the BanubaAgoraFilters.xcodeproj (or of your project). Then you can build BanubaAgoraFilters or your project.
 
 The reconnection of the `BanubaFiltersAgoraExtension.framework` to the example project may be required. To do it, you should remove the `BanubaFiltersAgoraExtension.framework` from the Project Settings: "General-> Frameworks, Libraries and Embedded Content". Then you should drag&drop the `BanubaFiltersAgoraExtension.framework` to this section. You should choose «Embed&Sign» for this framework.
 
