@@ -25,7 +25,7 @@
 		63EAB1A626DE833100A83AD4 /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 63EAB1A526DE833100A83AD4 /* effects */; };
 		8E6E85ED287460C500041909 /* BanubaFiltersAgoraExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6E85EC287460BE00041909 /* BanubaFiltersAgoraExtension.framework */; platformFilter = ios; };
 		8E6E85EE287460C500041909 /* BanubaFiltersAgoraExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6E85EC287460BE00041909 /* BanubaFiltersAgoraExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F355FC1B2733E6EB0056A8D9 /* AgoraRtcKit in Frameworks */ = {isa = PBXBuildFile; productRef = F355FC1A2733E6EB0056A8D9 /* AgoraRtcKit */; };
+		8ED00E222876C16E00D8A3B2 /* AgoraRtcKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8ED00E212876C16E00D8A3B2 /* AgoraRtcKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,8 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ED00E222876C16E00D8A3B2 /* AgoraRtcKit in Frameworks */,
 				8E6E85ED287460C500041909 /* BanubaFiltersAgoraExtension.framework in Frameworks */,
-				F355FC1B2733E6EB0056A8D9 /* AgoraRtcKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +203,7 @@
 			);
 			name = BanubaAgoraFilters;
 			packageProductDependencies = (
-				F355FC1A2733E6EB0056A8D9 /* AgoraRtcKit */,
+				8ED00E212876C16E00D8A3B2 /* AgoraRtcKit */,
 			);
 			productName = BanubaAgoraFilters;
 			productReference = 637C19B426A6EEAB000C647F /* BanubaAgoraFilters.app */;
@@ -234,7 +234,7 @@
 			);
 			mainGroup = 637C19AB26A6EEAB000C647F;
 			packageReferences = (
-				F355FC192733E6EB0056A8D9 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS_Preview" */,
+				8ED00E202876C16E00D8A3B2 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS_Preview" */,
 			);
 			productRefGroup = 637C19B526A6EEAB000C647F /* Products */;
 			projectDirPath = "";
@@ -506,20 +506,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F355FC192733E6EB0056A8D9 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS_Preview" */ = {
+		8ED00E202876C16E00D8A3B2 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS_Preview" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/agorabuilder/AgoraRtcEngine_iOS_Preview.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = "4.0.0-preview.1";
+				kind = exactVersion;
+				version = "4.0.0-preview.6";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F355FC1A2733E6EB0056A8D9 /* AgoraRtcKit */ = {
+		8ED00E212876C16E00D8A3B2 /* AgoraRtcKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F355FC192733E6EB0056A8D9 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS_Preview" */;
+			package = 8ED00E202876C16E00D8A3B2 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS_Preview" */;
 			productName = AgoraRtcKit;
 		};
 /* End XCSwiftPackageProductDependency section */
