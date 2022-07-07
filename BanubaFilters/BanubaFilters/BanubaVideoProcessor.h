@@ -6,7 +6,7 @@
 #include <AgoraRtcKit/AgoraMediaBase.h>
 #include <AgoraRtcKit/NGIAgoraVideoFrame.h>
 
-#include <BanubaEffectPlayer/BNBOffscreenEffectPlayer.h>
+#include <BNBSdkCore/BNBOffscreenEffectPlayer.h>
 
 namespace agora::extension
 {

@@ -1,8 +1,7 @@
 #include "BanubaVideoProcessor.h"
 #include <libyuv.h>
 
-#include <BanubaEffectPlayer/BNBUtilityManager.h>
-
+#include <BNBSdkCore/BNBUtilityManager.h>
 
 namespace agora::extension
 {
