@@ -107,7 +107,7 @@ If the mask has parameters and you want to change them, you can do it the next w
 agoraKit?.setExtensionPropertyWithVendor(
     BanubaPluginKeys.vendorName,
     extension: BanubaPluginKeys.extensionName,
-    key: BanubaPluginKeys.callJSMethod,
+    key: BanubaPluginKeys.evalJSMethod,
     value: string
 )      
 ```

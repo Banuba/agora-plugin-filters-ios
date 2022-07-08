@@ -182,7 +182,7 @@ extension ViewController {
       agoraKit?.setExtensionPropertyWithVendor(
         BanubaPluginKeys.vendorName,
         extension: BanubaPluginKeys.extensionName,
-        key: BanubaPluginKeys.callJSMethod,
+        key: BanubaPluginKeys.evalJSMethod,
         value: string
       )
   }

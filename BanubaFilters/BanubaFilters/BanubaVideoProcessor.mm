@@ -77,7 +77,7 @@ namespace agora::extension
             initialize();
             return;
         }
-        if (key == "call_js_method") {
+        if (key == "eval_js") {
             [m_oep evalJs:param resultCallback:nil];
             return;
         }
