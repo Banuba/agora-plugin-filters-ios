@@ -23,7 +23,10 @@ namespace agora::extension
 
         @autoreleasepool {
             if (m_effect_is_loaded) {
-                // We have to copy the input data because of the workflow of the BanubaSDK
+                /** Banuba SDK distinguishes input and output frame buffers, this lets to avoid data copying to improve the performance.
+                 *  Since the Agora plugin assumes to use the same memory buffer as input and output,
+                 *  we are compelled to make a copy of input frame data to prevent the destruction of the frame, processing by the Banuba SDK.
+                 */
                 CVPixelBufferRef source_buffer = copy_to_NV12_buffer_from_captured_frame(captured_frame);
 
                 auto format = EpImageFormat();
