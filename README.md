@@ -4,7 +4,7 @@ Examples for Banuba SDK on iOS and [Agora.io](https://www.agora.io/en/) SDK inte
 >
 > [master](../../tree/master) branch is always compatible with latest SDK version. Please use [v0.x](../../tree/v0.x) branch for SDK version 0.x (e.g. v0.38).
 >
-> The sample has been tested with `4.0.0-preview.6` version of the AgoraRtcKit.
+> The sample has been tested with `4.0.0-beta.2` version of the AgoraRtcKit.
 
 # Getting Started
 
@@ -39,7 +39,7 @@ internal let agoraChannelId = "Agora Channel ID"
 Connecting Banuba SDK to your project is similar to the steps in the `Getting Started` section. As for AgoraRtcKit, we advise to use Swift Package Manager. You should use the following settings:  
 URL: `https://github.com/agorabuilder/AgoraRtcEngine_iOS_Preview.git`  
 Version Rule: `Exact`  
-Version: `4.0.0-preview.6`
+Version: `4.0.0-beta.2`
 
 # How to use `BanubaFiltersAgoraExtension`
 
