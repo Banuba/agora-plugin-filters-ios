@@ -6,6 +6,7 @@
 namespace agora::extension
 {
 
+    static bool is_utility_initialized = false;
     BanubaVideoProcessor::BanubaVideoProcessor() = default;
 
     void BanubaVideoProcessor::process_frame(const agora_refptr<rtc::IVideoFrame>& input_frame)
@@ -88,8 +89,13 @@ namespace agora::extension
 
     void BanubaVideoProcessor::initialize()
     {
-        if (m_client_token.empty() || m_path_to_effects.empty())
+        if(is_utility_initialized) {
+            m_is_initialized = true;
             return;
+        }
+        if (m_client_token.empty() || m_path_to_effects.empty()) {
+            return;
+        }
 
         NSString* effectPlayerBundlePath = [[NSBundle mainBundle] bundlePath];
         NSString* pathToEffects = @(m_path_to_effects.c_str());
@@ -100,7 +106,8 @@ namespace agora::extension
         ];
         NSString* clientToken = @(m_client_token.c_str());
         [BNBUtilityManager initialize:paths clientToken:clientToken];
-
+        
+        is_utility_initialized = true;
         m_is_initialized = true;
     }
 
