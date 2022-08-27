@@ -89,7 +89,7 @@ namespace agora::extension
 
     void BanubaVideoProcessor::initialize()
     {
-        if(is_utility_initialized) {
+        if (is_utility_initialized) {
             m_is_initialized = true;
             return;
         }
