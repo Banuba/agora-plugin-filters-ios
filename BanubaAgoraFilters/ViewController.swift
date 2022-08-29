@@ -80,7 +80,7 @@ class ViewController: UIViewController {
   }
   
   private func joinChannel() {
-    agoraKit?.joinChannel(
+    let result = agoraKit?.joinChannel(
       byToken: agoraClientToken,
       channelId: agoraChannelId,
       info: nil,
@@ -88,6 +88,7 @@ class ViewController: UIViewController {
       joinSuccess: { channel, uid, elapsed in
         print("Did join channel")
       })
+    if let result = result { print("join result = \(result)") }
     agoraKit?.startPreview()
     agoraKit?.setEnableSpeakerphone(true)
   }
@@ -95,7 +96,8 @@ class ViewController: UIViewController {
 
 // MARK: - AgoraRtcEngineDelegate
 extension ViewController: AgoraRtcEngineDelegate {
-  func rtcEngine(_ engine: AgoraRtcEngineKit, firstRemoteVideoFrameOfUid uid: UInt, size: CGSize, elapsed: Int) {
+  func rtcEngine(_ engine: AgoraRtcEngineKit, didJoinedOfUid uid: UInt, elapsed: Int) {
+    print("didJoinedOfUid \(uid)")
     setupRemoteVideo(uid: uid)
   }
   
@@ -105,6 +107,14 @@ extension ViewController: AgoraRtcEngineDelegate {
     videoCanvas.view = remoteVideo
     videoCanvas.renderMode = .hidden
     agoraKit?.setupRemoteVideo(videoCanvas)
+  }
+
+  func rtcEngine(_ engine: AgoraRtcEngineKit, didOccurError errorCode: AgoraErrorCode) {
+    print("Agora error occured: AgoraErrorCode = \(errorCode)")
+  }
+
+  func rtcEngine(_ engine: AgoraRtcEngineKit, didOccurWarning warningCode: AgoraWarningCode) {
+    print("Agora warning occured: AgoraWarningCode = \(warningCode)")
   }
 }
 
