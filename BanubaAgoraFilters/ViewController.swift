@@ -110,7 +110,7 @@ extension ViewController: AgoraRtcEngineDelegate {
   }
 
   func rtcEngine(_ engine: AgoraRtcEngineKit, didOccurError errorCode: AgoraErrorCode) {
-      print("Agora error occured: AgoraErrorCode = \(errorCode)")
+    print("Agora error occured: AgoraErrorCode = \(errorCode)")
   }
 
   func rtcEngine(_ engine: AgoraRtcEngineKit, didOccurWarning warningCode: AgoraWarningCode) {
