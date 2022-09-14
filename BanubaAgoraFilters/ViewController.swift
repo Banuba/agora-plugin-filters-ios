@@ -153,20 +153,25 @@ extension ViewController {
 // MARK: - BanubaFilterPlugin interactions
 extension ViewController {
   private func setupBanubaPlugin() {
-    agoraKit?.setExtensionPropertyWithVendor(
-      BanubaPluginKeys.vendorName,
-      extension: BanubaPluginKeys.extensionName,
-      key: BanubaPluginKeys.setEffectsPath,
-      value: BanubaEffectsManager.effectsURL.path
-    )
-    
-    let clientToken = banubaClientToken.trimmingCharacters(in: .whitespacesAndNewlines)
-    agoraKit?.setExtensionPropertyWithVendor(
-      BanubaPluginKeys.vendorName,
-      extension: BanubaPluginKeys.extensionName,
-      key: BanubaPluginKeys.setToken,
-      value: clientToken
-    )
+      agoraKit?.setExtensionPropertyWithVendor(BanubaPluginKeys.vendorName,
+                                               extension: BanubaPluginKeys.extensionName,
+                                               key: BanubaPluginKeys.setEffectsPath,
+                                               value: BanubaEffectsManager.effectsURL.path)
+      // TODO remove separate client token as App Secret should hold its value
+      let clientToken = banubaClientToken.trimmingCharacters(in: .whitespacesAndNewlines)
+      agoraKit?.setExtensionPropertyWithVendor(BanubaPluginKeys.vendorName,
+                                               extension: BanubaPluginKeys.extensionName,
+                                               key: BanubaPluginKeys.setToken,
+                                               value: clientToken)
+      
+      agoraKit?.setExtensionPropertyWithVendor(BanubaPluginKeys.vendorName,
+                                               extension: BanubaPluginKeys.extensionName,
+                                               key: BanubaPluginKeys.setAppKey,
+                                               value: appKey)
+      agoraKit?.setExtensionPropertyWithVendor(BanubaPluginKeys.vendorName,
+                                               extension: BanubaPluginKeys.extensionName,
+                                               key: BanubaPluginKeys.setAppSecret,
+                                               value: appSecret)
   }
   
   private func loadEffect(_ effectName: String) {

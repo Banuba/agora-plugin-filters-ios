@@ -16,11 +16,13 @@ namespace agora::extension {
         if (control) {
             m_video_processor->set_extension_control(control);
         }
+        m_video_processor->onProcessingStarted();
         return 0;
     }
 
     int BanubaVideoFilter::stop()
     {
+        m_video_processor->onProcessingStopped();
         return 0;
     }
 

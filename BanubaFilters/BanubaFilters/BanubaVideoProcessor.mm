@@ -5,9 +5,15 @@
 
 namespace agora::extension
 {
+    NSTimeInterval const FRAMETIME_INTERVAL_LIMIT = 1.0;
 
     static bool is_utility_initialized = false;
     BanubaVideoProcessor::BanubaVideoProcessor() = default;
+
+    BanubaVideoProcessor::~BanubaVideoProcessor()
+    {
+        trackingHelper = nil;
+    }
 
     void BanubaVideoProcessor::process_frame(const agora_refptr<rtc::IVideoFrame>& input_frame)
     {
@@ -49,10 +55,31 @@ namespace agora::extension
 
                 NSNumber* timestamp = [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]];
                 [m_oep processImage:source_buffer withFormat:&format frameTimestamp:timestamp completion:callback];
+                
+                NSDate *currentFrameTime = [NSDate date];
+                if (m_effect_is_loaded && m_previous_processedframe_timestamp != nil) {
+                    NSTimeInterval frameTime = [currentFrameTime timeIntervalSinceDate:m_previous_processedframe_timestamp];
+                    // Discard frame time, if it's obviously exceeds estimated time
+                    // (caused by extension disable/enable or channel leave/enter and by other possible
+                    // reasons to break continuous rendering process).
+                    if (frameTime < FRAMETIME_INTERVAL_LIMIT) {
+                        [this->trackingHelper logUsageTime:frameTime];
+                    }
+                }
+                m_previous_processedframe_timestamp = m_effect_is_loaded ? currentFrameTime : nil;
             } else {
+                m_previous_processedframe_timestamp = nil;
                 m_control->deliverVideoFrame(input_frame);
             }
         }
+    }
+
+    void BanubaVideoProcessor::onProcessingStarted() {
+        [trackingHelper startTracking];
+    }
+
+    void BanubaVideoProcessor::onProcessingStopped() {
+        [trackingHelper stopTracking];
     }
 
     void BanubaVideoProcessor::set_parameter(
@@ -81,6 +108,18 @@ namespace agora::extension
             initialize();
             return;
         }
+        if (key == "set_app_key") {
+            m_client_app_key = parameter;
+            initialize();
+            setupTrackingHelper();
+            return;
+        }
+        if (key == "set_app_secret") {
+            m_client_app_secret = parameter;
+            initialize();
+            setupTrackingHelper();
+            return;
+        }
         if (key == "eval_js") {
             [m_oep evalJs:param resultCallback:nil];
             return;
@@ -93,7 +132,8 @@ namespace agora::extension
             m_is_initialized = true;
             return;
         }
-        if (m_client_token.empty() || m_path_to_effects.empty()) {
+        // TODO remove m_client_token as app_secret should hold SDK token.
+        if (m_client_token.empty() || m_path_to_effects.empty() || m_client_app_secret.empty()) {
             return;
         }
 
@@ -109,6 +149,18 @@ namespace agora::extension
         
         is_utility_initialized = true;
         m_is_initialized = true;
+    }
+
+    void BanubaVideoProcessor::setupTrackingHelper()
+    {
+        if (m_client_app_key.empty() || m_client_app_secret.empty())
+            return;
+        
+        NSString *appKey = @(m_client_app_key.c_str());
+        NSString *appSecret = @(m_client_app_secret.c_str());
+        
+        trackingHelper = [[UsageTrackingHelper alloc] initWithAppKey:appKey appSecret:appSecret];
+        [trackingHelper startTracking];
     }
 
     void BanubaVideoProcessor::create_ep(int32_t width, int32_t height)

@@ -17,11 +17,15 @@
 		63CE255D26D38D66002A587C /* BanubaExtensionProvider.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63CE255B26D38D66002A587C /* BanubaExtensionProvider.mm */; };
 		63CE255E26D38D66002A587C /* BanubaExtensionProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 63CE255C26D38D66002A587C /* BanubaExtensionProvider.h */; };
 		63EAAE8626DE5F6000A83AD4 /* BanubaPluginKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAE8526DE5F6000A83AD4 /* BanubaPluginKeys.swift */; };
+		80A35EF128B512BF00EC2182 /* RtcBasic in Frameworks */ = {isa = PBXBuildFile; productRef = 80A35EF028B512BF00EC2182 /* RtcBasic */; };
+		80D6D4D228AFB1AC001C9AA9 /* UsageTrackingHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 80D6D4D028AFB1AC001C9AA9 /* UsageTrackingHelper.h */; };
+		80D6D4D328AFB1AC001C9AA9 /* UsageTrackingHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 80D6D4D128AFB1AC001C9AA9 /* UsageTrackingHelper.mm */; };
 		8E6E85E62874605500041909 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6E85E52874605500041909 /* CoreVideo.framework */; };
-		8E7E849528902CE300E1A8A0 /* AgoraRtcKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8E7E849428902CE300E1A8A0 /* AgoraRtcKit */; };
+		CF5B8A729230E28D6F03269B /* Pods_BanubaFiltersAgoraExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8450D64F5AEFE62B39E7E46A /* Pods_BanubaFiltersAgoraExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CA2DA03C16D6E803AE123A7 /* Pods-BanubaFiltersAgoraExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanubaFiltersAgoraExtension.debug.xcconfig"; path = "Target Support Files/Pods-BanubaFiltersAgoraExtension/Pods-BanubaFiltersAgoraExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		637480DF26D394F700505F33 /* BanubaVideoProcessor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BanubaVideoProcessor.mm; sourceTree = "<group>"; };
 		637480E026D394F700505F33 /* BanubaVideoProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BanubaVideoProcessor.h; sourceTree = "<group>"; };
 		637480E326D397B200505F33 /* BanubaEffectPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BanubaEffectPlayer.xcframework; path = ../Frameworks/BanubaEffectPlayer.xcframework; sourceTree = "<group>"; };
@@ -39,8 +43,12 @@
 		63CE255C26D38D66002A587C /* BanubaExtensionProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BanubaExtensionProvider.h; sourceTree = "<group>"; };
 		63CE256026D38DE7002A587C /* AgoraRtcKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AgoraRtcKit.framework; path = ../Frameworks/AgoraRtcKit.framework; sourceTree = "<group>"; };
 		63EAAE8526DE5F6000A83AD4 /* BanubaPluginKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanubaPluginKeys.swift; sourceTree = "<group>"; };
+		80D6D4D028AFB1AC001C9AA9 /* UsageTrackingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsageTrackingHelper.h; sourceTree = "<group>"; };
+		80D6D4D128AFB1AC001C9AA9 /* UsageTrackingHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UsageTrackingHelper.mm; sourceTree = "<group>"; };
+		8450D64F5AEFE62B39E7E46A /* Pods_BanubaFiltersAgoraExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BanubaFiltersAgoraExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E66E312287486C4000BC4E8 /* BanubaEffectPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BanubaEffectPlayer.xcframework; path = Frameworks/BanubaEffectPlayer.xcframework; sourceTree = "<group>"; };
 		8E6E85E52874605500041909 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		C35DF1EEFB073BA7938E6B6F /* Pods-BanubaFiltersAgoraExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanubaFiltersAgoraExtension.release.xcconfig"; path = "Target Support Files/Pods-BanubaFiltersAgoraExtension/Pods-BanubaFiltersAgoraExtension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,8 +58,9 @@
 			files = (
 				637480DC26D38F7600505F33 /* AgoraRtcKit.framework in Frameworks */,
 				8E6E85E62874605500041909 /* CoreVideo.framework in Frameworks */,
-				8E7E849528902CE300E1A8A0 /* AgoraRtcKit in Frameworks */,
 				6374828726D627A900505F33 /* libyuv.a in Frameworks */,
+				CF5B8A729230E28D6F03269B /* Pods_BanubaFiltersAgoraExtension.framework in Frameworks */,
+				80A35EF128B512BF00EC2182 /* RtcBasic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +73,7 @@
 				63CE253126D38B8A002A587C /* BanubaFilters */,
 				63CE253026D38B8A002A587C /* Products */,
 				63CE255F26D38DE7002A587C /* Frameworks */,
+				85ACCC30F134CEA6B6B65199 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +96,8 @@
 				63CE255B26D38D66002A587C /* BanubaExtensionProvider.mm */,
 				637480E026D394F700505F33 /* BanubaVideoProcessor.h */,
 				637480DF26D394F700505F33 /* BanubaVideoProcessor.mm */,
+				80D6D4D028AFB1AC001C9AA9 /* UsageTrackingHelper.h */,
+				80D6D4D128AFB1AC001C9AA9 /* UsageTrackingHelper.mm */,
 				63EAAE8526DE5F6000A83AD4 /* BanubaPluginKeys.swift */,
 				6374828626D627A900505F33 /* libyuv.a */,
 			);
@@ -103,8 +115,19 @@
 				6374827C26D620BF00505F33 /* Foundation.framework */,
 				637480E326D397B200505F33 /* BanubaEffectPlayer.xcframework */,
 				63CE256026D38DE7002A587C /* AgoraRtcKit.framework */,
+				8450D64F5AEFE62B39E7E46A /* Pods_BanubaFiltersAgoraExtension.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85ACCC30F134CEA6B6B65199 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0CA2DA03C16D6E803AE123A7 /* Pods-BanubaFiltersAgoraExtension.debug.xcconfig */,
+				C35DF1EEFB073BA7938E6B6F /* Pods-BanubaFiltersAgoraExtension.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +140,7 @@
 				63CE253426D38B8A002A587C /* BanubaFilters.h in Headers */,
 				63CE255E26D38D66002A587C /* BanubaExtensionProvider.h in Headers */,
 				637480E226D394F700505F33 /* BanubaVideoProcessor.h in Headers */,
+				80D6D4D228AFB1AC001C9AA9 /* UsageTrackingHelper.h in Headers */,
 				63CE255A26D38D03002A587C /* BanubaVideoFilter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,10 +152,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63CE253726D38B8A002A587C /* Build configuration list for PBXNativeTarget "BanubaFiltersAgoraExtension" */;
 			buildPhases = (
+				38C75D75D475C43AED1F9222 /* [CP] Check Pods Manifest.lock */,
 				63CE252A26D38B8A002A587C /* Headers */,
 				63CE252B26D38B8A002A587C /* Sources */,
 				63CE252C26D38B8A002A587C /* Frameworks */,
 				63CE252D26D38B8A002A587C /* Resources */,
+				BE862414BEE33DBBF763ACC1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,7 +165,7 @@
 			);
 			name = BanubaFiltersAgoraExtension;
 			packageProductDependencies = (
-				8E7E849428902CE300E1A8A0 /* AgoraRtcKit */,
+				80A35EF028B512BF00EC2182 /* RtcBasic */,
 			);
 			productName = BanubaFilters;
 			productReference = 63CE252F26D38B8A002A587C /* BanubaFiltersAgoraExtension.framework */;
@@ -169,7 +195,7 @@
 			);
 			mainGroup = 63CE252526D38B8A002A587C;
 			packageReferences = (
-				8E7E849328902CE300E1A8A0 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS_Beta" */,
+				80A35EEF28B512BF00EC2182 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */,
 			);
 			productRefGroup = 63CE253026D38B8A002A587C /* Products */;
 			projectDirPath = "";
@@ -190,12 +216,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		38C75D75D475C43AED1F9222 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BanubaFiltersAgoraExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE862414BEE33DBBF763ACC1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BanubaFiltersAgoraExtension/Pods-BanubaFiltersAgoraExtension-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BanubaFiltersAgoraExtension/Pods-BanubaFiltersAgoraExtension-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BanubaFiltersAgoraExtension/Pods-BanubaFiltersAgoraExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		63CE252B26D38B8A002A587C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				63CE255926D38D03002A587C /* BanubaVideoFilter.mm in Sources */,
+				80D6D4D328AFB1AC001C9AA9 /* UsageTrackingHelper.mm in Sources */,
 				637480E126D394F700505F33 /* BanubaVideoProcessor.mm in Sources */,
 				63EAAE8626DE5F6000A83AD4 /* BanubaPluginKeys.swift in Sources */,
 				63CE255D26D38D66002A587C /* BanubaExtensionProvider.mm in Sources */,
@@ -325,6 +394,7 @@
 		};
 		63CE253826D38B8A002A587C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CA2DA03C16D6E803AE123A7 /* Pods-BanubaFiltersAgoraExtension.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
@@ -377,6 +447,7 @@
 		};
 		63CE253926D38B8A002A587C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C35DF1EEFB073BA7938E6B6F /* Pods-BanubaFiltersAgoraExtension.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
@@ -450,21 +521,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8E7E849328902CE300E1A8A0 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS_Beta" */ = {
+		80A35EEF28B512BF00EC2182 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/agorabuilder/AgoraRtcEngine_iOS_Beta";
+			repositoryURL = "https://github.com/AgoraIO/AgoraRtcEngine_iOS";
 			requirement = {
 				kind = exactVersion;
-				version = "4.0.0-beta.2";
+				version = "4.0.0-rc.1";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8E7E849428902CE300E1A8A0 /* AgoraRtcKit */ = {
+		80A35EF028B512BF00EC2182 /* RtcBasic */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8E7E849328902CE300E1A8A0 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS_Beta" */;
-			productName = AgoraRtcKit;
+			package = 80A35EEF28B512BF00EC2182 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = RtcBasic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
