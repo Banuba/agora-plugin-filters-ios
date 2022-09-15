@@ -15,6 +15,5 @@ public struct BanubaPluginKeys {
     public static let setAppKey = "set_app_key"
     public static let setAppSecret = "set_app_secret"
     public static let setEffectsPath = "set_effects_path"
-    public static let setToken = "set_token"
     public static let evalJSMethod = "eval_js"
 }

@@ -4,20 +4,20 @@ Examples for Banuba SDK on iOS and [Agora.io](https://www.agora.io/en/) SDK inte
 >
 > [master](../../tree/master) branch is always compatible with latest SDK version. Please use [v0.x](../../tree/v0.x) branch for SDK version 0.x (e.g. v0.38).
 >
-> The sample has been tested with `4.0.0-beta.2` version of the AgoraRtcKit.
+> The sample has been tested with `4.0.0-rc.1` version of the Agora SDK.
 
 # Getting Started
 
-1. Get the following Banuba trial client token.
-To receive a trial token or a full commercial licence from Banuba - please fill in our form on [form on banuba.com](https://www.banuba.com/face-filters-sdk) website, or contact us via [info@banuba.com](mailto:info@banuba.com).
+1. Execute 'pod install' to get the Banuba SDK.
 
-2. Execute 'pod install' to get the Banuba SDK.
+2. Open the BanubaAgoraFilters.xcworkspace file in Xcode.
 
-3. Open the BanubaAgoraFilters.xcworkspace file in Xcode.
+3. Update SPM dependencies to get Agora SDK.
 
-4. Copy and Paste your Banuba client token into the appropriate section of `/BanubaAgoraFilters/Token.swift` with “ ” symbols. For example: 
+4. Copy and Paste your Banuba extension credentials from Agora Console into the appropriate section of `/BanubaAgoraFilters/Token.swift` with “ ” symbols. For example: 
 ``` swift
-let banubaClientToken = "Banuba Token"
+let appKey = "Banuba Extension App Key"
+let appSecret = "Banuba Extension App Secret"
 ```
 5. Visit agora.io to sign up and get the token, app and channel ID.
 
@@ -30,28 +30,30 @@ internal let agoraChannelId = "Agora Channel ID"
 
 7. Donwload the needed effects from [here](https://docs.banuba.com/face-ar-sdk-v1/overview/demo_face_filters). This guarantees, that you will use the up-to-date version of the effects. The effects must be copied to the `agora-plugin-filters-ios -> BanubaAgoraFilters -> effects` folder.
 
-8. Open the BanubaAgoraFilters.xcodporj project in Xcode and run the `BanubaAgoraFilters` target.
+8. Run the `BanubaAgoraFilters` target.
 
 :exclamation: If you have any problems with installing Agora frameworks with Swift Package Manager refer to this [page](https://github.com/agorabuilder/AgoraRtcEngine_iOS_Preview)
 
 # Connecting Banuba SDK and AgoraRtcKit to your own project
 
 Connecting Banuba SDK to your project is similar to the steps in the `Getting Started` section. As for AgoraRtcKit, we advise to use Swift Package Manager. You should use the following settings:  
-URL: `https://github.com/agorabuilder/AgoraRtcEngine_iOS_Preview.git`  
+URL: `https://github.com/AgoraIO/AgoraRtcEngine_iOS`  
 Version Rule: `Exact`  
-Version: `4.0.0-beta.2`
+Version: `4.0.0-rc.1`
 
 # How to use `BanubaFiltersAgoraExtension`
 
 To control `BanubaFiltersAgoraExtension` with Agora libs look available keys listed below:
 ```swift
 public struct BanubaPluginKeys {
-  public static let vendorName = "Banuba"
-  public static let extensionName = "BanubaFilter"
-  public static let loadEffect = "load_effect"
-  public static let unloadEffect = "unload_effect"
-  public static let setEffectsPath = "set_effects_path"
-  public static let setToken = "set_token"
+    public static let vendorName = "Banuba"
+    public static let extensionName = "BanubaFilter"
+    public static let loadEffect = "load_effect"
+    public static let unloadEffect = "unload_effect"
+    public static let setAppKey = "set_app_key"
+    public static let setAppSecret = "set_app_secret"
+    public static let setEffectsPath = "set_effects_path"
+    public static let evalJSMethod = "eval_js"
 }
 ```
 
@@ -66,21 +68,22 @@ agoraKit?.enableExtension(
 )
 ```
 
-Before applying an effect on your video you have to initialize `BanubaFiltersAgoraExtension` with the path to effects and banuba client token. Look how it can be achieved:
+Before applying an effect on your video you have to initialize `BanubaFiltersAgoraExtension` with the path to effects and extension credentials (app key and app secret). Look how it can be achieved:
 ```swift
-agoraKit?.setExtensionPropertyWithVendor(
-    BanubaPluginKeys.vendorName,
-    extension: BanubaPluginKeys.extensionName,
-    key: BanubaPluginKeys.setEffectsPath,
-    value: "place_path_to_effects_folder_here"
-)
-    
-agoraKit?.setExtensionPropertyWithVendor(
-    BanubaPluginKeys.vendorName,
-    extension: BanubaPluginKeys.extensionName,
-    key: BanubaPluginKeys.setToken,
-    value: "place_your_banuba_token_here".trimmingCharacters(in: .whitespacesAndNewlines)
-)
+      agoraKit?.setExtensionPropertyWithVendor(BanubaPluginKeys.vendorName,
+                                               extension: BanubaPluginKeys.extensionName,
+                                               key: BanubaPluginKeys.setEffectsPath,
+                                               value: BanubaEffectsManager.effectsURL.path)
+                                               
+      agoraKit?.setExtensionPropertyWithVendor(BanubaPluginKeys.vendorName,
+                                               extension: BanubaPluginKeys.extensionName,
+                                               key: BanubaPluginKeys.setAppKey,
+                                               value: appKey)
+                                               
+      agoraKit?.setExtensionPropertyWithVendor(BanubaPluginKeys.vendorName,
+                                               extension: BanubaPluginKeys.extensionName,
+                                               key: BanubaPluginKeys.setAppSecret,
+                                               value: appSecret)
 ```
 
 After those steps you can tell `BanubaFiltersAgoraExtension` to enable or disable the mask:

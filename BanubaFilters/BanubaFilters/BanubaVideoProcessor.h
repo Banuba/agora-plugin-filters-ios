@@ -43,8 +43,6 @@ namespace agora::extension
         void copy_to_Agora_frame_from_processed_buffer(const agora_refptr<rtc::IVideoFrame>& input_frame, const CVPixelBufferRef buffer);
 
         std::string m_path_to_effects;
-        // TODO remove separate m_client_token as app_secret should work as SDK token.
-        std::string m_client_token;
         std::string m_client_app_key;
         std::string m_client_app_secret;
         

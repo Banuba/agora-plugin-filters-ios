@@ -103,11 +103,6 @@ namespace agora::extension
             initialize();
             return;
         }
-        if (key == "set_token") {
-            m_client_token = parameter;
-            initialize();
-            return;
-        }
         if (key == "set_app_key") {
             m_client_app_key = parameter;
             initialize();
@@ -132,8 +127,7 @@ namespace agora::extension
             m_is_initialized = true;
             return;
         }
-        // TODO remove m_client_token as app_secret should hold SDK token.
-        if (m_client_token.empty() || m_path_to_effects.empty() || m_client_app_secret.empty()) {
+        if (m_path_to_effects.empty() || m_client_app_secret.empty()) {
             return;
         }
 
@@ -144,7 +138,7 @@ namespace agora::extension
             [effectPlayerBundlePath stringByAppendingString:@"/bnb-res-ios"],
             pathToEffects
         ];
-        NSString* clientToken = @(m_client_token.c_str());
+        NSString* clientToken = @(m_client_app_secret.c_str());
         [BNBUtilityManager initialize:paths clientToken:clientToken];
         
         is_utility_initialized = true;
