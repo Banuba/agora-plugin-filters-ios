@@ -18,8 +18,10 @@ class ViewController: UIViewController {
   @IBOutlet weak var remoteVideo: UIView!
   @IBOutlet weak var localVideo: UIView!
   @IBOutlet weak var effectSelectorView: BanubaEffectSelectorView!
+  @IBOutlet weak var toggleExtStateButton: UIButton!
   
   private var agoraKit: AgoraRtcEngineKit?
+  private var isEnabled: Bool = false
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -35,6 +37,23 @@ class ViewController: UIViewController {
     
     joinChannel()
     setupBanubaPlugin()
+    adjustUIState()
+  }
+    
+  @IBAction func onToggleExtensionBtnPressed(_ sender: Any) {
+    isEnabled.toggle()
+    adjustUIState()
+    
+    agoraKit?.enableExtension(
+      withVendor: BanubaPluginKeys.vendorName,
+      extension: BanubaPluginKeys.extensionName,
+      enabled: isEnabled
+    )
+  }
+  
+  private func adjustUIState() {
+    let toggleBtnTitle = isEnabled ? "Disable Ext" : "Enable Ext"
+    toggleExtStateButton.setTitle(toggleBtnTitle, for: .normal)
   }
   
   private func setupEngine() {
@@ -51,6 +70,7 @@ class ViewController: UIViewController {
       extension: BanubaPluginKeys.extensionName,
       enabled: true
     )
+    isEnabled = true
   }
   
   private func setupVideo() {

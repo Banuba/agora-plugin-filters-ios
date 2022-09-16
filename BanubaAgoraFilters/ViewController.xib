@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,6 +14,7 @@
                 <outlet property="effectSelectorView" destination="Dtu-Sq-DIM" id="eYh-qe-MHB"/>
                 <outlet property="localVideo" destination="Rt8-ua-ihj" id="NEd-TK-3xe"/>
                 <outlet property="remoteVideo" destination="t0H-eh-V0p" id="t6y-4i-Sg2"/>
+                <outlet property="toggleExtStateButton" destination="fO1-nw-Lxz" id="Kre-MP-zkB"/>
                 <outlet property="view" destination="koG-RE-lDl" id="eMQ-bg-tRj"/>
             </connections>
         </placeholder>
@@ -41,6 +42,20 @@
                         <constraint firstAttribute="width" secondItem="Rt8-ua-ihj" secondAttribute="height" multiplier="9:16" id="bpK-df-IVC"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fO1-nw-Lxz" userLabel="EnableExtButton">
+                    <rect key="frame" x="20" y="64" width="120" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="ZkN-nZ-xXr"/>
+                        <constraint firstAttribute="width" constant="120" id="c7k-Ys-48v"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Enable Ext">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="onToggleExtensionBtnPressed:" destination="-1" eventType="touchUpInside" id="z4D-Nk-zAk"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="XHD-Bx-CyI"/>
             <color key="backgroundColor" systemColor="systemGrayColor"/>
@@ -48,9 +63,11 @@
                 <constraint firstItem="XHD-Bx-CyI" firstAttribute="bottom" secondItem="Dtu-Sq-DIM" secondAttribute="bottom" constant="20" id="7nt-S9-5b8"/>
                 <constraint firstItem="Dtu-Sq-DIM" firstAttribute="leading" secondItem="XHD-Bx-CyI" secondAttribute="leading" id="BYX-jt-rVh"/>
                 <constraint firstItem="XHD-Bx-CyI" firstAttribute="trailing" secondItem="Rt8-ua-ihj" secondAttribute="trailing" constant="20" id="S28-nc-dPe"/>
+                <constraint firstItem="fO1-nw-Lxz" firstAttribute="leading" secondItem="XHD-Bx-CyI" secondAttribute="leading" constant="20" id="UbV-eP-CfX"/>
                 <constraint firstItem="XHD-Bx-CyI" firstAttribute="trailing" secondItem="t0H-eh-V0p" secondAttribute="trailing" id="WSJ-2Z-Yg9"/>
                 <constraint firstItem="t0H-eh-V0p" firstAttribute="top" secondItem="XHD-Bx-CyI" secondAttribute="top" id="Xrm-UN-sDp"/>
                 <constraint firstItem="t0H-eh-V0p" firstAttribute="leading" secondItem="XHD-Bx-CyI" secondAttribute="leading" id="ei0-AZ-stf"/>
+                <constraint firstItem="fO1-nw-Lxz" firstAttribute="top" secondItem="XHD-Bx-CyI" secondAttribute="top" constant="20" id="i6T-EO-dZ4"/>
                 <constraint firstItem="XHD-Bx-CyI" firstAttribute="bottom" secondItem="t0H-eh-V0p" secondAttribute="bottom" id="q0K-IC-8hz"/>
                 <constraint firstItem="Dtu-Sq-DIM" firstAttribute="trailing" secondItem="XHD-Bx-CyI" secondAttribute="trailing" id="rZI-iW-EIo"/>
                 <constraint firstItem="Rt8-ua-ihj" firstAttribute="top" secondItem="XHD-Bx-CyI" secondAttribute="top" constant="20" id="u93-CT-Bsg"/>
