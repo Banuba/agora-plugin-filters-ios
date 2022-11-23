@@ -167,16 +167,24 @@ namespace agora::extension
         input_frame->getVideoFrameData(captured_frame);
         auto pixels = captured_frame.pixels.data;
 
+        int width = static_cast<int>(CVPixelBufferGetWidthOfPlane(buffer, 0));
+        int height = static_cast<int>(CVPixelBufferGetHeightOfPlane(buffer, 0));
         CVPixelBufferLockBaseAddress(buffer, 1);
-        uint8_t* y_adress = static_cast<uint8_t*>(CVPixelBufferGetBaseAddressOfPlane(buffer, 0));
-        auto y_width = static_cast<int>(CVPixelBufferGetWidthOfPlane(buffer, 0));
-        auto y_height = static_cast<int>(CVPixelBufferGetHeightOfPlane(buffer, 0));
-        auto y_bytes_per_row = static_cast<int>(CVPixelBufferGetBytesPerRowOfPlane(buffer, 0));
+        const uint8_t* src_y = static_cast<uint8_t*>(CVPixelBufferGetBaseAddressOfPlane(buffer, 0));
+        int src_stride_y = static_cast<int>(CVPixelBufferGetBytesPerRowOfPlane(buffer, 0));
+        const uint8_t* src_uv = static_cast<uint8_t*>(CVPixelBufferGetBaseAddressOfPlane(buffer, 1));
+        int src_stride_uv = static_cast<int>(CVPixelBufferGetBytesPerRowOfPlane(buffer, 1));
+        int dst_stride_y = m_width;
+        uint8_t* dst_y = static_cast<uint8_t*>(pixels) + dst_stride_y * (height - 1);
+        int dst_stride_uv = m_width;
+        uint8_t* dst_uv = static_cast<uint8_t*>(pixels + m_width * m_height) + dst_stride_uv * (height / 2 - 1);
 
-        uint8_t* uv_adress = static_cast<uint8_t*>(CVPixelBufferGetBaseAddressOfPlane(buffer, 1));
-        auto uv_bytes_per_row = static_cast<int>(CVPixelBufferGetBytesPerRowOfPlane(buffer, 1));
-
-        libyuv::NV12Copy(y_adress, y_bytes_per_row, uv_adress, uv_bytes_per_row, static_cast<uint8_t*>(pixels), m_width, static_cast<uint8_t*>(pixels + m_width * m_height), m_width, y_width, y_height);
+        libyuv::NV12Copy(
+            src_y, src_stride_y,
+            src_uv, src_stride_uv,
+            dst_y, -dst_stride_y,
+            dst_uv, -dst_stride_uv,
+            width, height);
         CVPixelBufferUnlockBaseAddress(buffer, 1);
     }
 }
