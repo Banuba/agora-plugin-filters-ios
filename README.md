@@ -19,7 +19,7 @@ Examples for Banuba SDK on iOS and [Agora.io](https://www.agora.io/en/) SDK inte
         pod install
     ```
 
-3. Download the effects you need from [HERE](https://docs.banuba.com/face-ar-sdk-v1/overview/demo_face_filters). Unzip the downloaded `.zip` files with effects to a folder [`app/src/main/assets/effects`](./BanubaAgoraFilters/effects). Each unpacked effect should be put into a separate folder. The folder name will be the effect name for loading.
+3. Download the effects you need from [HERE](https://docs.banuba.com/face-ar-sdk-v1/overview/demo_face_filters). Unzip the downloaded `.zip` files with effects to a folder [`BanubaAgoraFilters/effects`](./BanubaAgoraFilters/effects). Each unpacked effect should be put into a separate folder. The folder name will be the effect name for loading.
 
 3. Get the following Banuba trial client token. To receive a trial token or a full commercial licence from Banuba - please fill in our form on [form on banuba.com](https://www.banuba.com/face-filters-sdk) website, or contact us via [info@banuba.com](mailto:info@banuba.com).
 
