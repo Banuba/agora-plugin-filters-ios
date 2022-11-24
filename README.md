@@ -21,15 +21,15 @@ Examples for Banuba SDK on iOS and [Agora.io](https://www.agora.io/en/) SDK inte
 
 3. Download the effects you need from [HERE](https://docs.banuba.com/face-ar-sdk-v1/overview/demo_face_filters). Unzip the downloaded `.zip` files with effects to a folder [`BanubaAgoraFilters/effects`](./BanubaAgoraFilters/effects). Each unpacked effect should be put into a separate folder. The folder name will be the effect name for loading.
 
-3. Get the following Banuba trial client token. To receive a trial token or a full commercial licence from Banuba - please fill in our form on [form on banuba.com](https://www.banuba.com/face-filters-sdk) website, or contact us via [info@banuba.com](mailto:info@banuba.com).
+4. Get the following Banuba trial client token. To receive a trial token or a full commercial licence from Banuba - please fill in our form on [form on banuba.com](https://www.banuba.com/face-filters-sdk) website, or contact us via [info@banuba.com](mailto:info@banuba.com).
 
-4. Copy and Paste your Banuba client token into appropriate section of [`Token.swift`](./BanubaAgoraFilters/Token.swift) with " " symbols.
+5. Copy and Paste your Banuba client token into appropriate section of [`Token.swift`](./BanubaAgoraFilters/Token.swift) with " " symbols.
 
-5. Visit [agora.io](https://console.agora.io) to sign up and get [Agora token, Agora app ID and Agora channel ID](https://docs.agora.io/en/Agora%20Platform/channel_key?platform=Android). You can read more about how you can get an Agora token at [THIS LINK](https://docs.agora.io/en/Agora%20Platform/channel_key?platform=Android).
+6. Visit [agora.io](https://console.agora.io) to sign up and get [Agora token, Agora app ID and Agora channel ID](https://docs.agora.io/en/Agora%20Platform/channel_key?platform=Android). You can read more about how you can get an Agora token at [THIS LINK](https://docs.agora.io/en/Agora%20Platform/channel_key?platform=Android).
 
-6. Copy and Paste your Agora token, Agora app ID and Agora channel ID into appropriate section of [`Token.swift`](./BanubaAgoraFilters/Token.swift) with " " symbols.
+7. Copy and Paste your Agora token, Agora app ID and Agora channel ID into appropriate section of [`Token.swift`](./BanubaAgoraFilters/Token.swift) with " " symbols.
 
-7. As a result of the four previous steps, in the file [`Token.swift`](./BanubaAgoraFilters/Token.swift) you should have the following: 
+8. As a result of the four previous steps, in the file [`Token.swift`](./BanubaAgoraFilters/Token.swift) you should have the following: 
 ``` swift
 import Foundation
 
@@ -42,7 +42,7 @@ internal let agoraChannelId: String = "this_is_your_AGORA_CHANNEL_ID"
 internal let banubaClientToken = "this_is_your_BANUBA_CLIENT_TOKEN"
 ```
 
-8. Open the `BanubaAgoraFilters.xcworkspace` project in Xcode and run the `BanubaAgoraFilters` target.
+9. Open the `BanubaAgoraFilters.xcworkspace` project in Xcode and run the `BanubaAgoraFilters` target.
 
 :exclamation: If you have any problems with installing Agora frameworks with Swift Package Manager refer to this [page](https://github.com/agorabuilder/AgoraRtcEngine_iOS_Preview)
 
