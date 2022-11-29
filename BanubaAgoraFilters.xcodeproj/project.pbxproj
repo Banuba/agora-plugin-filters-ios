@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63D0FCF328F41455000C07D1 /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 63D0FCF228F41455000C07D1 /* effects */; };
 		63EAB02D26DE830A00A83AD4 /* BanubaEffectSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAEA626DE830A00A83AD4 /* BanubaEffectSelectorView.swift */; };
 		63EAB02E26DE830A00A83AD4 /* LICENCE.md in Resources */ = {isa = PBXBuildFile; fileRef = 63EAAEA826DE830A00A83AD4 /* LICENCE.md */; };
 		63EAB02F26DE830A00A83AD4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 63EAAEA926DE830A00A83AD4 /* README.md */; };
@@ -22,22 +23,8 @@
 		63EAB03926DE830A00A83AD4 /* BanubaAgoraFilters-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 63EAAEB526DE830A00A83AD4 /* BanubaAgoraFilters-Bridging-Header.h */; };
 		63EAB03A26DE830A00A83AD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAEB626DE830A00A83AD4 /* AppDelegate.swift */; };
 		63EAB1A326DE830B00A83AD4 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAB02B26DE830A00A83AD4 /* Token.swift */; };
-		7646E5344445197421C737EE /* Pods_BanubaAgoraFilters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629A8A85617152486F205C7C /* Pods_BanubaAgoraFilters.framework */; };
-		80A35EF428B512D000EC2182 /* RtcBasic in Frameworks */ = {isa = PBXBuildFile; productRef = 80A35EF328B512D000EC2182 /* RtcBasic */; };
-		80D6D4DE28AFB70A001C9AA9 /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 80D6D4DD28AFB70A001C9AA9 /* effects */; };
-		8E6E85ED287460C500041909 /* BanubaFiltersAgoraExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6E85EC287460BE00041909 /* BanubaFiltersAgoraExtension.framework */; platformFilter = ios; };
-		8E6E85EE287460C500041909 /* BanubaFiltersAgoraExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6E85EC287460BE00041909 /* BanubaFiltersAgoraExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		695052DDAEAFBC381D84DFAA /* Pods_BanubaAgoraFilters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92A72FE31B4831E76242823 /* Pods_BanubaAgoraFilters.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		8E6E85EB287460BE00041909 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8E6E85E7287460BE00041909 /* BanubaFiltersAgoraExtension.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 63CE252F26D38B8A002A587C;
-			remoteInfo = BanubaFiltersAgoraExtension;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		8E6E85EF287460C500041909 /* Embed Frameworks */ = {
@@ -46,7 +33,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8E6E85EE287460C500041909 /* BanubaFiltersAgoraExtension.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,10 +40,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		629A8A85617152486F205C7C /* Pods_BanubaAgoraFilters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BanubaAgoraFilters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		637C19B426A6EEAB000C647F /* BanubaAgoraFilters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BanubaAgoraFilters.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		63EAAE9726DE824D00A83AD4 /* BanubaEffectPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BanubaEffectPlayer.xcframework; path = Frameworks/BanubaEffectPlayer.xcframework; sourceTree = "<group>"; };
-		63EAAE9A26DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BanubaFiltersAgoraExtension.framework; path = Frameworks/BanubaFiltersAgoraExtension.framework; sourceTree = "<group>"; };
+		63D0FCF228F41455000C07D1 /* effects */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = effects; path = BanubaAgoraFilters/effects; sourceTree = SOURCE_ROOT; };
 		63EAAEA626DE830A00A83AD4 /* BanubaEffectSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BanubaEffectSelectorView.swift; sourceTree = "<group>"; };
 		63EAAEA826DE830A00A83AD4 /* LICENCE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENCE.md; sourceTree = "<group>"; };
 		63EAAEA926DE830A00A83AD4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -74,10 +58,9 @@
 		63EAAEB626DE830A00A83AD4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63EAB02B26DE830A00A83AD4 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		63EAB02C26DE830A00A83AD4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C6D6FCFFA7BE7034A87808C /* Pods-BanubaAgoraFilters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanubaAgoraFilters.release.xcconfig"; path = "Target Support Files/Pods-BanubaAgoraFilters/Pods-BanubaAgoraFilters.release.xcconfig"; sourceTree = "<group>"; };
-		80D6D4DD28AFB70A001C9AA9 /* effects */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = effects; sourceTree = SOURCE_ROOT; };
-		8E6E85E7287460BE00041909 /* BanubaFiltersAgoraExtension.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BanubaFiltersAgoraExtension.xcodeproj; path = BanubaFilters/BanubaFiltersAgoraExtension.xcodeproj; sourceTree = "<group>"; };
-		FA8E4220CE0959DDCD1E09CA /* Pods-BanubaAgoraFilters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanubaAgoraFilters.debug.xcconfig"; path = "Target Support Files/Pods-BanubaAgoraFilters/Pods-BanubaAgoraFilters.debug.xcconfig"; sourceTree = "<group>"; };
+		6B00339DB29F391D7E928F7D /* Pods-BanubaAgoraFilters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanubaAgoraFilters.debug.xcconfig"; path = "Target Support Files/Pods-BanubaAgoraFilters/Pods-BanubaAgoraFilters.debug.xcconfig"; sourceTree = "<group>"; };
+		F38DE352DE51C7561D42F939 /* Pods-BanubaAgoraFilters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanubaAgoraFilters.release.xcconfig"; path = "Target Support Files/Pods-BanubaAgoraFilters/Pods-BanubaAgoraFilters.release.xcconfig"; sourceTree = "<group>"; };
+		F92A72FE31B4831E76242823 /* Pods_BanubaAgoraFilters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BanubaAgoraFilters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,23 +68,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E6E85ED287460C500041909 /* BanubaFiltersAgoraExtension.framework in Frameworks */,
-				7646E5344445197421C737EE /* Pods_BanubaAgoraFilters.framework in Frameworks */,
-				80A35EF428B512D000EC2182 /* RtcBasic in Frameworks */,
+				695052DDAEAFBC381D84DFAA /* Pods_BanubaAgoraFilters.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		553BCCFBBAD1C63F226780EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B00339DB29F391D7E928F7D /* Pods-BanubaAgoraFilters.debug.xcconfig */,
+				F38DE352DE51C7561D42F939 /* Pods-BanubaAgoraFilters.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		637C19AB26A6EEAB000C647F = {
 			isa = PBXGroup;
 			children = (
-				8E6E85E7287460BE00041909 /* BanubaFiltersAgoraExtension.xcodeproj */,
 				63EAAEA426DE830A00A83AD4 /* BanubaAgoraFilters */,
 				637C19B526A6EEAB000C647F /* Products */,
 				637C19CB26A6EF5C000C647F /* Frameworks */,
-				F67EE46E3400E6A5159E8351 /* Pods */,
+				553BCCFBBAD1C63F226780EE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,9 +105,7 @@
 		637C19CB26A6EF5C000C647F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				63EAAE9726DE824D00A83AD4 /* BanubaEffectPlayer.xcframework */,
-				63EAAE9A26DE824D00A83AD4 /* BanubaFiltersAgoraExtension.framework */,
-				629A8A85617152486F205C7C /* Pods_BanubaAgoraFilters.framework */,
+				F92A72FE31B4831E76242823 /* Pods_BanubaAgoraFilters.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -126,11 +113,11 @@
 		63EAAEA426DE830A00A83AD4 /* BanubaAgoraFilters */ = {
 			isa = PBXGroup;
 			children = (
+				63D0FCF228F41455000C07D1 /* effects */,
 				63EAAEA526DE830A00A83AD4 /* BanubaEffectSelectorView */,
 				63EAAEAE26DE830A00A83AD4 /* ViewController.swift */,
 				63EAAEAF26DE830A00A83AD4 /* ViewController.xib */,
 				63EAAEB026DE830A00A83AD4 /* Assets.xcassets */,
-				80D6D4DD28AFB70A001C9AA9 /* effects */,
 				63EAAEB126DE830A00A83AD4 /* EffectsService.swift */,
 				63EAAEB226DE830A00A83AD4 /* LaunchScreen.storyboard */,
 				63EAAEB426DE830A00A83AD4 /* BanubaEffectsManager.swift */,
@@ -171,23 +158,6 @@
 			path = iCarousel;
 			sourceTree = "<group>";
 		};
-		8E6E85E8287460BE00041909 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8E6E85EC287460BE00041909 /* BanubaFiltersAgoraExtension.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F67EE46E3400E6A5159E8351 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				FA8E4220CE0959DDCD1E09CA /* Pods-BanubaAgoraFilters.debug.xcconfig */,
-				7C6D6FCFFA7BE7034A87808C /* Pods-BanubaAgoraFilters.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -221,9 +191,6 @@
 			dependencies = (
 			);
 			name = BanubaAgoraFilters;
-			packageProductDependencies = (
-				80A35EF328B512D000EC2182 /* RtcBasic */,
-			);
 			productName = BanubaAgoraFilters;
 			productReference = 637C19B426A6EEAB000C647F /* BanubaAgoraFilters.app */;
 			productType = "com.apple.product-type.application";
@@ -235,7 +202,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					637C19B326A6EEAB000C647F = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -252,17 +219,8 @@
 				Base,
 			);
 			mainGroup = 637C19AB26A6EEAB000C647F;
-			packageReferences = (
-				80A35EF228B512D000EC2182 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */,
-			);
 			productRefGroup = 637C19B526A6EEAB000C647F /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 8E6E85E8287460BE00041909 /* Products */;
-					ProjectRef = 8E6E85E7287460BE00041909 /* BanubaFiltersAgoraExtension.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				637C19B326A6EEAB000C647F /* BanubaAgoraFilters */,
@@ -270,23 +228,13 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		8E6E85EC287460BE00041909 /* BanubaFiltersAgoraExtension.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = BanubaFiltersAgoraExtension.framework;
-			remoteRef = 8E6E85EB287460BE00041909 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		637C19B226A6EEAB000C647F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				63EAB03226DE830A00A83AD4 /* BanubaEffectSelectorView.xib in Resources */,
-				80D6D4DE28AFB70A001C9AA9 /* effects in Resources */,
+				63D0FCF328F41455000C07D1 /* effects in Resources */,
 				63EAB02F26DE830A00A83AD4 /* README.md in Resources */,
 				63EAB03426DE830A00A83AD4 /* ViewController.xib in Resources */,
 				63EAB03726DE830A00A83AD4 /* LaunchScreen.storyboard in Resources */,
@@ -436,7 +384,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -491,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -503,7 +451,7 @@
 		};
 		637C19C926A6EEAE000C647F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA8E4220CE0959DDCD1E09CA /* Pods-BanubaAgoraFilters.debug.xcconfig */;
+			baseConfigurationReference = 6B00339DB29F391D7E928F7D /* Pods-BanubaAgoraFilters.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -512,17 +460,10 @@
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8W9QCBMQCU;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = BanubaAgoraFilters/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				OTHER_LDFLAGS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banuba.BanubaAgoraFilters.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BanubaAgoraFilters/BanubaAgoraFilters-Bridging-Header.h";
@@ -534,7 +475,7 @@
 		};
 		637C19CA26A6EEAE000C647F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C6D6FCFFA7BE7034A87808C /* Pods-BanubaAgoraFilters.release.xcconfig */;
+			baseConfigurationReference = F38DE352DE51C7561D42F939 /* Pods-BanubaAgoraFilters.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -548,12 +489,8 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = BanubaAgoraFilters/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				OTHER_LDFLAGS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banuba.BanubaAgoraFilters.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BanubaAgoraFilters/BanubaAgoraFilters-Bridging-Header.h";
@@ -584,25 +521,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		80A35EF228B512D000EC2182 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AgoraIO/AgoraRtcEngine_iOS";
-			requirement = {
-				kind = exactVersion;
-				version = "4.0.0-rc.1";
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		80A35EF328B512D000EC2182 /* RtcBasic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 80A35EF228B512D000EC2182 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
-			productName = RtcBasic;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 637C19AC26A6EEAB000C647F /* Project object */;
 }
