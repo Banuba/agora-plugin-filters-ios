@@ -18,8 +18,10 @@ class ViewController: UIViewController {
   @IBOutlet weak var remoteVideo: UIView!
   @IBOutlet weak var localVideo: UIView!
   @IBOutlet weak var effectSelectorView: BanubaEffectSelectorView!
+  @IBOutlet weak var toggleExtStateButton: UIButton!
   
   private var agoraKit: AgoraRtcEngineKit?
+  private var isEnabled: Bool = false
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -35,6 +37,23 @@ class ViewController: UIViewController {
     
     joinChannel()
     setupBanubaPlugin()
+    adjustUIState()
+  }
+    
+  @IBAction func onToggleExtensionBtnPressed(_ sender: Any) {
+    isEnabled.toggle()
+    adjustUIState()
+    
+    agoraKit?.enableExtension(
+      withVendor: BNBKeyVendorName,
+      extension: BNBKeyExtensionName,
+      enabled: isEnabled
+    )
+  }
+  
+  private func adjustUIState() {
+    let toggleBtnTitle = isEnabled ? "Disable Ext" : "Enable Ext"
+    toggleExtStateButton.setTitle(toggleBtnTitle, for: .normal)
   }
   
   private func setupEngine() {
@@ -47,10 +66,11 @@ class ViewController: UIViewController {
     )
     
     agoraKit?.enableExtension(
-      withVendor: BanubaPluginKeys.vendorName,
-      extension: BanubaPluginKeys.extensionName,
+      withVendor: BNBKeyVendorName,
+      extension: BNBKeyExtensionName,
       enabled: true
     )
+    isEnabled = true
   }
   
   private func setupVideo() {
@@ -86,9 +106,9 @@ class ViewController: UIViewController {
       info: nil,
       uid: 0,
       joinSuccess: { channel, uid, elapsed in
-        print("Did join channel")
+        print("[Agora] Did join channel")
       })
-    if let result = result { print("join result = \(result)") }
+    if let result = result { print("[Agora] join result = \(result)") }
     agoraKit?.startPreview()
     agoraKit?.setEnableSpeakerphone(true)
   }
@@ -97,7 +117,7 @@ class ViewController: UIViewController {
 // MARK: - AgoraRtcEngineDelegate
 extension ViewController: AgoraRtcEngineDelegate {
   func rtcEngine(_ engine: AgoraRtcEngineKit, didJoinedOfUid uid: UInt, elapsed: Int) {
-    print("didJoinedOfUid \(uid)")
+    print("[Agora] didJoinedOfUid \(uid)")
     setupRemoteVideo(uid: uid)
   }
   
@@ -110,11 +130,11 @@ extension ViewController: AgoraRtcEngineDelegate {
   }
 
   func rtcEngine(_ engine: AgoraRtcEngineKit, didOccurError errorCode: AgoraErrorCode) {
-    print("Agora error occured: AgoraErrorCode = \(errorCode)")
+    print("[Agora] Error occured: AgoraErrorCode = \(errorCode)")
   }
 
   func rtcEngine(_ engine: AgoraRtcEngineKit, didOccurWarning warningCode: AgoraWarningCode) {
-    print("Agora warning occured: AgoraWarningCode = \(warningCode)")
+    print("[Agora] Warning occured: AgoraWarningCode = \(warningCode)")
   }
 }
 
@@ -153,36 +173,34 @@ extension ViewController {
 // MARK: - BanubaFilterPlugin interactions
 extension ViewController {
   private func setupBanubaPlugin() {
-    agoraKit?.setExtensionPropertyWithVendor(
-      BanubaPluginKeys.vendorName,
-      extension: BanubaPluginKeys.extensionName,
-      key: BanubaPluginKeys.setEffectsPath,
-      value: BanubaEffectsManager.effectsURL.path
-    )
-    
-    let clientToken = banubaClientToken.trimmingCharacters(in: .whitespacesAndNewlines)
-    agoraKit?.setExtensionPropertyWithVendor(
-      BanubaPluginKeys.vendorName,
-      extension: BanubaPluginKeys.extensionName,
-      key: BanubaPluginKeys.setToken,
-      value: clientToken
-    )
+      agoraKit?.setExtensionPropertyWithVendor(BNBKeyVendorName,
+                                               extension: BNBKeyExtensionName,
+                                               key: BNBKeySetEffectsPath,
+                                               value: BanubaEffectsManager.effectsURL.path)
+      agoraKit?.setExtensionPropertyWithVendor(BNBKeyVendorName,
+                                               extension: BNBKeyExtensionName,
+                                               key: BNBKeySetAppKey,
+                                               value: appKey)
+      agoraKit?.setExtensionPropertyWithVendor(BNBKeyVendorName,
+                                               extension: BNBKeyExtensionName,
+                                               key: BNBKeySetAppSecret,
+                                               value: appSecret)
   }
   
   private func loadEffect(_ effectName: String) {
     agoraKit?.setExtensionPropertyWithVendor(
-      BanubaPluginKeys.vendorName,
-      extension: BanubaPluginKeys.extensionName,
-      key: BanubaPluginKeys.loadEffect,
+      BNBKeyVendorName,
+      extension: BNBKeyExtensionName,
+      key: BNBKeyLoadEffect,
       value: effectName
     )
   }
   
   private func unloadEffect() {
     agoraKit?.setExtensionPropertyWithVendor(
-      BanubaPluginKeys.vendorName,
-      extension: BanubaPluginKeys.extensionName,
-      key: BanubaPluginKeys.unloadEffect,
+      BNBKeyVendorName,
+      extension: BNBKeyExtensionName,
+      key: BNBKeyUnloadEffect,
       value: " "
     )
   }
@@ -190,9 +208,9 @@ extension ViewController {
   /// To control BanubaEffectPlayer via json methods refer to this method
   private func sendJSONToBanubaPlugin(string: String) {
       agoraKit?.setExtensionPropertyWithVendor(
-        BanubaPluginKeys.vendorName,
-        extension: BanubaPluginKeys.extensionName,
-        key: BanubaPluginKeys.evalJSMethod,
+        BNBKeyVendorName,
+        extension: BNBKeyExtensionName,
+        key: BNBKeyEvalJSMethod,
         value: string
       )
   }
