@@ -8,28 +8,39 @@ Examples for Banuba SDK on iOS and [Agora.io](https://www.agora.io/en/) SDK inte
 
 # Getting Started
 
-1. Execute 'pod install' to get the Banuba and Agora SDKs and plugin framework.
+1. Visit agora.io to sign up and get the app id, client token and channel id. Please consult with [Agora documentation about account management](https://docs.agora.io/en/voice-calling/reference/manage-agora-account) to find out exactly how mentioned IDs are created.
 
-2. Open the BanubaAgoraFilters.xcworkspace file in Xcode.
+2. Activate the [Banuba Face AR SDK extension](https://console.agora.io/marketplace/extension/introduce?serviceName=banuba) to get the app key and app secret. Please check out the [extension integration documentation](https://docs.agora.io/en/video-calling/develop/use-an-extension?platform=ios) if you have any questions regarding this step.
 
-3. Visit agora.io to sign up and get the app key, app secret as well as necessary Agora IDs.
+3. Open a terminal and run the following command to clone the project to your computer:
+```sh
+git clone https://github.com/Banuba/agora-plugin-filters-ios.git
+```
 
-4. Copy and Paste your Agora token, app and chanel ID to the appropriate section of `/BanubaAgoraFilters/Token.swift` with “ ” symbols. For example: 
+4. In the terminal open the project directory and run the 'pod install' command to get the Banuba and Agora SDKs and plugin framework:
+```sh
+cd agora-plugin-filters-ios/
+pod install
+```
+
+5. Open the BanubaAgoraFilters.xcworkspace file in Xcode.
+
+6. Copy and paste your Agora token, app and chanel ID to the appropriate section of `/BanubaAgoraFilters/Token.swift` with “ ” symbols. For example: 
 ``` swift
 internal let agoraAppID = "Agora App ID"
 internal let agoraClientToken = "Agora Token"
 internal let agoraChannelId = "Agora Channel ID"
 ```
 
-5. Copy and Paste your Banuba extension credentials from Agora Console to the appropriate section of `/BanubaAgoraFilters/Token.swift` with “ ” symbols. For example: 
+7. Copy and Paste your Banuba extension credentials from Agora Console to the appropriate section of `/BanubaAgoraFilters/Token.swift` with “ ” symbols. For example: 
 ``` swift
 let appKey = "Banuba Extension App Key"
 let appSecret = "Banuba Extension App Secret"
 ```
 
-6. Download the needed effects from [here](https://docs.banuba.com/face-ar-sdk-v1/overview/demo_face_filters). This guarantees, that you will use the up-to-date version of the effects. The effects must be copied to the `agora-plugin-filters-ios -> BanubaAgoraFilters -> effects` folder.
+8. Download the needed effects from [here](https://docs.banuba.com/face-ar-sdk-v1/overview/demo_face_filters). This guarantees, that you will use the up-to-date version of the effects. The effects must be copied to the `agora-plugin-filters-ios -> BanubaAgoraFilters -> effects` folder.
 
-7. Run the `BanubaAgoraFilters` target.
+9. Run the `BanubaAgoraFilters` target.
 
 # Connecting Banuba SDK and AgoraRtcKit to your own project
 
@@ -39,18 +50,24 @@ As for AgoraRtcKit you can install it using either Swift Package Manager of Coco
 URL: `https://github.com/AgoraIO/AgoraRtcEngine_iOS`  
 Version Rule: `Exact`  
 Version: `4.0.1`
+
 In case of Cocoapods add the following line to your Podfile:
 ```ruby
-  pod 'AgoraRtcEngine_iOS', '4.0.1'
+pod 'AgoraRtcEngine_iOS', '4.0.1'
 ```
 
 # Plugin installation
 
 The `BanubaFiltersAgoraExtension` plugin can be installed with Cocoapods. Simply add the following line to your Podfile:
 ```ruby
-  pod 'BanubaFiltersAgoraExtension', '2.0.0'
+pod 'BanubaFiltersAgoraExtension', '2.0.0'
 ```
-Alternatively you can also install the extension by downloading the prebuilt xcframework from [here]() and manually linking it to your project.
+Please make sure that you have also added our custom Podspecs source to your Podfile:
+```ruby
+source 'https://github.com/sdk-banuba/banuba-sdk-podspecs.git'
+```
+
+Alternatively you can also install the extension by downloading the prebuilt xcframework from [here](https://github.com/Banuba/banuba-filters-agora-extension-framework) and manually linking it to your project.
 
 # How to use `BanubaFiltersAgoraExtension`
 
