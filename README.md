@@ -32,7 +32,7 @@ internal let agoraClientToken = "Agora Token"
 internal let agoraChannelId = "Agora Channel ID"
 ```
 
-7. Copy and Paste your Banuba extension credentials from Agora Console to the appropriate section of `/BanubaAgoraFilters/Token.swift` with “ ” symbols. For example: 
+7. Copy and Paste your Banuba extension credentials received from the sales representative to the appropriate section of `/BanubaAgoraFilters/Token.swift` with “ ” symbols. For example: 
 ``` swift
 let appKey = "Banuba Extension App Key"
 let appSecret = "Banuba Extension App Secret"
