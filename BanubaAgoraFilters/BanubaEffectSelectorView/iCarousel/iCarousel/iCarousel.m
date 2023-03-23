@@ -1509,56 +1509,27 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
     
     if (animated)
     {
-        
-#ifdef ICAROUSEL_IOS
-        
-        [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:0.1];
-        [UIView setAnimationDelegate:itemView.superview];
-        [UIView setAnimationDidStopSelector:@selector(removeFromSuperview)];
-        [self performSelector:@selector(queueItemView:) withObject:itemView afterDelay:0.1];
-        itemView.superview.layer.opacity = 0.0;
-        [UIView commitAnimations];
-        
-        [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDelay:0.1];
-        [UIView setAnimationDuration:INSERT_DURATION];
-        [UIView setAnimationDelegate:self];
-        [UIView setAnimationDidStopSelector:@selector(depthSortViews)];
-        [self removeViewAtIndex:index];
-        _numberOfItems --;
-        _wrapEnabled = !![self valueForOption:iCarouselOptionWrap withDefault:_wrapEnabled];
-        [self updateNumberOfVisibleItems];
-        _scrollOffset = self.currentItemIndex;
-        [self didScroll];
-        [UIView commitAnimations];
-        
-#else
-		[NSAnimationContext beginGrouping];
-		[[NSAnimationContext currentContext] setAllowsImplicitAnimation:YES];
-        [CATransaction begin];
-        [CATransaction setAnimationDuration:0.1];
-        [CATransaction setCompletionBlock:^{
-            [self queueItemView:itemView];
-            [itemView.superview removeFromSuperview]; 
-        }];
-        itemView.superview.layer.opacity = 0.0;
-        [CATransaction commit];
-        
-        [CATransaction begin];
-        [CATransaction setAnimationDuration:INSERT_DURATION];
-        [CATransaction setCompletionBlock:^{
-            [self depthSortViews]; 
-        }];
-        [self removeViewAtIndex:index];
-        _numberOfItems --;
-        _wrapEnabled = !![self valueForOption:iCarouselOptionWrap withDefault:_wrapEnabled];
-        _scrollOffset = self.currentItemIndex;
-        [self didScroll];
-        [CATransaction commit];
-		[NSAnimationContext endGrouping];        
-#endif
-        
+        [UIView animateWithDuration:0.1
+                         animations:^{
+            [self performSelector:@selector(queueItemView:) withObject:itemView afterDelay:0.1];
+            itemView.superview.layer.opacity = 0.0;
+        }                completion:^(BOOL finished){ [itemView.superview removeFromSuperview]; }];
+
+        [UIView animateWithDuration:INSERT_DURATION
+                         animations:^{ [self transformItemViews]; }
+                         completion:^(BOOL finished){ [self didScroll]; }];
+
+        [UIView animateWithDuration:INSERT_DURATION
+                              delay:0.1
+                            options:0
+                         animations:^{
+            [self removeViewAtIndex:index];
+            self->_numberOfItems -= 1;
+            self->_wrapEnabled = !![self valueForOption:iCarouselOptionWrap withDefault:self->_wrapEnabled];
+            [self updateNumberOfVisibleItems];
+            self.scrollOffset = self.currentItemIndex;
+            [self didScroll];
+        }                completion:^(BOOL finished){ [self depthSortViews]; }];
     }
     else
     {
@@ -1592,29 +1563,9 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
     
     if (animated)
     {
-
-#ifdef ICAROUSEL_IOS
-        
-        [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:INSERT_DURATION];
-        [UIView setAnimationDelegate:self];
-        [UIView setAnimationDidStopSelector:@selector(didScroll)];
-        [self transformItemViews];
-        [UIView commitAnimations];
-        
-#else
-		[NSAnimationContext beginGrouping];
-		[[NSAnimationContext currentContext] setAllowsImplicitAnimation:YES];
-        [CATransaction begin];
-        [CATransaction setAnimationDuration:INSERT_DURATION];
-        [CATransaction setCompletionBlock:^{
-            [self didScroll];
-        }];
-        [self transformItemViews];
-        [CATransaction commit];
-		[NSAnimationContext endGrouping];
-#endif
-    
+        [UIView animateWithDuration:INSERT_DURATION
+                         animations:^{ [self transformItemViews]; }
+                         completion:^(BOOL finished){ [self didScroll]; }];
     }
     else
     {

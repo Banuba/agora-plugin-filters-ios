@@ -179,12 +179,8 @@ extension ViewController {
                                                value: BanubaEffectsManager.effectsURL.path)
       agoraKit?.setExtensionPropertyWithVendor(BNBKeyVendorName,
                                                extension: BNBKeyExtensionName,
-                                               key: BNBKeySetAppKey,
-                                               value: appKey)
-      agoraKit?.setExtensionPropertyWithVendor(BNBKeyVendorName,
-                                               extension: BNBKeyExtensionName,
-                                               key: BNBKeySetAppSecret,
-                                               value: appSecret)
+                                               key: BNBKeySetBanubaLicenseToken,
+                                               value: banubaLicenseToken)
   }
   
   private func loadEffect(_ effectName: String) {

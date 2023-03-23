@@ -8,10 +8,9 @@
 import Foundation
 
 // MARK: - Agora Tokens
-internal let agoraAppID: String = <#Agora App ID#>
-internal let agoraClientToken: String? = <#Agora Token#>
-internal let agoraChannelId: String = <#Agora Channel ID#>
+let agoraAppID: String = <#Agora App ID#>
+let agoraClientToken: String? = <#Agora Token#>
+let agoraChannelId: String = <#Agora Channel ID#>
 
 // MARK: - Extension credentials
-internal let appKey = <#Agora App Key#>
-internal let appSecret = <#Agora App Secret#>
+let banubaLicenseToken = <#Banuba License Token#>
