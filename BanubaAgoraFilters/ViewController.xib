@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0H-eh-V0p">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <color key="backgroundColor" systemColor="systemGrayColor"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dtu-Sq-DIM" customClass="BanubaEffectSelectorView" customModule="BanubaAgoraFilters" customModuleProvider="target">
@@ -35,7 +35,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rt8-ua-ihj">
-                    <rect key="frame" x="294" y="64" width="100" height="178"/>
+                    <rect key="frame" x="294" y="68" width="100" height="178"/>
                     <color key="backgroundColor" systemColor="systemGray2Color"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="J6x-Yg-crd"/>
@@ -43,7 +43,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fO1-nw-Lxz" userLabel="EnableExtButton">
-                    <rect key="frame" x="20" y="64" width="120" height="40"/>
+                    <rect key="frame" x="20" y="68" width="120" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="ZkN-nZ-xXr"/>
                         <constraint firstAttribute="width" constant="120" id="c7k-Ys-48v"/>
@@ -65,10 +65,10 @@
                 <constraint firstItem="XHD-Bx-CyI" firstAttribute="trailing" secondItem="Rt8-ua-ihj" secondAttribute="trailing" constant="20" id="S28-nc-dPe"/>
                 <constraint firstItem="fO1-nw-Lxz" firstAttribute="leading" secondItem="XHD-Bx-CyI" secondAttribute="leading" constant="20" id="UbV-eP-CfX"/>
                 <constraint firstItem="XHD-Bx-CyI" firstAttribute="trailing" secondItem="t0H-eh-V0p" secondAttribute="trailing" id="WSJ-2Z-Yg9"/>
-                <constraint firstItem="t0H-eh-V0p" firstAttribute="top" secondItem="XHD-Bx-CyI" secondAttribute="top" id="Xrm-UN-sDp"/>
+                <constraint firstItem="t0H-eh-V0p" firstAttribute="top" secondItem="koG-RE-lDl" secondAttribute="top" id="Xrm-UN-sDp"/>
                 <constraint firstItem="t0H-eh-V0p" firstAttribute="leading" secondItem="XHD-Bx-CyI" secondAttribute="leading" id="ei0-AZ-stf"/>
                 <constraint firstItem="fO1-nw-Lxz" firstAttribute="top" secondItem="XHD-Bx-CyI" secondAttribute="top" constant="20" id="i6T-EO-dZ4"/>
-                <constraint firstItem="XHD-Bx-CyI" firstAttribute="bottom" secondItem="t0H-eh-V0p" secondAttribute="bottom" id="q0K-IC-8hz"/>
+                <constraint firstAttribute="bottom" secondItem="t0H-eh-V0p" secondAttribute="bottom" id="q0K-IC-8hz"/>
                 <constraint firstItem="Dtu-Sq-DIM" firstAttribute="trailing" secondItem="XHD-Bx-CyI" secondAttribute="trailing" id="rZI-iW-EIo"/>
                 <constraint firstItem="Rt8-ua-ihj" firstAttribute="top" secondItem="XHD-Bx-CyI" secondAttribute="top" constant="20" id="u93-CT-Bsg"/>
             </constraints>

@@ -1,3 +1,8 @@
+# 2.3.0
+* Agora SDK 4.2.0+ support.
+* Banuba Face AR SDK 1.7.0+ support.
+* In line with Face AR SDK the extension now has iOS 13 deployment target.
+
 # 2.2.0
 * Extension now depends on BNBSdkCore module instead of umbrella module BanubaSdk. When installed via Cocoapods this will allow to install only certain Banuba SDK modules instead of all.
 

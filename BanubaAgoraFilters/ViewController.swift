@@ -9,10 +9,6 @@ import UIKit
 import AgoraRtcKit
 import BanubaFiltersAgoraExtension
 
-private struct Defaults {
-  static let renderSize = AgoraVideoDimension640x480
-}
-
 class ViewController: UIViewController {
   
   @IBOutlet weak var remoteVideo: UIView!
@@ -79,7 +75,7 @@ class ViewController: UIViewController {
     agoraKit?.enableVideo()
     
     let encoderConfig = AgoraVideoEncoderConfiguration(
-      size: Defaults.renderSize,
+      size: AgoraVideoDimension1280x720,
       frameRate: .fps30,
       bitrate: AgoraVideoBitrateStandard,
       orientationMode: .adaptative,

@@ -12,9 +12,9 @@ Examples for Banuba SDK on iOS and [Agora.io](https://www.agora.io/en/) SDK inte
 
 |                             | Version |                    Description                    | 
 |-----------------------------|:-------:|:-------------------------------------------------:|
-| AgoraRtcEngine_iOS/RtcBasic |  4.1.1  |               Agora RTC dependency                |
-| BanubaSdk                   |  1.5.4  | Banuba Face AR dependency for applying AR filters |
-| BanubaFiltersAgoraExtension |  2.2.0  |            Banuba Extension for Agora             |
+| AgoraRtcEngine_iOS/RtcBasic |  4.2.0  |               Agora RTC dependency                |
+| BanubaSdk                   |  1.7.0  | Banuba Face AR dependency for applying AR filters |
+| BanubaFiltersAgoraExtension |  2.3.0  |            Banuba Extension for Agora             |
 
 ## Installation
 
@@ -26,7 +26,7 @@ git clone https://github.com/Banuba/agora-plugin-filters-ios.git
 2. In the terminal open the project directory and run the 'pod install' command to get the Banuba and Agora SDKs and plugin framework:
 ```sh
 cd agora-plugin-filters-ios/
-pod install
+pod install --repo-update
 ```
 
 3. Open the BanubaAgoraFilters.xcworkspace file in Xcode.
@@ -55,8 +55,8 @@ Integrating Banuba SDK to your project is similar to the steps in the `Getting S
 
 The `BanubaFiltersAgoraExtension` plugin and Banuba SDK can be installed with Cocoapods. Simply add the following lines to your Podfile:
 ```ruby
-pod 'BanubaFiltersAgoraExtension', '2.2.0'
-pod 'BanubaSdk', '1.5.4'
+pod 'BanubaFiltersAgoraExtension', '2.3.0'
+pod 'BanubaSdk', '1.7.0'
 ```
 Please make sure that you have also added our custom Podspecs source to your Podfile:
 ```ruby
@@ -69,7 +69,7 @@ Alternatively you can also install the extension by downloading the prebuilt xcf
 
 Add the following line to your Podfile:
 ```ruby
-pod 'AgoraRtcEngine_iOS', '4.1.1'
+pod 'AgoraRtcEngine_iOS', '4.2.0'
 ```
 
 # How to use `BanubaFiltersAgoraExtension`
