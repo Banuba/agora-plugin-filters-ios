@@ -91,7 +91,7 @@ class ViewController: UIViewController {
     videoCanvas.uid = 0
     videoCanvas.view = localVideo
     videoCanvas.renderMode = .hidden
-    videoCanvas.mirrorMode = .disabled
+    videoCanvas.mirrorMode = .enabled
     agoraKit?.setupLocalVideo(videoCanvas)
   }
   
