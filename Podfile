@@ -8,9 +8,9 @@ target 'BanubaAgoraFilters' do
   project 'BanubaAgoraFilters'
   use_frameworks!
 
-  pod 'BanubaSdk', '1.7.0'
-  pod 'AgoraRtcEngine_iOS/RtcBasic', '4.2.0'
-  pod 'BanubaFiltersAgoraExtension', '2.3.0'
+  pod 'BanubaSdk', '1.9.0'
+  pod 'AgoraRtcEngine_iOS/RtcBasic', '4.2.3'
+  pod 'BanubaFiltersAgoraExtension', '2.4.0'
   
   # The following pods are only used by the plugin developers, you can ignore them
   ## Pre-release binary framework check

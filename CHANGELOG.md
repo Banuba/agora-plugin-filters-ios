@@ -1,3 +1,7 @@
+# 2.4.0
+* Agora SDK 4.2.3+ support
+* Banuba Face AR SDK 1.9.0+ support
+
 # 2.3.0
 * Agora SDK 4.2.0+ support.
 * Banuba Face AR SDK 1.7.0+ support.
