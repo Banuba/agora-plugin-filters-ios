@@ -1,102 +1,120 @@
 PODS:
   - AgoraRtcEngine_iOS/RtcBasic (4.2.3)
-  - BanubaFiltersAgoraExtension (2.4.0):
+  - BanubaFiltersAgoraExtension (2.4.2):
     - AgoraRtcEngine_iOS/RtcBasic (~> 4.2.3)
-    - BNBSdkCore (~> 1.9.0)
-  - BanubaSdk (1.9.0):
-    - BNBAcneEyebagsRemoval (= 1.9.0)
-    - BNBBackground (= 1.9.0)
-    - BNBBody (= 1.9.0)
-    - BNBEffectPlayer (= 1.9.0)
-    - BNBEyes (= 1.9.0)
-    - BNBFaceMatch (= 1.9.0)
-    - BNBFaceTracker (= 1.9.0)
-    - BNBFaceTrackerLite (= 1.9.0)
-    - BNBHair (= 1.9.0)
-    - BNBHands (= 1.9.0)
-    - BNBLips (= 1.9.0)
-    - BNBNeurobeautyMakeup (= 1.9.0)
-    - BNBOcclusion (= 1.9.0)
-    - BNBPoseEstimation (= 1.9.0)
-    - BNBScripting (= 1.9.0)
-    - BNBSdkApi (= 1.9.0)
-    - BNBSdkCore (= 1.9.0)
-    - BNBSkin (= 1.9.0)
-    - BNBWatch (= 1.9.0)
-  - BNBAcneEyebagsRemoval (1.9.0):
-    - BNBEffectPlayer (= 1.9.0)
-    - BNBFaceTracker (= 1.9.0)
-    - BNBScripting (= 1.9.0)
-    - BNBSdkCore (= 1.9.0)
-  - BNBBackground (1.9.0):
-    - BNBEffectPlayer (= 1.9.0)
-    - BNBScripting (= 1.9.0)
-    - BNBSdkCore (= 1.9.0)
-  - BNBBody (1.9.0):
-    - BNBEffectPlayer (= 1.9.0)
-    - BNBScripting (= 1.9.0)
-    - BNBSdkCore (= 1.9.0)
-  - BNBEffectPlayer (1.9.0)
-  - BNBEyes (1.9.0):
-    - BNBEffectPlayer (= 1.9.0)
-    - BNBFaceTracker (= 1.9.0)
-    - BNBScripting (= 1.9.0)
-    - BNBSdkCore (= 1.9.0)
-  - BNBFaceMatch (1.9.0):
-    - BNBFaceTracker (= 1.9.0)
-    - BNBSdkCore (= 1.9.0)
-  - BNBFaceTracker (1.9.0):
-    - BNBEffectPlayer (= 1.9.0)
-    - BNBScripting (= 1.9.0)
-    - BNBSdkCore (= 1.9.0)
-  - BNBFaceTrackerLite (1.9.0):
-    - BNBEffectPlayer (= 1.9.0)
-    - BNBScripting (= 1.9.0)
-    - BNBSdkCore (= 1.9.0)
-  - BNBHair (1.9.0):
-    - BNBEffectPlayer (= 1.9.0)
-    - BNBScripting (= 1.9.0)
-    - BNBSdkCore (= 1.9.0)
-  - BNBHands (1.9.0):
-    - BNBEffectPlayer (= 1.9.0)
-    - BNBScripting (= 1.9.0)
-    - BNBSdkCore (= 1.9.0)
-  - BNBLips (1.9.0):
-    - BNBEffectPlayer (= 1.9.0)
-    - BNBFaceTracker (= 1.9.0)
-    - BNBScripting (= 1.9.0)
-    - BNBSdkCore (= 1.9.0)
-  - BNBNeurobeautyMakeup (1.9.0):
-    - BNBEffectPlayer (= 1.9.0)
-    - BNBFaceTracker (= 1.9.0)
-    - BNBScripting (= 1.9.0)
-    - BNBSdkCore (= 1.9.0)
-  - BNBOcclusion (1.9.0):
-    - BNBEffectPlayer (= 1.9.0)
-    - BNBFaceTracker (= 1.9.0)
-    - BNBScripting (= 1.9.0)
-    - BNBSdkCore (= 1.9.0)
-  - BNBPoseEstimation (1.9.0):
-    - BNBEffectPlayer (= 1.9.0)
-    - BNBScripting (= 1.9.0)
-    - BNBSdkCore (= 1.9.0)
-  - BNBScripting (1.9.0)
-  - BNBSdkApi (1.9.0):
-    - BNBSdkCore (= 1.9.0)
-  - BNBSdkCore (1.9.0)
-  - BNBSkin (1.9.0):
-    - BNBEffectPlayer (= 1.9.0)
-    - BNBScripting (= 1.9.0)
-    - BNBSdkCore (= 1.9.0)
-  - BNBWatch (1.9.0):
-    - BNBEffectPlayer (= 1.9.0)
-    - BNBScripting (= 1.9.0)
-    - BNBSdkCore (= 1.9.0)
+    - BNBSdkCore (>= 1.9.0)
+  - BanubaSdk (1.12.0):
+    - BNBAcneEyebagsRemoval (= 1.12.0)
+    - BNBBackground (= 1.12.0)
+    - BNBBody (= 1.12.0)
+    - BNBEffectPlayer (= 1.12.0)
+    - BNBEyes (= 1.12.0)
+    - BNBFaceAttributes (= 1.12.0)
+    - BNBFaceMatch (= 1.12.0)
+    - BNBFaceTracker (= 1.12.0)
+    - BNBFaceTrackerLite (= 1.12.0)
+    - BNBHair (= 1.12.0)
+    - BNBHands (= 1.12.0)
+    - BNBLips (= 1.12.0)
+    - BNBMakeup (= 1.12.0)
+    - BNBNeurobeautyMakeup (= 1.12.0)
+    - BNBOcclusion (= 1.12.0)
+    - BNBPoseEstimation (= 1.12.0)
+    - BNBScripting (= 1.12.0)
+    - BNBSdkApi (= 1.12.0)
+    - BNBSdkCore (= 1.12.0)
+    - BNBSkin (= 1.12.0)
+    - BNBVisualClip (= 1.12.0)
+    - BNBWatch (= 1.12.0)
+  - BNBAcneEyebagsRemoval (1.12.0):
+    - BNBEffectPlayer (= 1.12.0)
+    - BNBFaceTracker (= 1.12.0)
+    - BNBScripting (= 1.12.0)
+    - BNBSdkCore (= 1.12.0)
+  - BNBBackground (1.12.0):
+    - BNBEffectPlayer (= 1.12.0)
+    - BNBScripting (= 1.12.0)
+    - BNBSdkCore (= 1.12.0)
+  - BNBBody (1.12.0):
+    - BNBEffectPlayer (= 1.12.0)
+    - BNBScripting (= 1.12.0)
+    - BNBSdkCore (= 1.12.0)
+  - BNBEffectPlayer (1.12.0)
+  - BNBEyes (1.12.0):
+    - BNBEffectPlayer (= 1.12.0)
+    - BNBFaceTracker (= 1.12.0)
+    - BNBScripting (= 1.12.0)
+    - BNBSdkCore (= 1.12.0)
+  - BNBFaceAttributes (1.12.0):
+    - BNBEyes (= 1.12.0)
+    - BNBFaceTracker (= 1.12.0)
+    - BNBHair (= 1.12.0)
+    - BNBSdkCore (= 1.12.0)
+    - BNBSkin (= 1.12.0)
+  - BNBFaceMatch (1.12.0):
+    - BNBFaceTracker (= 1.12.0)
+    - BNBSdkCore (= 1.12.0)
+  - BNBFaceTracker (1.12.0):
+    - BNBEffectPlayer (= 1.12.0)
+    - BNBScripting (= 1.12.0)
+    - BNBSdkCore (= 1.12.0)
+  - BNBFaceTrackerLite (1.12.0):
+    - BNBEffectPlayer (= 1.12.0)
+    - BNBScripting (= 1.12.0)
+    - BNBSdkCore (= 1.12.0)
+  - BNBHair (1.12.0):
+    - BNBEffectPlayer (= 1.12.0)
+    - BNBScripting (= 1.12.0)
+    - BNBSdkCore (= 1.12.0)
+  - BNBHands (1.12.0):
+    - BNBEffectPlayer (= 1.12.0)
+    - BNBScripting (= 1.12.0)
+    - BNBSdkCore (= 1.12.0)
+  - BNBLips (1.12.0):
+    - BNBEffectPlayer (= 1.12.0)
+    - BNBFaceTracker (= 1.12.0)
+    - BNBScripting (= 1.12.0)
+    - BNBSdkCore (= 1.12.0)
+  - BNBMakeup (1.12.0):
+    - BNBEffectPlayer (= 1.12.0)
+    - BNBFaceTracker (= 1.12.0)
+    - BNBLips (= 1.12.0)
+    - BNBScripting (= 1.12.0)
+    - BNBSdkCore (= 1.12.0)
+    - BNBSkin (= 1.12.0)
+  - BNBNeurobeautyMakeup (1.12.0):
+    - BNBEffectPlayer (= 1.12.0)
+    - BNBFaceTracker (= 1.12.0)
+    - BNBScripting (= 1.12.0)
+    - BNBSdkCore (= 1.12.0)
+  - BNBOcclusion (1.12.0):
+    - BNBEffectPlayer (= 1.12.0)
+    - BNBFaceTracker (= 1.12.0)
+    - BNBScripting (= 1.12.0)
+    - BNBSdkCore (= 1.12.0)
+  - BNBPoseEstimation (1.12.0):
+    - BNBEffectPlayer (= 1.12.0)
+    - BNBScripting (= 1.12.0)
+    - BNBSdkCore (= 1.12.0)
+  - BNBScripting (1.12.0)
+  - BNBSdkApi (1.12.0):
+    - BNBSdkCore (= 1.12.0)
+  - BNBSdkCore (1.12.0)
+  - BNBSkin (1.12.0):
+    - BNBEffectPlayer (= 1.12.0)
+    - BNBScripting (= 1.12.0)
+    - BNBSdkCore (= 1.12.0)
+  - BNBVisualClip (1.12.0):
+    - BNBSdkCore (= 1.12.0)
+  - BNBWatch (1.12.0):
+    - BNBEffectPlayer (= 1.12.0)
+    - BNBScripting (= 1.12.0)
+    - BNBSdkCore (= 1.12.0)
 
 DEPENDENCIES:
   - AgoraRtcEngine_iOS/RtcBasic (= 4.2.3)
-  - BanubaFiltersAgoraExtension (= 2.4.0)
-  - BanubaSdk (= 1.9.0)
+  - BanubaFiltersAgoraExtension (= 2.4.2)
+  - BanubaSdk (= 1.12.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -109,12 +127,14 @@ SPEC REPOS:
     - BNBBody
     - BNBEffectPlayer
     - BNBEyes
+    - BNBFaceAttributes
     - BNBFaceMatch
     - BNBFaceTracker
     - BNBFaceTrackerLite
     - BNBHair
     - BNBHands
     - BNBLips
+    - BNBMakeup
     - BNBNeurobeautyMakeup
     - BNBOcclusion
     - BNBPoseEstimation
@@ -122,32 +142,36 @@ SPEC REPOS:
     - BNBSdkApi
     - BNBSdkCore
     - BNBSkin
+    - BNBVisualClip
     - BNBWatch
 
 SPEC CHECKSUMS:
   AgoraRtcEngine_iOS: eb0a7e87dbc9e818b267d413b48f76a57959e6f4
-  BanubaFiltersAgoraExtension: 484b15ef08e0afbe9ef7d9cc4b0920bc71da0552
-  BanubaSdk: ee3635ba3f53dc0576880aac5ba6fcae56b56b45
-  BNBAcneEyebagsRemoval: 7416acfd9d8cfd8ae588100ef2eb735919ff89c4
-  BNBBackground: db758a26198327ec22041110caa637a120739f34
-  BNBBody: 804527c7b4fe67e662aee31d7090c36afc3bb133
-  BNBEffectPlayer: 1642a422437a908f0ef266eaf732d8192d1e1eba
-  BNBEyes: bf52d4e46f8636308265b69c9d2d2d24cae69c7b
-  BNBFaceMatch: e3e83aa881e9318941a122aec3a1774efdb238e1
-  BNBFaceTracker: c38d747df91b05ac46341ebc35ec5f98a2149f85
-  BNBFaceTrackerLite: 7435232d8584290beb619b9c1c86db8e5f91e0c0
-  BNBHair: fb4102943467e7dcec7938792b75f4d11d886307
-  BNBHands: 3653be632010db9cb1ea2a16d2707cf9ba5acb79
-  BNBLips: 073721bbf05c6b2c4ecf794f743df9fc027b92b8
-  BNBNeurobeautyMakeup: 207130b3cff2e8e263a3d5f0fa173cd38546570b
-  BNBOcclusion: 9b2e6ec68f72b1164ba4f4824bde0ff0fddc2e50
-  BNBPoseEstimation: 4c80ab385d4e9492f82ec06013bd85ab583f6014
-  BNBScripting: 04bc08cab0ccf73761cc2c094d27cf00b16a69f8
-  BNBSdkApi: ea1fbc3f13597d7f1a5929c20bca88a2dd1a45da
-  BNBSdkCore: c5e9264cfd7c53a174955618f5202f1946768757
-  BNBSkin: 04755aea080b988a71d9e657520a83f17c0fd209
-  BNBWatch: cb242e70a036786aa56b3dd226bb105fc7c2c525
+  BanubaFiltersAgoraExtension: 8a0623ba12b472d244e42cc5137e84d5069f1ab9
+  BanubaSdk: 2dd898094ece9c7941dad0b5b8ec46157a82ed80
+  BNBAcneEyebagsRemoval: 6ea1ebe2014ad078cfc4ff3c5d2b8b4ffc304547
+  BNBBackground: 63273588d277006a6a395b0ddd12027413f4554a
+  BNBBody: 6431f81622c02026ab966ee49a767cfa56403542
+  BNBEffectPlayer: 02f868c31b2490bcc866369037dfe372eb84ba3f
+  BNBEyes: 91eaabe0132f551d2a07884cc6c856598d599baf
+  BNBFaceAttributes: 1a90027d9c912283662cbc4000f23704bb67d643
+  BNBFaceMatch: 61b0dceb3879d491b7612c6b7e124c52fee72852
+  BNBFaceTracker: b816bb9a891d0eeeb5a9a960c6b9f15b69bbd289
+  BNBFaceTrackerLite: 206525783aed131dbbd129bae3903f18be44a069
+  BNBHair: f0665fe9bf5cddf636eb4e7e8863b95e5fde582b
+  BNBHands: fc2480dd31cb9246cdddd2d0091b27dd1311a476
+  BNBLips: ff52bdffa4720cfa56c49e48cd08188cdea462fb
+  BNBMakeup: a1d7fdb8d4d91e1a5e4519f7a6742b8e55ffd36a
+  BNBNeurobeautyMakeup: a26a9f50aff1893e739e635a8d2b1bd2c1429e85
+  BNBOcclusion: 9bcab02e299a3f6207aa4235cda94da48508b8d3
+  BNBPoseEstimation: 682069a96d9b48669b0d5a8e5de6da64ffd3573b
+  BNBScripting: bff4182fcc3bb661ba2d0cd1e2c4da8ba0f2c2be
+  BNBSdkApi: 56dcbd64b320244b021790da9d3c37309f5123ab
+  BNBSdkCore: ab6addce9d46aa0e30c3b8d204ffa96816e42c24
+  BNBSkin: 86601aa64aa51e3664ab912f37158d254052cd98
+  BNBVisualClip: 70f4ab0ab209ea96a0185a1a91148e852e35b558
+  BNBWatch: b94bfc54d1ba9410bdbf99cf5a6eee1f59c452b5
 
-PODFILE CHECKSUM: a70ae6025f9ce64691edc48457598df31618ea74
+PODFILE CHECKSUM: 840fab43ca33ca5813a1808f15fa72bfba580a18
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.15.2

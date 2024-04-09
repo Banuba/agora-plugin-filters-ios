@@ -184,7 +184,6 @@
 				637C19B226A6EEAB000C647F /* Resources */,
 				8E6E85EF287460C500041909 /* Embed Frameworks */,
 				6793A85EBB13D459E2AF6523 /* [CP] Embed Pods Frameworks */,
-				870A584389A7ACFE6DEA3E19 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -283,23 +282,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BanubaAgoraFilters/Pods-BanubaAgoraFilters-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		870A584389A7ACFE6DEA3E19 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BanubaAgoraFilters/Pods-BanubaAgoraFilters-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BanubaAgoraFilters/Pods-BanubaAgoraFilters-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BanubaAgoraFilters/Pods-BanubaAgoraFilters-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
