@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13AD694E2BCFACB100CA48EF /* RtcBasic in Frameworks */ = {isa = PBXBuildFile; productRef = 13AD694D2BCFACB100CA48EF /* RtcBasic */; };
+		13AD69512BCFAD3B00CA48EF /* BanubaFiltersAgoraExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 13AD69502BCFAD3B00CA48EF /* BanubaFiltersAgoraExtension */; };
+		13AD69532BCFAFC700CA48EF /* BanubaSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 13AD69522BCFAFC700CA48EF /* BanubaSdk */; };
 		63D0FCF328F41455000C07D1 /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 63D0FCF228F41455000C07D1 /* effects */; };
 		63EAB02D26DE830A00A83AD4 /* BanubaEffectSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAEA626DE830A00A83AD4 /* BanubaEffectSelectorView.swift */; };
 		63EAB02E26DE830A00A83AD4 /* LICENCE.md in Resources */ = {isa = PBXBuildFile; fileRef = 63EAAEA826DE830A00A83AD4 /* LICENCE.md */; };
@@ -64,17 +67,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13AD69512BCFAD3B00CA48EF /* BanubaFiltersAgoraExtension in Frameworks */,
+				13AD69532BCFAFC700CA48EF /* BanubaSdk in Frameworks */,
+				13AD694E2BCFACB100CA48EF /* RtcBasic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		553BCCFBBAD1C63F226780EE /* Pods */ = {
+		13AD694F2BCFAD3B00CA48EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		637C19AB26A6EEAB000C647F = {
@@ -82,7 +88,7 @@
 			children = (
 				63EAAEA426DE830A00A83AD4 /* BanubaAgoraFilters */,
 				637C19B526A6EEAB000C647F /* Products */,
-				553BCCFBBAD1C63F226780EE /* Pods */,
+				13AD694F2BCFAD3B00CA48EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +178,11 @@
 			dependencies = (
 			);
 			name = BanubaAgoraFilters;
+			packageProductDependencies = (
+				13AD694D2BCFACB100CA48EF /* RtcBasic */,
+				13AD69502BCFAD3B00CA48EF /* BanubaFiltersAgoraExtension */,
+				13AD69522BCFAFC700CA48EF /* BanubaSdk */,
+			);
 			productName = BanubaAgoraFilters;
 			productReference = 637C19B426A6EEAB000C647F /* BanubaAgoraFilters.app */;
 			productType = "com.apple.product-type.application";
@@ -200,6 +211,11 @@
 				Base,
 			);
 			mainGroup = 637C19AB26A6EEAB000C647F;
+			packageReferences = (
+				13AD69482BCFA78700CA48EF /* XCRemoteSwiftPackageReference "banuba-filters-agora-extension-framework" */,
+				13AD69492BCFABB200CA48EF /* XCRemoteSwiftPackageReference "BanubaSdk" */,
+				13AD694C2BCFACB100CA48EF /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */,
+			);
 			productRefGroup = 637C19B526A6EEAB000C647F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -307,12 +323,17 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -362,11 +383,16 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -380,16 +406,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = BanubaAgoraFilters/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banuba.BanubaAgoraFilters.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BanubaAgoraFilters/BanubaAgoraFilters-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -403,18 +425,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
-				);
 				INFOPLIST_FILE = BanubaAgoraFilters/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banuba.BanubaAgoraFilters.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BanubaAgoraFilters/BanubaAgoraFilters-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -441,6 +456,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		13AD69482BCFA78700CA48EF /* XCRemoteSwiftPackageReference "banuba-filters-agora-extension-framework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Banuba/banuba-filters-agora-extension-framework";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		13AD69492BCFABB200CA48EF /* XCRemoteSwiftPackageReference "BanubaSdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sdk-banuba/BanubaSdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.12.0;
+			};
+		};
+		13AD694C2BCFACB100CA48EF /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AgoraIO/AgoraRtcEngine_iOS";
+			requirement = {
+				kind = exactVersion;
+				version = 4.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		13AD694D2BCFACB100CA48EF /* RtcBasic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13AD694C2BCFACB100CA48EF /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = RtcBasic;
+		};
+		13AD69502BCFAD3B00CA48EF /* BanubaFiltersAgoraExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13AD69482BCFA78700CA48EF /* XCRemoteSwiftPackageReference "banuba-filters-agora-extension-framework" */;
+			productName = BanubaFiltersAgoraExtension;
+		};
+		13AD69522BCFAFC700CA48EF /* BanubaSdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13AD69492BCFABB200CA48EF /* XCRemoteSwiftPackageReference "BanubaSdk" */;
+			productName = BanubaSdk;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 637C19AC26A6EEAB000C647F /* Project object */;
 }
