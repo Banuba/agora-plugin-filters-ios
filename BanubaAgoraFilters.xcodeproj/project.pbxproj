@@ -23,7 +23,6 @@
 		63EAB03926DE830A00A83AD4 /* BanubaAgoraFilters-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 63EAAEB526DE830A00A83AD4 /* BanubaAgoraFilters-Bridging-Header.h */; };
 		63EAB03A26DE830A00A83AD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAAEB626DE830A00A83AD4 /* AppDelegate.swift */; };
 		63EAB1A326DE830B00A83AD4 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAB02B26DE830A00A83AD4 /* Token.swift */; };
-		695052DDAEAFBC381D84DFAA /* Pods_BanubaAgoraFilters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92A72FE31B4831E76242823 /* Pods_BanubaAgoraFilters.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,9 +57,6 @@
 		63EAAEB626DE830A00A83AD4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63EAB02B26DE830A00A83AD4 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		63EAB02C26DE830A00A83AD4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6B00339DB29F391D7E928F7D /* Pods-BanubaAgoraFilters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanubaAgoraFilters.debug.xcconfig"; path = "Target Support Files/Pods-BanubaAgoraFilters/Pods-BanubaAgoraFilters.debug.xcconfig"; sourceTree = "<group>"; };
-		F38DE352DE51C7561D42F939 /* Pods-BanubaAgoraFilters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanubaAgoraFilters.release.xcconfig"; path = "Target Support Files/Pods-BanubaAgoraFilters/Pods-BanubaAgoraFilters.release.xcconfig"; sourceTree = "<group>"; };
-		F92A72FE31B4831E76242823 /* Pods_BanubaAgoraFilters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BanubaAgoraFilters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +64,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				695052DDAEAFBC381D84DFAA /* Pods_BanubaAgoraFilters.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,8 +73,6 @@
 		553BCCFBBAD1C63F226780EE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6B00339DB29F391D7E928F7D /* Pods-BanubaAgoraFilters.debug.xcconfig */,
-				F38DE352DE51C7561D42F939 /* Pods-BanubaAgoraFilters.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -89,7 +82,6 @@
 			children = (
 				63EAAEA426DE830A00A83AD4 /* BanubaAgoraFilters */,
 				637C19B526A6EEAB000C647F /* Products */,
-				637C19CB26A6EF5C000C647F /* Frameworks */,
 				553BCCFBBAD1C63F226780EE /* Pods */,
 			);
 			sourceTree = "<group>";
@@ -100,14 +92,6 @@
 				637C19B426A6EEAB000C647F /* BanubaAgoraFilters.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		637C19CB26A6EF5C000C647F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F92A72FE31B4831E76242823 /* Pods_BanubaAgoraFilters.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		63EAAEA426DE830A00A83AD4 /* BanubaAgoraFilters */ = {
@@ -177,13 +161,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 637C19C826A6EEAE000C647F /* Build configuration list for PBXNativeTarget "BanubaAgoraFilters" */;
 			buildPhases = (
-				3FABC269F6AC828CF2FB164D /* [CP] Check Pods Manifest.lock */,
 				637C1A0F26A82E2E000C647F /* Headers */,
 				637C19B026A6EEAB000C647F /* Sources */,
 				637C19B126A6EEAB000C647F /* Frameworks */,
 				637C19B226A6EEAB000C647F /* Resources */,
 				8E6E85EF287460C500041909 /* Embed Frameworks */,
-				6793A85EBB13D459E2AF6523 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,48 +225,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3FABC269F6AC828CF2FB164D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BanubaAgoraFilters-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6793A85EBB13D459E2AF6523 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BanubaAgoraFilters/Pods-BanubaAgoraFilters-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BanubaAgoraFilters/Pods-BanubaAgoraFilters-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BanubaAgoraFilters/Pods-BanubaAgoraFilters-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		637C19B026A6EEAB000C647F /* Sources */ = {
@@ -433,7 +373,6 @@
 		};
 		637C19C926A6EEAE000C647F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B00339DB29F391D7E928F7D /* Pods-BanubaAgoraFilters.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -457,7 +396,6 @@
 		};
 		637C19CA26A6EEAE000C647F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F38DE352DE51C7561D42F939 /* Pods-BanubaAgoraFilters.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
