@@ -1,6 +1,6 @@
 PODS:
   - AgoraRtcEngine_iOS/RtcBasic (4.3.2)
-  - BanubaFiltersAgoraExtension (2.5.0):
+  - BanubaFiltersAgoraExtension (2.5.1):
     - AgoraRtcEngine_iOS/RtcBasic (~> 4.3.2)
     - BNBSdkCore (>= 1.15.0)
   - BanubaSdk (1.15.0):
@@ -79,7 +79,7 @@ PODS:
 
 DEPENDENCIES:
   - AgoraRtcEngine_iOS/RtcBasic (= 4.3.2)
-  - BanubaFiltersAgoraExtension (= 2.5.0)
+  - BanubaFiltersAgoraExtension (= 2.5.1)
   - BanubaSdk (= 1.15.0)
 
 SPEC REPOS:
@@ -106,7 +106,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AgoraRtcEngine_iOS: eaa97751fcfe1b50d9b067e0df92752a6a5f899f
-  BanubaFiltersAgoraExtension: 812640b858fccc2445cbbf6207b49336778d76db
+  BanubaFiltersAgoraExtension: 311fbabd9412bafd09e3ca7abbbdbb672e52286f
   BanubaSdk: 293277f63dd8f4bebde331e077c254a1b116d5a5
   BNBAcneEyebagsRemoval: 1fecf11a0eb5a7d34eea8ac7e2f9a3d64b9b9945
   BNBBackground: 68c841aa0aac8557266b8cc7ec3bbfde3a8d35d3
@@ -124,6 +124,6 @@ SPEC CHECKSUMS:
   BNBSdkCore: 282ad1cf3ecac1780e669f7220c5e5ecca565070
   BNBSkin: c719fc70bb57915c4c3b9edd23dccf211df0c60d
 
-PODFILE CHECKSUM: ba43cf24bd8bb681d7d5c6b83199dcf6359c5a0c
+PODFILE CHECKSUM: 4d715376d5086802638602c818335223178a6b90
 
 COCOAPODS: 1.15.2

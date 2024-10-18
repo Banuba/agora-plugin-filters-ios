@@ -1,3 +1,9 @@
+# 2.5.1 
+* New key `BNBKeyRelease` to free extension 
+
+# 2.5.0
+* Agora SDK support 4.3.1
+
 # 2.4.0
 * Agora SDK 4.2.3+ support
 * Banuba Face AR SDK 1.9.0+ support
