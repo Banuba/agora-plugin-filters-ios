@@ -43,7 +43,7 @@ internal let agoraChannelId = "Agora Channel ID"
 let banubaLicenseToken = "Banuba Extension License Token"
 ```
 
-6. The sample includes a few basic AR effects, however you can download additional effects from [here](https://docs.banuba.com/face-ar-sdk-v1/overview/demo_face_filters). This guarantees, that you will use the up-to-date version of the effects. The effects must be copied to the `agora-plugin-filters-ios -> BanubaAgoraFilters -> effects` folder.
+6. The sample includes a few basic AR effects, however you can download additional effects from [here](https://docs.banuba.com/far-sdk/tutorials/capabilities/demo_face_filters). This guarantees, that you will use the up-to-date version of the effects. The effects must be copied to the `agora-plugin-filters-ios -> BanubaAgoraFilters -> effects` folder.
 
 7. Run the `BanubaAgoraFilters` target.
 
@@ -137,7 +137,7 @@ agoraKit?.setExtensionPropertyWithVendor(
     value: string
 )      
 ```
-`string` must be a string with method’s name and parameters. You can find an example in our [documentation](https://docs.banuba.com/face-ar-sdk-v1/effect_api/face_beauty).
+`string` must be a string with method’s name and parameters. You can find an example in our [documentation](https://docs.banuba.com/far-sdk/effects/makeup_deprecated/face_beauty).
 
 # Effects managing
 
