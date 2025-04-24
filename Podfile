@@ -8,7 +8,12 @@ target 'BanubaAgoraFilters' do
   project 'BanubaAgoraFilters'
   use_frameworks!
 
-  pod 'BanubaSdk', '1.15.0'
+
+  bnb_version = '1.17.0'
+  pod 'BNBBackground', bnb_version
+  pod 'BNBMakeup', bnb_version  
+
+
   pod 'AgoraRtcEngine_iOS/RtcBasic', '4.3.2'
   pod 'BanubaFiltersAgoraExtension', '2.5.1'
   
