@@ -9,7 +9,7 @@ target 'BanubaAgoraFilters' do
   use_frameworks!
 
 
-  bnb_version = '1.17.0'
+  bnb_version = '1.17.4'
   pod 'BNBBackground', bnb_version
   pod 'BNBMakeup', bnb_version  
 
