@@ -13,7 +13,7 @@ Check out examples for other platforms:
 * [Android](https://github.com/Banuba/agora-plugin-filters-android)
 * [Web](https://github.com/Banuba/agora-plugin-filters-web)
 
-![Banuba](banuba.gif]
+![Banuba](banuba.gif)
 
 # Getting Started
 
