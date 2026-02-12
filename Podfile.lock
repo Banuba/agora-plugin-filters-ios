@@ -1,47 +1,49 @@
 PODS:
-  - AgoraRtcEngine_iOS/RtcBasic (4.3.2)
-  - BanubaFiltersAgoraExtension (2.5.1):
-    - AgoraRtcEngine_iOS/RtcBasic (~> 4.3.2)
-    - BNBSdkCore (>= 1.15.0)
-  - BNBBackground (1.17.4):
-    - BNBEffectPlayer (= 1.17.4)
-    - BNBScripting (= 1.17.4)
-    - BNBSdkCore (= 1.17.4)
-  - BNBEffectPlayer (1.17.4)
-  - BNBFaceTracker (1.17.4):
-    - BNBEffectPlayer (= 1.17.4)
-    - BNBScripting (= 1.17.4)
-    - BNBSdkCore (= 1.17.4)
-  - BNBLips (1.17.4):
-    - BNBEffectPlayer (= 1.17.4)
-    - BNBFaceTracker (= 1.17.4)
-    - BNBScripting (= 1.17.4)
-    - BNBSdkCore (= 1.17.4)
-  - BNBMakeup (1.17.4):
-    - BNBEffectPlayer (= 1.17.4)
-    - BNBFaceTracker (= 1.17.4)
-    - BNBLips (= 1.17.4)
-    - BNBScripting (= 1.17.4)
-    - BNBSdkCore (= 1.17.4)
-    - BNBSkin (= 1.17.4)
-  - BNBScripting (1.17.4)
-  - BNBSdkCore (1.17.4)
-  - BNBSkin (1.17.4):
-    - BNBEffectPlayer (= 1.17.4)
-    - BNBScripting (= 1.17.4)
-    - BNBSdkCore (= 1.17.4)
+  - AgoraInfra_iOS (1.3.5)
+  - AgoraRtcEngine_iOS/RtcBasic (4.6.2):
+    - AgoraInfra_iOS (= 1.3.5)
+  - BanubaFiltersAgoraExtension (2.6.0):
+    - AgoraRtcEngine_iOS/RtcBasic (~> 4.6.2)
+    - BNBSdkCore (>= 1.17.0)
+  - BNBBackground (1.17.7):
+    - BNBEffectPlayer (= 1.17.7)
+    - BNBScripting (= 1.17.7)
+    - BNBSdkCore (= 1.17.7)
+  - BNBEffectPlayer (1.17.7)
+  - BNBFaceTracker (1.17.7):
+    - BNBEffectPlayer (= 1.17.7)
+    - BNBScripting (= 1.17.7)
+    - BNBSdkCore (= 1.17.7)
+  - BNBLips (1.17.7):
+    - BNBEffectPlayer (= 1.17.7)
+    - BNBFaceTracker (= 1.17.7)
+    - BNBScripting (= 1.17.7)
+    - BNBSdkCore (= 1.17.7)
+  - BNBMakeup (1.17.7):
+    - BNBEffectPlayer (= 1.17.7)
+    - BNBFaceTracker (= 1.17.7)
+    - BNBLips (= 1.17.7)
+    - BNBScripting (= 1.17.7)
+    - BNBSdkCore (= 1.17.7)
+    - BNBSkin (= 1.17.7)
+  - BNBScripting (1.17.7)
+  - BNBSdkCore (1.17.7)
+  - BNBSkin (1.17.7):
+    - BNBEffectPlayer (= 1.17.7)
+    - BNBScripting (= 1.17.7)
+    - BNBSdkCore (= 1.17.7)
 
 DEPENDENCIES:
-  - AgoraRtcEngine_iOS/RtcBasic (= 4.3.2)
-  - BanubaFiltersAgoraExtension (= 2.5.1)
-  - BNBBackground (= 1.17.4)
-  - BNBMakeup (= 1.17.4)
+  - AgoraRtcEngine_iOS/RtcBasic (~> 4.6.2)
+  - BanubaFiltersAgoraExtension (from `../../banuba-filters-agora-extension-framework/`)
+  - BNBBackground (~> 1.17.7)
+  - BNBMakeup (~> 1.17.7)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - AgoraInfra_iOS
     - AgoraRtcEngine_iOS
   https://github.com/sdk-banuba/banuba-sdk-podspecs.git:
-    - BanubaFiltersAgoraExtension
     - BNBBackground
     - BNBEffectPlayer
     - BNBFaceTracker
@@ -51,18 +53,23 @@ SPEC REPOS:
     - BNBSdkCore
     - BNBSkin
 
-SPEC CHECKSUMS:
-  AgoraRtcEngine_iOS: eaa97751fcfe1b50d9b067e0df92752a6a5f899f
-  BanubaFiltersAgoraExtension: 311fbabd9412bafd09e3ca7abbbdbb672e52286f
-  BNBBackground: d13b70dc24046dd0e01a63c1f025309e3600c944
-  BNBEffectPlayer: 572831e1acc8741198ed9cad7af97c331dd2e2b9
-  BNBFaceTracker: 3e62af255e467a0741b70f3d6026d1d8f719292d
-  BNBLips: f510db07f9e436df367433ebc6aa57a7272f7e4d
-  BNBMakeup: cbee4e66d8616253b71a746d73aa8a21c76c177f
-  BNBScripting: 60ab9e8d2f88f0ce424f42b5c678a0dc48478a77
-  BNBSdkCore: 888836227c66fd654f56a321e5ee1812f2e10736
-  BNBSkin: 100efe82a99ce1deb5c033ed27a5b90e9c1fbca6
+EXTERNAL SOURCES:
+  BanubaFiltersAgoraExtension:
+    :path: "../../banuba-filters-agora-extension-framework/"
 
-PODFILE CHECKSUM: 291c2cdbbb3766f3fe0fccb785427300ab4193b0
+SPEC CHECKSUMS:
+  AgoraInfra_iOS: 0bf927aad4fc425b24ca5d094b333361960f5cb0
+  AgoraRtcEngine_iOS: 11f37dd846d6194a5268b084b99102e5b6aff0de
+  BanubaFiltersAgoraExtension: 4e9b83cd2e7f851716554289dd79e389b145002c
+  BNBBackground: 1a20f411b5bbd59ad754d6cc47fb1486bae7651a
+  BNBEffectPlayer: 1c9ba42c55d31989b82e445d8c1b6b0bf33d5652
+  BNBFaceTracker: dc143f12b1e0c19fda273f6675028a83aae5d5d2
+  BNBLips: 898957ae1e960501a96b3c1b1d71d344797f5e09
+  BNBMakeup: b04c5be9198c8342dad9dc751176c7bb63d91278
+  BNBScripting: 157a37e96ef00f6e2e004e11832e180be60b2828
+  BNBSdkCore: 97dfc7c28033fad51fff04befa453117a9e9d2f0
+  BNBSkin: 4a1ea3741a257c098d776cbfd6e879e9adbd14ef
+
+PODFILE CHECKSUM: e690574e32c55920a23a5f3a92392d90d31d3742
 
 COCOAPODS: 1.16.2

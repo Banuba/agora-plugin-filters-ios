@@ -76,7 +76,7 @@ class ViewController: UIViewController {
     
     let encoderConfig = AgoraVideoEncoderConfiguration(
       size: AgoraVideoDimension1280x720,
-      frameRate: .fps30,
+      frameRate: 30,
       bitrate: AgoraVideoBitrateStandard,
       orientationMode: .adaptative,
       mirrorMode: .auto

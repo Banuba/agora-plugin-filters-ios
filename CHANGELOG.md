@@ -1,3 +1,6 @@
+# 2.6.0 
+* Agora SDK support 4.6.2
+
 # 2.5.1 
 * New key `BNBKeyRelease` to free extension 
 

@@ -25,11 +25,11 @@ Check out examples for other platforms:
 
 ## Dependencies
 
-|                             | Version |                    Description                    | 
-|-----------------------------|:-------:|:-------------------------------------------------:|
-| AgoraRtcEngine_iOS/RtcBasic |  4.2.0  |               Agora RTC dependency                |
-| BanubaSdk                   |  1.7.0  | Banuba Face AR dependency for applying AR filters |
-| BanubaFiltersAgoraExtension |  2.3.0  |            Banuba Extension for Agora             |
+|                             | Version  |                    Description                    | 
+|-----------------------------|:--------:|:-------------------------------------------------:|
+| AgoraRtcEngine_iOS/RtcBasic |  4.6.2   |               Agora RTC dependency                |
+| BanubaSdk                   |  1.17.7  | Banuba Face AR dependency for applying AR filters |
+| BanubaFiltersAgoraExtension |  2.6.0   |            Banuba Extension for Agora             |
 
 ## Installation
 
@@ -70,8 +70,8 @@ Integrating Banuba SDK to your project is similar to the steps in the `Getting S
 
 The `BanubaFiltersAgoraExtension` plugin and Banuba SDK can be installed with Cocoapods. Simply add the following lines to your Podfile:
 ```ruby
-pod 'BanubaFiltersAgoraExtension', '2.3.0'
-pod 'BanubaSdk', '1.7.0'
+pod 'BanubaFiltersAgoraExtension', '2.6.0'
+pod 'BanubaSdk', '1.17.7'
 ```
 Please make sure that you have also added our custom Podspecs source to your Podfile:
 ```ruby
@@ -84,7 +84,7 @@ Alternatively you can also install the extension by downloading the prebuilt xcf
 
 Add the following line to your Podfile:
 ```ruby
-pod 'AgoraRtcEngine_iOS', '4.2.0'
+pod 'AgoraRtcEngine_iOS', '4.6.0'
 ```
 
 # How to use `BanubaFiltersAgoraExtension`
@@ -98,6 +98,7 @@ extern NSString * __nonnull const BNBKeyUnloadEffect;
 extern NSString * __nonnull const BNBKeySetBanubaLicenseToken;
 extern NSString * __nonnull const BNBKeySetEffectsPath;
 extern NSString * __nonnull const BNBKeyEvalJSMethod;
+extern NSString * __nonnull const BNBKeyRelease;
 ```
 
 To enable/disable `BanubaFiltersAgoraExtension` use the following method:
