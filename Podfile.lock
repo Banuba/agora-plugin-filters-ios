@@ -5,45 +5,46 @@ PODS:
   - BanubaFiltersAgoraExtension (2.6.0):
     - AgoraRtcEngine_iOS/RtcBasic (~> 4.6.2)
     - BNBSdkCore (>= 1.17.0)
-  - BNBBackground (1.17.7):
-    - BNBEffectPlayer (= 1.17.7)
-    - BNBScripting (= 1.17.7)
-    - BNBSdkCore (= 1.17.7)
-  - BNBEffectPlayer (1.17.7)
-  - BNBFaceTracker (1.17.7):
-    - BNBEffectPlayer (= 1.17.7)
-    - BNBScripting (= 1.17.7)
-    - BNBSdkCore (= 1.17.7)
-  - BNBLips (1.17.7):
-    - BNBEffectPlayer (= 1.17.7)
-    - BNBFaceTracker (= 1.17.7)
-    - BNBScripting (= 1.17.7)
-    - BNBSdkCore (= 1.17.7)
-  - BNBMakeup (1.17.7):
-    - BNBEffectPlayer (= 1.17.7)
-    - BNBFaceTracker (= 1.17.7)
-    - BNBLips (= 1.17.7)
-    - BNBScripting (= 1.17.7)
-    - BNBSdkCore (= 1.17.7)
-    - BNBSkin (= 1.17.7)
-  - BNBScripting (1.17.7)
-  - BNBSdkCore (1.17.7)
-  - BNBSkin (1.17.7):
-    - BNBEffectPlayer (= 1.17.7)
-    - BNBScripting (= 1.17.7)
-    - BNBSdkCore (= 1.17.7)
+  - BNBBackground (1.18.0):
+    - BNBEffectPlayer (= 1.18.0)
+    - BNBScripting (= 1.18.0)
+    - BNBSdkCore (= 1.18.0)
+  - BNBEffectPlayer (1.18.0)
+  - BNBFaceTracker (1.18.0):
+    - BNBEffectPlayer (= 1.18.0)
+    - BNBScripting (= 1.18.0)
+    - BNBSdkCore (= 1.18.0)
+  - BNBLips (1.18.0):
+    - BNBEffectPlayer (= 1.18.0)
+    - BNBFaceTracker (= 1.18.0)
+    - BNBScripting (= 1.18.0)
+    - BNBSdkCore (= 1.18.0)
+  - BNBMakeup (1.18.0):
+    - BNBEffectPlayer (= 1.18.0)
+    - BNBFaceTracker (= 1.18.0)
+    - BNBLips (= 1.18.0)
+    - BNBScripting (= 1.18.0)
+    - BNBSdkCore (= 1.18.0)
+    - BNBSkin (= 1.18.0)
+  - BNBScripting (1.18.0)
+  - BNBSdkCore (1.18.0)
+  - BNBSkin (1.18.0):
+    - BNBEffectPlayer (= 1.18.0)
+    - BNBScripting (= 1.18.0)
+    - BNBSdkCore (= 1.18.0)
 
 DEPENDENCIES:
   - AgoraRtcEngine_iOS/RtcBasic (~> 4.6.2)
-  - BanubaFiltersAgoraExtension (from `../../banuba-filters-agora-extension-framework/`)
-  - BNBBackground (~> 1.17.7)
-  - BNBMakeup (~> 1.17.7)
+  - BanubaFiltersAgoraExtension (~> 2.6.0)
+  - BNBBackground (~> 1.18.0)
+  - BNBMakeup (~> 1.18.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AgoraInfra_iOS
     - AgoraRtcEngine_iOS
   https://github.com/sdk-banuba/banuba-sdk-podspecs.git:
+    - BanubaFiltersAgoraExtension
     - BNBBackground
     - BNBEffectPlayer
     - BNBFaceTracker
@@ -53,23 +54,19 @@ SPEC REPOS:
     - BNBSdkCore
     - BNBSkin
 
-EXTERNAL SOURCES:
-  BanubaFiltersAgoraExtension:
-    :path: "../../banuba-filters-agora-extension-framework/"
-
 SPEC CHECKSUMS:
   AgoraInfra_iOS: 0bf927aad4fc425b24ca5d094b333361960f5cb0
   AgoraRtcEngine_iOS: 11f37dd846d6194a5268b084b99102e5b6aff0de
-  BanubaFiltersAgoraExtension: 4e9b83cd2e7f851716554289dd79e389b145002c
-  BNBBackground: 1a20f411b5bbd59ad754d6cc47fb1486bae7651a
-  BNBEffectPlayer: 1c9ba42c55d31989b82e445d8c1b6b0bf33d5652
-  BNBFaceTracker: dc143f12b1e0c19fda273f6675028a83aae5d5d2
-  BNBLips: 898957ae1e960501a96b3c1b1d71d344797f5e09
-  BNBMakeup: b04c5be9198c8342dad9dc751176c7bb63d91278
-  BNBScripting: 157a37e96ef00f6e2e004e11832e180be60b2828
-  BNBSdkCore: 97dfc7c28033fad51fff04befa453117a9e9d2f0
-  BNBSkin: 4a1ea3741a257c098d776cbfd6e879e9adbd14ef
+  BanubaFiltersAgoraExtension: 1b34186c87b7de9f3be5536c18a363eb5e6d9515
+  BNBBackground: 876aafe44c28da5202a8fc6eb222bccd59920b6b
+  BNBEffectPlayer: d02533930e139aa7443cc48bf04b4e212f93b767
+  BNBFaceTracker: a808fdab4cd9caf650200246195eb74fd0f147d6
+  BNBLips: 47743499bc15047a89989731dee869e56a664406
+  BNBMakeup: 62c92bff6eddfe3ae1cd76ac661b9261defaa4b9
+  BNBScripting: 619686ec2ee1fb109c255a55578fddd86011a137
+  BNBSdkCore: 2cb98e883775749f7de2a386dfa84b69f0731794
+  BNBSkin: dbebbefa32c442ddfe3d6e2c3d6d4e156d423f09
 
-PODFILE CHECKSUM: e690574e32c55920a23a5f3a92392d90d31d3742
+PODFILE CHECKSUM: 2fa47ceb5b55374e9b687efdfb0723073ffa1d02
 
 COCOAPODS: 1.16.2
